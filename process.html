@@ -1,0 +1,1848 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Guidance Process | Eminent Overseas & Consultants</title>
+  <meta name="description" content="Step-by-step transparent process for studying in Japan or UK. Ethical guidance, language training, visa support, and preparation for Bangladeshi students." />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Our Guidance Process | Eminent Overseas & Consultants">
+  <meta property="og:description" content="Transparent step-by-step guidance process for Japan & UK study abroad. Ethical, no false promises.">
+  <meta property="og:image" content="images/process-hero.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/process.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Guidance Process">
+  <meta name="twitter:description" content="Transparent study abroad process for Japan & UK">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Process Page Custom CSS -->
+  <style>
+    /* ========================
+       PROCESS PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* Process Hero Section */
+    .process-hero {
+      margin-top: calc(var(--marquee-height) + var(--navbar-height));
+      padding: 8rem 0 5rem;
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.08) 0%, 
+        rgba(56, 189, 248, 0.04) 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .process-hero .display-2 {
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .process-hero .lead {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+    }
+
+    /* Process Timeline */
+    .process-timeline {
+      position: relative;
+      padding: 6rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .process-timeline {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--primary-400),
+        var(--primary-600),
+        var(--primary-400),
+        transparent
+      );
+      transform: translateX(-50%);
+      opacity: 0.3;
+    }
+
+    .timeline-step {
+      position: relative;
+      margin-bottom: 6rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .timeline-step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      z-index: 2;
+      box-shadow: 0 0 0 8px var(--bg-primary), 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+
+    [data-theme="dark"] .timeline-step::before {
+      box-shadow: 0 0 0 8px var(--bg-primary), 0 4px 12px rgba(14, 165, 233, 0.5);
+    }
+
+    .timeline-step.even::before {
+      left: 50%;
+      transform: translateX(calc(-50% + 2px));
+    }
+
+    .timeline-step.odd::before {
+      left: 50%;
+      transform: translateX(calc(-50% - 2px));
+    }
+
+    .timeline-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .timeline-step.even .timeline-content {
+      margin-right: calc(50% + 40px);
+    }
+
+    .timeline-step.odd .timeline-content {
+      margin-left: calc(50% + 40px);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+      z-index: 1;
+    }
+
+    .timeline-step.even .step-number {
+      left: calc(50% - 350px);
+    }
+
+    .timeline-step.odd .step-number {
+      left: calc(50% + 350px);
+    }
+
+    .step-duration {
+      display: inline-block;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--primary-600);
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+
+    .timeline-content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .timeline-content .lead {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+
+    .step-features {
+      margin-bottom: 2rem;
+    }
+
+    .step-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .step-feature i {
+      color: var(--primary-500);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .step-outcome {
+      background: var(--bg-secondary);
+      border-left: 4px solid var(--primary-500);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      margin-top: 1.5rem;
+    }
+
+    .step-outcome h5 {
+      color: var(--primary-600);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .step-outcome p {
+      color: var(--text-secondary);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Process Comparison Section */
+    .process-comparison {
+      padding: 6rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    [data-theme="dark"] .process-comparison {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .comparison-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .comparison-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .country-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.3);
+    }
+
+    .comparison-card.japan .country-icon {
+      background: linear-gradient(135deg, #dc2626, #ef4444);
+    }
+
+    .comparison-card.uk .country-icon {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    }
+
+    .comparison-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .comparison-timeline {
+      margin: 2rem 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .timeline-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-100);
+      color: var(--primary-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 0.875rem;
+    }
+
+    [data-theme="dark"] .timeline-number {
+      background: rgba(14, 165, 233, 0.2);
+      color: var(--primary-300);
+    }
+
+    .timeline-text {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .comparison-highlight {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .comparison-highlight h5 {
+      color: var(--primary-600);
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .comparison-highlight ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .comparison-highlight li {
+      padding: 0.375rem 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .comparison-highlight li i {
+      color: var(--primary-500);
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    /* Requirements Section */
+    .requirements-section {
+      padding: 6rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .requirements-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .requirement-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .requirement-category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .category-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .requirement-category h4 {
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .requirement-list li {
+      padding: 0.625rem 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+
+    .requirement-list li i {
+      color: var(--primary-500);
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    .requirement-important {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 4px solid var(--error);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      margin-top: 1.5rem;
+    }
+
+    .requirement-important h5 {
+      color: var(--error);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .requirement-important p {
+      color: var(--text-secondary);
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* CTA Section for Process Page */
+    .process-cta {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .process-cta .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-cta h2 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .process-cta p {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 3rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-steps {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .cta-step {
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .cta-step-number {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-700);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-step p {
+      font-size: 1rem;
+      color: white;
+      margin: 0;
+    }
+
+    /* Responsive Design for Process Page */
+    @media (max-width: 992px) {
+      .process-timeline::before {
+        left: 40px;
+      }
+
+      .timeline-step::before {
+        left: 40px !important;
+        transform: translateX(-50%) !important;
+      }
+
+      .timeline-step.even .timeline-content,
+      .timeline-step.odd .timeline-content {
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+      }
+
+      .timeline-step.even .step-number,
+      .timeline-step.odd .step-number {
+        left: 40px !important;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+
+      .timeline-content {
+        padding: 2rem;
+      }
+
+      .cta-steps {
+        gap: 2rem;
+      }
+
+      .cta-step {
+        min-width: 150px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .process-hero {
+        padding: 6rem 0 4rem;
+      }
+
+      .process-hero .display-2 {
+        font-size: 2.5rem;
+      }
+
+      .process-hero .lead {
+        font-size: 1.125rem;
+      }
+
+      .timeline-content h3 {
+        font-size: 1.5rem;
+      }
+
+      .timeline-content .lead {
+        font-size: 1rem;
+      }
+
+      .comparison-card {
+        padding: 2rem;
+      }
+
+      .requirements-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-cta h2 {
+        font-size: 2.25rem;
+      }
+
+      .process-cta p {
+        font-size: 1.125rem;
+      }
+
+      .cta-steps {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .cta-step {
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .process-hero {
+        padding: 5rem 0 3rem;
+      }
+
+      .process-hero .display-2 {
+        font-size: 2rem;
+      }
+
+      .timeline-content {
+        padding: 1.5rem;
+      }
+
+      .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.125rem;
+      }
+
+      .process-timeline::before {
+        left: 30px;
+      }
+
+      .timeline-step::before {
+        left: 30px !important;
+      }
+
+      .timeline-step.even .timeline-content,
+      .timeline-step.odd .timeline-content {
+        margin-left: 60px !important;
+      }
+
+      .timeline-step.even .step-number,
+      .timeline-step.odd .step-number {
+        left: 30px !important;
+      }
+
+      .process-cta {
+        padding: 4rem 0;
+      }
+
+      .process-cta h2 {
+        font-size: 1.75rem;
+      }
+
+      .process-cta p {
+        font-size: 1rem;
+      }
+    }
+
+    /* Animation delays for timeline steps */
+    .timeline-step:nth-child(1) { transition-delay: 100ms; }
+    .timeline-step:nth-child(2) { transition-delay: 200ms; }
+    .timeline-step:nth-child(3) { transition-delay: 300ms; }
+    .timeline-step:nth-child(4) { transition-delay: 400ms; }
+    .timeline-step:nth-child(5) { transition-delay: 500ms; }
+    .timeline-step:nth-child(6) { transition-delay: 600ms; }
+    .timeline-step:nth-child(7) { transition-delay: 700ms; }
+
+    /* Print styles for process page */
+    @media print {
+      .process-hero {
+        margin-top: 0;
+        padding: 2rem 0;
+        background: none;
+      }
+
+      .timeline-content {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+
+      .process-cta {
+        background: none;
+        color: black;
+        padding: 2rem 0;
+      }
+
+      .process-cta::before {
+        display: none;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      .step-outcome {
+        background: #f8f9fa;
+      }
+    }
+  </style>
+    <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process (Active) -->
+          <li class="nav-item"><a class="nav-link active" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Process Hero Section -->
+  <section class="process-hero" id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h1 class="display-2 mb-4 animate-on-scroll">
+            <span class="text-gradient" data-en="Our Transparent Guidance Process" data-ja="透明なガイダンスプロセス">Our Transparent Guidance Process</span>
+          </h1>
+          <p class="lead animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="At Eminent Overseas & Consultants, we follow a structured, ethical approach to ensure proper preparation for your study abroad journey. No false promises, just realistic guidance and support."
+             data-ja="エミネント海外留学コンサルタントでは、留学の旅に適切に備えるための体系的な倫理的アプローチに従います。偽りの約束はなく、現実的なガイダンスとサポートのみです。">
+            At Eminent Overseas & Consultants, we follow a structured, ethical approach to ensure proper preparation for your study abroad journey. No false promises, just realistic guidance and support.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#timeline" class="btn btn-primary">
+              <i class="fas fa-list-ol me-2"></i> <span data-en="View Process Steps" data-ja="プロセスステップを見る">View Process Steps</span>
+            </a>
+            <a href="#comparison" class="btn btn-secondary">
+              <i class="fas fa-exchange-alt me-2"></i> <span data-en="Compare Japan & UK" data-ja="日本と英国を比較">Compare Japan & UK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section class="process-timeline" id="timeline">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Step-by-Step Guidance Process" data-ja="ステップバイステップのガイダンスプロセス">Step-by-Step Guidance Process</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Our transparent 7-step process ensures you're fully prepared for your study abroad journey. Each step builds upon the previous one to create a solid foundation."
+             data-ja="透明な7ステップのプロセスは、留学の旅に完全に備えることを保証します。各ステップは前のステップに基づいて強固な基盤を作ります。">
+            Our transparent 7-step process ensures you're fully prepared for your study abroad journey. Each step builds upon the previous one to create a solid foundation.
+          </p>
+        </div>
+      </div>
+
+      <div class="process-steps-container">
+        <!-- Step 1 -->
+        <div class="timeline-step even animate-on-scroll">
+          <div class="step-number">1</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Week 1" data-ja="第1週">Week 1</span>
+            <h3 data-en="Initial Consultation & Profile Assessment" data-ja="初回相談・プロファイル評価">Initial Consultation & Profile Assessment</h3>
+            <p class="lead" data-en="We begin with a comprehensive consultation to understand your academic background, career goals, and study preferences."
+               data-ja="あなたの学歴、キャリア目標、学習希望を理解するための包括的な相談から始めます。">
+              We begin with a comprehensive consultation to understand your academic background, career goals, and study preferences.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-user-graduate"></i>
+                <span data-en="Academic record evaluation and gap analysis" data-ja="学業成績評価とギャップ分析">Academic record evaluation and gap analysis</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-bullseye"></i>
+                <span data-en="Career goal alignment and realistic expectation setting" data-ja="キャリア目標調整と現実的な期待設定">Career goal alignment and realistic expectation setting</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-money-bill-wave"></i>
+                <span data-en="Financial capacity assessment and budget planning" data-ja="経済能力評価と予算計画">Financial capacity assessment and budget planning</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Clear understanding of your profile and realistic study abroad options for Japan or UK."
+                 data-ja="あなたのプロファイルと日本または英国への現実的な留学オプションの明確な理解。">
+                Clear understanding of your profile and realistic study abroad options for Japan or UK.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step odd animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="step-number">2</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Week 2-3" data-ja="第2-3週">Week 2-3</span>
+            <h3 data-en="Country & Program Selection" data-ja="国・プログラム選択">Country & Program Selection</h3>
+            <p class="lead" data-en="Based on your profile, we help you choose between Japan and UK, and select appropriate programs that match your goals."
+               data-ja="あなたのプロファイルに基づき、日本と英国の選択を支援し、目標に合った適切なプログラムを選択します。">
+              Based on your profile, we help you choose between Japan and UK, and select appropriate programs that match your goals.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-flag"></i>
+                <span data-en="Detailed comparison of Japan vs UK education systems" data-ja="日本対英国教育制度の詳細比較">Detailed comparison of Japan vs UK education systems</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-school"></i>
+                <span data-en="Institution and program recommendation based on eligibility" data-ja="適格性に基づく教育機関とプログラム推奨">Institution and program recommendation based on eligibility</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-calendar-alt"></i>
+                <span data-en="Intake selection (April/September for Japan, September/January for UK)" data-ja="入学時期選択（日本は4月/9月、英国は9月/1月）">Intake selection (April/September for Japan, September/January for UK)</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Finalized country selection and shortlisted 3-5 suitable institutions."
+                 data-ja="最終的な国選択と3-5校の適切な教育機関の短リスト。">
+                Finalized country selection and shortlisted 3-5 suitable institutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step even animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="step-number">3</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Month 1-6 (Japan) / Month 1-2 (UK)" data-ja="1-6ヶ月（日本）/ 1-2ヶ月（英国）">Month 1-6 (Japan) / Month 1-2 (UK)</span>
+            <h3 data-en="Language Preparation (Japan Track Only)" data-ja="語学準備（日本コースのみ）">Language Preparation (Japan Track Only)</h3>
+            <p class="lead" data-en="For Japan-bound students, we provide intensive Japanese language training (N5/N4) in our offline classrooms."
+               data-ja="日本行きの学生には、対面教室での集中的な日本語研修（N5/N4）を提供します。">
+              For Japan-bound students, we provide intensive Japanese language training (N5/N4) in our offline classrooms.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span data-en="Structured offline classroom training (3 hours daily, 6 days/week)" data-ja="体系的な対面教室研修（毎日3時間、週6日）">Structured offline classroom training (3 hours daily, 6 days/week)</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-book"></i>
+                <span data-en="JLPT/NAT test preparation and practice exams" data-ja="JLPT/NATテスト準備と模擬試験">JLPT/NAT test preparation and practice exams</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-comments"></i>
+                <span data-en="Conversational practice and cultural orientation" data-ja="会話練習と文化オリエンテーション">Conversational practice and cultural orientation</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Achieve required Japanese proficiency (N5 minimum) for application and daily life in Japan."
+                 data-ja="日本での申請と日常生活に必要な日本語能力（最低N5）の達成。">
+                Achieve required Japanese proficiency (N5 minimum) for application and daily life in Japan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step odd animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="step-number">4</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Month 2-3" data-ja="2-3ヶ月">Month 2-3</span>
+            <h3 data-en="Application Preparation & Submission" data-ja="申請準備・提出">Application Preparation & Submission</h3>
+            <p class="lead" data-en="We guide you through the complete application process, ensuring all documents meet institutional requirements."
+               data-ja="申請プロセス全体をガイドし、すべての書類が教育機関の要件を満たすことを保証します。">
+              We guide you through the complete application process, ensuring all documents meet institutional requirements.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-file-alt"></i>
+                <span data-en="Document checklist and preparation guidance" data-ja="書類チェックリストと準備ガイダンス">Document checklist and preparation guidance</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-edit"></i>
+                <span data-en="SOP/Personal statement review and improvement" data-ja="SOP/個人陳述書のレビューと改善">SOP/Personal statement review and improvement</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-paper-plane"></i>
+                <span data-en="Application form completion and submission monitoring" data-ja="申請書完成と提出監視">Application form completion and submission monitoring</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Complete application package submitted to selected institutions."
+                 data-ja="選択した教育機関への完全な申請パッケージの提出。">
+                Complete application package submitted to selected institutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step even animate-on-scroll" style="transition-delay: 480ms;">
+          <div class="step-number">5</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Month 3-4" data-ja="3-4ヶ月">Month 3-4</span>
+            <h3 data-en="Admission & Offer Letter Processing" data-ja="入学許可・オファーレター処理">Admission & Offer Letter Processing</h3>
+            <p class="lead" data-en="We monitor your application status and help you understand and respond to admission offers."
+               data-ja="申請状況を監視し、入学オファーの理解と対応を支援します。">
+              We monitor your application status and help you understand and respond to admission offers.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-envelope"></i>
+                <span data-en="Regular follow-up with institutions on application status" data-ja="申請状況に関する教育機関への定期的なフォローアップ">Regular follow-up with institutions on application status</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-file-contract"></i>
+                <span data-en="Offer letter review and explanation of terms and conditions" data-ja="オファーレターのレビューと条件説明">Offer letter review and explanation of terms and conditions</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-check-circle"></i>
+                <span data-en="Acceptance letter preparation and submission" data-ja="承諾書の準備と提出">Acceptance letter preparation and submission</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Secured admission offer from at least one institution and acceptance confirmation."
+                 data-ja="少なくとも1つの教育機関からの入学許可獲得と承諾確認。">
+                Secured admission offer from at least one institution and acceptance confirmation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-step odd animate-on-scroll" style="transition-delay: 600ms;">
+          <div class="step-number">6</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Month 4-5" data-ja="4-5ヶ月">Month 4-5</span>
+            <h3 data-en="Visa Application & Interview Preparation" data-ja="ビザ申請・面接準備">Visa Application & Interview Preparation</h3>
+            <p class="lead" data-en="We guide you through the visa application process and prepare you for the credibility interview."
+               data-ja="ビザ申請プロセスをガイドし、信用調査面接の準備を支援します。">
+              We guide you through the visa application process and prepare you for the credibility interview.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-passport"></i>
+                <span data-en="Complete visa document checklist and preparation" data-ja="完全なビザ書類チェックリストと準備">Complete visa document checklist and preparation</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-money-check-alt"></i>
+                <span data-en="Financial document verification and arrangement guidance" data-ja="財務書類検証と整理ガイダンス">Financial document verification and arrangement guidance</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-comments"></i>
+                <span data-en="Mock interviews and question-answer preparation sessions" data-ja="模擬面接と質疑応答準備セッション">Mock interviews and question-answer preparation sessions</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Complete visa application submitted and interview-ready preparation."
+                 data-ja="完全なビザ申請の提出と面接準備の完了。">
+                Complete visa application submitted and interview-ready preparation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="timeline-step even animate-on-scroll" style="transition-delay: 720ms;">
+          <div class="step-number">7</div>
+          <div class="timeline-content">
+            <span class="step-duration" data-en="Month 5-6" data-ja="5-6ヶ月">Month 5-6</span>
+            <h3 data-en="Pre-Departure Orientation & Travel Arrangements" data-ja="出発前オリエンテーション・旅行手配">Pre-Departure Orientation & Travel Arrangements</h3>
+            <p class="lead" data-en="Final preparation covering accommodation, travel, cultural adjustment, and what to expect in your destination country."
+               data-ja="宿泊、旅行、文化適応、目的地の国での期待についての最終準備。">
+              Final preparation covering accommodation, travel, cultural adjustment, and what to expect in your destination country.
+            </p>
+            
+            <div class="step-features">
+              <div class="step-feature">
+                <i class="fas fa-home"></i>
+                <span data-en="Accommodation arrangement guidance (dormitory/homestay/apartment)" data-ja="宿泊手配ガイダンス（寮/ホームステイ/アパート）">Accommodation arrangement guidance (dormitory/homestay/apartment)</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-plane"></i>
+                <span data-en="Flight booking assistance and airport pickup information" data-ja="フライト予約支援と空港送迎情報">Flight booking assistance and airport pickup information</span>
+              </div>
+              <div class="step-feature">
+                <i class="fas fa-globe-asia"></i>
+                <span data-en="Cultural orientation and country-specific survival guide" data-ja="文化オリエンテーションと国別サバイバルガイド">Cultural orientation and country-specific survival guide</span>
+              </div>
+            </div>
+
+            <div class="step-outcome">
+              <h5 data-en="Outcome" data-ja="結果">Outcome</h5>
+              <p data-en="Fully prepared for departure with all necessary arrangements completed."
+                 data-ja="すべての必要な手配を完了して出発に完全に備える。">
+                Fully prepared for departure with all necessary arrangements completed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Comparison Section -->
+  <section class="process-comparison" id="comparison">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Japan vs UK Process Comparison" data-ja="日本と英国のプロセス比較">Japan vs UK Process Comparison</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="While our guidance process remains ethical and transparent for both countries, there are key differences in timeline and requirements."
+             data-ja="両国に対するガイダンスプロセスは倫理的で透明性を保ちますが、タイムラインと要件には重要な違いがあります。">
+            While our guidance process remains ethical and transparent for both countries, there are key differences in timeline and requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6 animate-on-scroll">
+          <div class="comparison-card japan">
+            <div class="country-icon">
+              <i class="fas fa-torii-gate"></i>
+            </div>
+            <h3 data-en="Study in Japan Process" data-ja="日本留学プロセス">Study in Japan Process</h3>
+            
+            <div class="comparison-timeline">
+              <div class="timeline-item">
+                <div class="timeline-number">1-6</div>
+                <div class="timeline-text" data-en="Months: Japanese Language Training (N5/N4)" data-ja="月: 日本語研修（N5/N4）">Months: Japanese Language Training (N5/N4)</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">2-3</div>
+                <div class="timeline-text" data-en="Months: School Selection & Application" data-ja="月: 学校選択・申請">Months: School Selection & Application</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">3-4</div>
+                <div class="timeline-text" data-en="Months: Visa Processing & Interview" data-ja="月: ビザ処理・面接">Months: Visa Processing & Interview</div>
+              </div>
+            </div>
+
+            <div class="comparison-highlight">
+              <h5 data-en="Key Requirements for Japan" data-ja="日本の主な要件">Key Requirements for Japan</h5>
+              <ul>
+                <li><i class="fas fa-check"></i> <span data-en="Minimum N5 Japanese proficiency" data-ja="最低N5日本語能力">Minimum N5 Japanese proficiency</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="12 years of formal education" data-ja="12年間の正規教育">12 years of formal education</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="Financial proof: ¥1.5-2 million/year" data-ja="資金証明: 年間150-200万円">Financial proof: ¥1.5-2 million/year</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="Health certificate (tuberculosis test)" data-ja="健康証明書（結核検査）">Health certificate (tuberculosis test)</span></li>
+              </ul>
+            </div>
+
+            <a href="study-japan.html" class="btn btn-primary w-100 mt-4">
+              <i class="fas fa-info-circle me-2"></i> <span data-en="Learn About Japan Study" data-ja="日本留学について学ぶ">Learn About Japan Study</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="comparison-card uk">
+            <div class="country-icon">
+              <i class="fas fa-landmark"></i>
+            </div>
+            <h3 data-en="Study in UK Process" data-ja="英国留学プロセス">Study in UK Process</h3>
+            
+            <div class="comparison-timeline">
+              <div class="timeline-item">
+                <div class="timeline-number">2-3</div>
+                <div class="timeline-text" data-en="Months: University Selection & Application" data-ja="月: 大学選択・申請">Months: University Selection & Application</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">1-2</div>
+                <div class="timeline-text" data-en="Months: Offer Acceptance & CAS" data-ja="月: オファー承諾・CAS">Months: Offer Acceptance & CAS</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-number">1-2</div>
+                <div class="timeline-text" data-en="Months: Visa Processing & Biometrics" data-ja="月: ビザ処理・生体認証">Months: Visa Processing & Biometrics</div>
+              </div>
+            </div>
+
+            <div class="comparison-highlight">
+              <h5 data-en="Key Requirements for UK" data-ja="英国の主な要件">Key Requirements for UK</h5>
+              <ul>
+                <li><i class="fas fa-check"></i> <span data-en="IELTS 6.0-6.5 (or equivalent)" data-ja="IELTS 6.0-6.5（または同等）">IELTS 6.0-6.5 (or equivalent)</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="Academic qualifications (minimum 65% or 2.5 GPA)" data-ja="学歴資格（最低65%またはGPA 2.5）">Academic qualifications (minimum 65% or 2.5 GPA)</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="Financial proof: £1,334/month (outside London)" data-ja="資金証明: 月£1,334（ロンドン以外）">Financial proof: £1,334/month (outside London)</span></li>
+                <li><i class="fas fa-check"></i> <span data-en="Tuberculosis test certificate" data-ja="結核検査証明書">Tuberculosis test certificate</span></li>
+              </ul>
+            </div>
+
+            <a href="study-uk.html" class="btn btn-primary w-100 mt-4">
+              <i class="fas fa-info-circle me-2"></i> <span data-en="Learn About UK Study" data-ja="英国留学について学ぶ">Learn About UK Study</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto text-center animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle me-2"></i>
+            <span data-en="Note: Both processes include our ethical counseling approach with no visa guarantees. We focus on proper preparation rather than unrealistic promises."
+                   data-ja="注: 両プロセスにはビザ保証のない倫理的カウンセリングアプローチを含みます。非現実的な約束ではなく適切な準備に焦点を当てます。">
+              Note: Both processes include our ethical counseling approach with no visa guarantees. We focus on proper preparation rather than unrealistic promises.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements Section -->
+  <section class="requirements-section" id="requirements">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="General Requirements & Documents" data-ja="一般的要件・書類">General Requirements & Documents</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="While specific requirements vary by country and institution, here are the common documents needed for a successful application."
+             data-ja="特定の要件は国や教育機関によって異なりますが、成功した申請に必要な一般的な書類は以下の通りです。">
+            While specific requirements vary by country and institution, here are the common documents needed for a successful application.
+          </p>
+        </div>
+      </div>
+
+      <div class="requirements-grid">
+        <!-- Academic Documents -->
+        <div class="requirement-category animate-on-scroll">
+          <div class="category-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h4 data-en="Academic Documents" data-ja="学歴書類">Academic Documents</h4>
+          <ul class="requirement-list">
+            <li><i class="fas fa-check"></i> <span data-en="All academic certificates and transcripts" data-ja="すべての学歴証明書と成績証明書">All academic certificates and transcripts</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Mark sheets from SSC/HSC to Bachelor's" data-ja="SSC/HSCから学士までの成績表">Mark sheets from SSC/HSC to Bachelor's</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Medium of instruction certificate (if available)" data-ja="教育言語証明書（利用可能な場合）">Medium of instruction certificate (if available)</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Transcript conversion to GPA (if required)" data-ja="GPAへの成績証明書変換（必要な場合）">Transcript conversion to GPA (if required)</span></li>
+          </ul>
+          <div class="requirement-important">
+            <h5 data-en="Important" data-ja="重要">Important</h5>
+            <p data-en="All documents must be attested by the Education Board and Ministry of Foreign Affairs."
+               data-ja="すべての書類は教育委員会と外務省によって認証されなければなりません。">
+              All documents must be attested by the Education Board and Ministry of Foreign Affairs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Language Proficiency -->
+        <div class="requirement-category animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="category-icon">
+            <i class="fas fa-language"></i>
+          </div>
+          <h4 data-en="Language Proficiency" data-ja="語学能力">Language Proficiency</h4>
+          <ul class="requirement-list">
+            <li><i class="fas fa-check"></i> <span data-en="For Japan: JLPT/NAT Test Certificate (N5 minimum)" data-ja="日本: JLPT/NATテスト証明書（最低N5）">For Japan: JLPT/NAT Test Certificate (N5 minimum)</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="For UK: IELTS/TOEFL/PTE Academic certificate" data-ja="英国: IELTS/TOEFL/PTE Academic証明書">For UK: IELTS/TOEFL/PTE Academic certificate</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Test score validity (usually 2 years)" data-ja="テストスコア有効期限（通常2年）">Test score validity (usually 2 years)</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Test center original score report" data-ja="テストセンターの原本スコアレポート">Test center original score report</span></li>
+          </ul>
+          <div class="requirement-important">
+            <h5 data-en="Important" data-ja="重要">Important</h5>
+            <p data-en="Some UK universities accept medium of instruction certificate instead of IELTS."
+               data-ja="一部の英国大学はIELTSの代わりに教育言語証明書を受け入れます。">
+              Some UK universities accept medium of instruction certificate instead of IELTS.
+            </p>
+          </div>
+        </div>
+
+        <!-- Financial Documents -->
+        <div class="requirement-category animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="category-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h4 data-en="Financial Documents" data-ja="財務書類">Financial Documents</h4>
+          <ul class="requirement-list">
+            <li><i class="fas fa-check"></i> <span data-en="Bank statements (last 6 months)" data-ja="銀行取引明細書（過去6ヶ月）">Bank statements (last 6 months)</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Bank solvency certificate" data-ja="銀行支払能力証明書">Bank solvency certificate</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Sponsor's financial documents" data-ja="スポンサーの財務書類">Sponsor's financial documents</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Income tax documents (if applicable)" data-ja="所得税書類（該当する場合）">Income tax documents (if applicable)</span></li>
+          </ul>
+          <div class="requirement-important">
+            <h5 data-en="Important" data-ja="重要">Important</h5>
+            <p data-en="Funds must be in liquid form and properly documented. Loan sanction letters are also acceptable."
+               data-ja="資金は流動性のある形式で適切に文書化されなければなりません。ローン承認書も受け入れられます。">
+              Funds must be in liquid form and properly documented. Loan sanction letters are also acceptable.
+            </p>
+          </div>
+        </div>
+
+        <!-- Personal Documents -->
+        <div class="requirement-category animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="category-icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h4 data-en="Personal Documents" data-ja="個人書類">Personal Documents</h4>
+          <ul class="requirement-list">
+            <li><i class="fas fa-check"></i> <span data-en="Valid passport (minimum 6 months validity)" data-ja="有効なパスポート（最低6ヶ月の有効期限）">Valid passport (minimum 6 months validity)</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Birth certificate" data-ja="出生証明書">Birth certificate</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="NID/Passport copies of parents/sponsors" data-ja="親/スポンサーのNID/パスポートコピー">NID/Passport copies of parents/sponsors</span></li>
+            <li><i class="fas fa-check"></i> <span data-en="Passport-size photographs (recent)" data-ja="パスポートサイズ写真（最近のもの）">Passport-size photographs (recent)</span></li>
+          </ul>
+          <div class="requirement-important">
+            <h5 data-en="Important" data-ja="重要">Important</h5>
+            <p data-en="All documents must be in English or officially translated. Keep multiple copies of everything."
+               data-ja="すべての書類は英語または公式翻訳でなければなりません。すべての書類の複数コピーを保管してください。">
+              All documents must be in English or officially translated. Keep multiple copies of everything.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process CTA Section -->
+  <section class="process-cta" id="start-process">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="animate-on-scroll" data-en="Ready to Start Your Study Abroad Journey?" data-ja="留学の旅を始める準備はできましたか？">Ready to Start Your Study Abroad Journey?</h2>
+          <p class="animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Begin your journey with Eminent Overseas & Consultants. We'll guide you through every step with transparency and ethical support."
+             data-ja="エミネント海外留学コンサルタントで旅を始めましょう。透明性と倫理的サポートであらゆるステップをガイドします。">
+            Begin your journey with Eminent Overseas & Consultants. We'll guide you through every step with transparency and ethical support.
+          </p>
+          
+          <div class="cta-steps animate-on-scroll" style="transition-delay: 240ms;">
+            <div class="cta-step">
+              <div class="cta-step-number">1</div>
+              <p data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</p>
+            </div>
+            <div class="cta-step">
+              <div class="cta-step-number">2</div>
+              <p data-en="Get Profile Assessment" data-ja="プロファイル評価を受ける">Get Profile Assessment</p>
+            </div>
+            <div class="cta-step">
+              <div class="cta-step-number">3</div>
+              <p data-en="Start Your Journey" data-ja="旅を始める">Start Your Journey</p>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 360ms;">
+            <a href="contact.php" class="btn btn-light px-5 py-3">
+              <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation Now" data-ja="今すぐ無料相談を予約">Book Free Consultation Now</span>
+            </a>
+            <a href="tel:+880XXXXXXXXXX" class="btn btn-outline-light px-5 py-3">
+              <i class="fas fa-phone me-2"></i> <span data-en="Call for Immediate Assistance" data-ja="即時サポートにお電話ください">Call for Immediate Assistance</span>
+            </a>
+          </div>
+
+          <p class="mt-4 opacity-75 animate-on-scroll" style="transition-delay: 480ms;">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <span data-en="Visit Our Office: 16/9, Indira Road, Dhaka | Sat-Thu: 10:00 AM – 6:00 PM"
+                  data-ja="オフィス訪問: 16/9 インディラ通り, ダッカ | 土-木: 午前10時 – 午後6時">
+              Visit Our Office: 16/9, Indira Road, Dhaka | Sat-Thu: 10:00 AM – 6:00 PM
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants provides ethical, transparent study abroad guidance for Bangladesh students pursuing education in Japan and United Kingdom. We focus on proper preparation and honest counseling."
+             data-ja="エミネント海外留学コンサルタントは、日本と英国で教育を追求するバングラデシュ人学生に倫理的で透明性のある留学ガイダンスを提供します。適切な準備と誠実なカウンセリングに焦点を当てています。">
+            Eminent Overseas & Consultants provides ethical, transparent study abroad guidance 
+            for Bangladesh students pursuing education in Japan and United Kingdom. 
+            We focus on proper preparation and honest counseling.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Our Services" data-ja="サービス一覧">Our Services</h5>
+          <a href="study-japan.html" class="footer-link" data-en="Japan Study Guidance" data-ja="日本留学ガイダンス">Japan Study Guidance</a>
+          <a href="study-uk.html" class="footer-link" data-en="UK Study Guidance" data-ja="英国留学ガイダンス">UK Study Guidance</a>
+          <a href="japanese-course.html#n5" class="footer-link" data-en="Japanese N5 Course" data-ja="日本語N5コース">Japanese N5 Course</a>
+          <a href="japanese-course.html#n4" class="footer-link" data-en="Japanese N4 Course" data-ja="日本語N4コース">Japanese N4 Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Student Visa Support" data-ja="学生ビザサポート">Student Visa Support</a>
+          <a href="process.html" class="footer-link" data-en="Application Process" data-ja="申請プロセス">Application Process</a>
+          <a href="contact.php" class="footer-link" data-en="Free Counseling" data-ja="無料相談">Free Counseling</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">16/9, Indira Road (Behind Tejgaon College), Dhaka 1212, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call or message for appointment" data-ja="予約のためにお電話またはメッセージを">Call or message for appointment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes."
+           data-ja="ガイダンスと準備サポートを提供します。ビザ承認や入学結果を保証するものではありません。">
+          We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>  <script src="js/main.js"></script>
+  
+  <!-- Process Page Specific JavaScript -->
+  <script>
+    // Process Page Specific JavaScript
+    class ProcessPageManager {
+      constructor() {
+        this.init();
+      }
+
+      init() {
+        this.initScrollAnimations();
+        this.initBackToTop();
+        this.initCurrentYear();
+        this.initTimelineAnimation();
+        this.initSmoothScroll();
+        this.initPrintButton();
+        this.initLanguageSystem();
+        this.initThemeSystem();
+        this.initMobileMenu();
+      }
+
+      initScrollAnimations() {
+        const observerOptions = { 
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        const animateEls = document.querySelectorAll('.animate-on-scroll');
+        animateEls.forEach(el => observer.observe(el));
+
+        // Make sections visible immediately if already in view
+        window.addEventListener('load', () => {
+          animateEls.forEach(el => {
+            const r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight - 20) {
+              el.classList.add('visible');
+            }
+          });
+        });
+      }
+
+      initTimelineAnimation() {
+        const timelineSteps = document.querySelectorAll('.timeline-step');
+        const timelineObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { 
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px'
+        });
+
+        timelineSteps.forEach(step => timelineObserver.observe(step));
+      }
+
+      initBackToTop() {
+        const backTopBtn = document.getElementById('backTop');
+        if (!backTopBtn) return;
+
+        const updateBackTopVisibility = () => {
+          if (window.scrollY > 300) {
+            backTopBtn.classList.add('show');
+          } else {
+            backTopBtn.classList.remove('show');
+          }
+        };
+
+        updateBackTopVisibility();
+        
+        window.addEventListener('scroll', () => {
+          updateBackTopVisibility();
+        });
+
+        backTopBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      initCurrentYear() {
+        const yearEl = document.getElementById('currentYear');
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+      }
+
+      initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+              const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+              const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight;
+              
+              window.scrollTo({
+                top: Math.max(offsetTop, 0),
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      }
+
+      initPrintButton() {
+        // Add print functionality if needed
+        const printBtn = document.getElementById('printProcess');
+        if (printBtn) {
+          printBtn.addEventListener('click', () => {
+            window.print();
+          });
+        }
+      }
+
+      initLanguageSystem() {
+        // Simple language toggle for this page
+        const langToggleButtons = document.querySelectorAll('.lang-toggle');
+        let currentLang = localStorage.getItem('language') || 'en';
+        
+        const updatePageLanguage = () => {
+          document.documentElement.lang = currentLang;
+          document.querySelectorAll('[data-en], [data-ja]').forEach(element => {
+            const text = element.dataset[currentLang];
+            if (text) {
+              if (text.includes('<span') || text.includes('<br')) {
+                element.innerHTML = text;
+              } else {
+                element.textContent = text;
+              }
+            }
+          });
+          
+          // Update toggle button text
+          const toggleText = currentLang === 'en' ? 'EN' : 'JP';
+          langToggleButtons.forEach(btn => {
+            btn.textContent = toggleText;
+          });
+          
+          // Update page title
+          if (currentLang === 'ja') {
+            document.title = 'ガイダンスプロセス | エミネント海外留学コンサルタント';
+          } else {
+            document.title = 'Our Guidance Process | Eminent Overseas & Consultants';
+          }
+          
+          // Update marquee content
+          this.updateMarqueeContent();
+        };
+        
+        // Initialize marquee content
+        this.updateMarqueeContent = () => {
+          const marqueeContent = {
+            en: [
+              "Eminent Overseas & Consultants | Our Transparent 7-Step Guidance Process",
+              "Japan & UK Study Abroad Process | Step-by-Step Ethical Guidance",
+              "No False Promises | Proper Preparation | Transparent Timeline",
+              "Book Your Free Process Consultation | Dhaka Office | Sat-Thu, 10 AM-6 PM"
+            ],
+            ja: [
+              "エミネント海外留学コンサルタント | 透明な7ステップガイダンスプロセス",
+              "日本・英国留学プロセス | ステップバイステップの倫理的ガイダンス",
+              "偽りの約束なし | 適切な準備 | 透明なタイムライン",
+              "無料プロセス相談を予約 | ダッカオフィス | 土-木、午前10時-午後6時"
+            ]
+          };
+          
+          const marqueeTrack = document.querySelector('.marquee-track');
+          if (marqueeTrack) {
+            const content = marqueeContent[currentLang];
+            marqueeTrack.innerHTML = '';
+            
+            // Create duplicate content for seamless loop
+            [...content, ...content].forEach(item => {
+              const div = document.createElement('div');
+              div.className = 'marquee-item';
+              div.innerHTML = `
+                <span class="marquee-dot"></span>
+                ${item}
+              `;
+              marqueeTrack.appendChild(div);
+            });
+          }
+        };
+        
+        // Set up event listeners
+        langToggleButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ja' : 'en';
+            localStorage.setItem('language', currentLang);
+            updatePageLanguage();
+          });
+        });
+        
+        // Initial language setup
+        updatePageLanguage();
+      }
+
+      initThemeSystem() {
+        const themeToggleButtons = document.querySelectorAll('.theme-toggle');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+        
+        const applyTheme = (theme) => {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+          
+          // Update toggle icon
+          const icon = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+          document.querySelectorAll('.theme-toggle i').forEach(el => {
+            el.className = icon;
+          });
+        };
+        
+        themeToggleButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(currentTheme);
+          });
+        });
+        
+        // Initial theme setup
+        applyTheme(currentTheme);
+      }
+
+      initMobileMenu() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        if (navLinks && navbarCollapse) {
+          navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              if (window.innerWidth < 992) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                  bsCollapse.hide();
+                }
+              }
+            });
+          });
+        }
+      }
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      const processPageManager = new ProcessPageManager();
+      
+
+      
+      // Update navbar active state
+      const currentPage = window.location.pathname;
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage || 
+            (currentPage.includes('process') && link.getAttribute('href') === 'process.html')) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+      
+      // Add scroll spy for timeline
+      const timelineSections = document.querySelectorAll('.timeline-step');
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+      };
+      
+      const callback = (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('highlighted');
+          }
+        });
+      };
+      
+      const observer = new IntersectionObserver(callback, options);
+      timelineSections.forEach(section => observer.observe(section));
+    });
+
+    // Add CSS for print styles
+    const printStyles = `
+      @media print {
+        .navbar, .top-marquee, .process-cta .btn, .back-top, .d-print-none {
+          display: none !important;
+        }
+        
+        .process-hero {
+          margin-top: 0 !important;
+          padding: 1rem 0 !important;
+        }
+        
+        .timeline-content {
+          break-inside: avoid;
+          box-shadow: none !important;
+          border: 1px solid #ddd !important;
+        }
+        
+        body {
+          font-size: 12pt !important;
+          line-height: 1.5 !important;
+        }
+        
+        h1, h2, h3, h4 {
+          color: black !important;
+        }
+        
+        .text-gradient {
+          background: none !important;
+          color: black !important;
+        }
+        
+        a {
+          color: black !important;
+          text-decoration: none !important;
+        }
+        
+        .step-number, .country-icon, .category-icon {
+          background: #f0f0f0 !important;
+          color: black !important;
+          box-shadow: none !important;
+        }
+      }
+    `;
+    
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = printStyles;
+    document.head.appendChild(styleSheet);
+  </script>
+</body>
+</html>
