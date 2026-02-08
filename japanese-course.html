@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Japanese Language Courses - Eminent Overseas & Consultants" data-ja="日本語コース - エミネント海外留学コンサルタント">Japanese Language Courses - Eminent Overseas & Consultants</title>
+  <meta name="description" content="Structured offline Japanese language training (N5/N4) for Japan study. 3 hours daily, 6 days/week. Build language proficiency for academic success in Japan." />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Japanese Language Courses - Eminent Overseas & Consultants">
+  <meta property="og:description" content="Offline Japanese N5/N4 courses for Japan study preparation. Intensive training for academic success.">
+  <meta property="og:image" content="images/japanese-course-banner.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/japanese-course.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Japanese Language Courses">
+  <meta name="twitter:description" content="Intensive offline Japanese training for Japan study">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Page Specific CSS -->
+  <style>
+    /* ========================
+       JAPANESE COURSE PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* Page Header */
+    .page-header {
+      padding-top: calc(var(--marquee-height) + var(--navbar-height) + 4rem);
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    [data-theme="dark"] .page-header {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    }
+    
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-200) 0%, transparent 70%);
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    
+    [data-theme="dark"] .page-header::before {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+    }
+    
+    .page-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Course Categories */
+    .course-category-nav {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+    
+    .category-list {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .category-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.5rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-base);
+      white-space: nowrap;
+    }
+    
+    .category-item:hover {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      border-color: var(--primary-300);
+      transform: translateY(-2px);
+    }
+    
+    [data-theme="dark"] .category-item:hover {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .category-item.active {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+    }
+    
+    /* Course Hero Banner */
+    .course-hero-banner {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-bottom: 4rem;
+      height: 400px;
+    }
+    
+    .course-hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .course-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 3rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+      color: white;
+    }
+    
+    .course-hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .course-hero-content p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    
+    /* Detailed Course Cards */
+    .detailed-course-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+    }
+    
+    .detailed-course-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+    
+    .course-badge {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+    
+    .course-header {
+      padding: 3rem 3rem 2rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .course-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .course-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Course Pricing */
+    .course-pricing {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    
+    [data-theme="dark"] .course-pricing {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .course-fee {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-700);
+    }
+    
+    .course-label {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    
+    /* Course Details Grid */
+    .course-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 3rem;
+    }
+    
+    .course-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition-base);
+    }
+    
+    .course-section:hover {
+      border-color: var(--primary-300);
+      transform: translateY(-4px);
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-200);
+    }
+    
+    .section-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    
+    .section-content {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .feature-list, .outcome-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .feature-list li, .outcome-list li {
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .feature-list li:before, .outcome-list li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-600);
+      font-weight: bold;
+    }
+    
+    /* Course Features Grid */
+    .course-features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 3rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .course-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      transition: var(--transition-base);
+    }
+    
+    .course-feature-item:hover {
+      border-color: var(--primary-300);
+      transform: translateY(-2px);
+    }
+    
+    .course-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-600);
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+    
+    [data-theme="dark"] .course-feature-icon {
+      background: rgba(14, 165, 233, 0.15);
+    }
+    
+    .course-feature-content h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    
+    .course-feature-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    /* Call to Action */
+    .course-cta {
+      padding: 2rem 3rem;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      color: white;
+      text-align: center;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+    
+    .course-cta h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .course-cta p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Why Learn Section */
+    .why-learn-section {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+    
+    [data-theme="dark"] .why-learn-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+    
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .reason-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition-base);
+    }
+    
+    .reason-item:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .reason-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+    }
+    
+    .reason-item h4 {
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .reason-item p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .course-hero-banner {
+        height: 350px;
+      }
+      
+      .course-hero-content {
+        padding: 2rem;
+      }
+      
+      .course-hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .course-header,
+      .course-details-grid,
+      .course-features-grid,
+      .course-cta {
+        padding: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .page-header {
+        padding-top: calc(var(--marquee-height) + var(--navbar-height) + 3rem);
+        padding-bottom: 3rem;
+      }
+      
+      .course-hero-banner {
+        height: 300px;
+        margin-bottom: 3rem;
+      }
+      
+      .course-hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .course-hero-content p {
+        font-size: 1.125rem;
+      }
+      
+      .course-header h2 {
+        font-size: 2rem;
+      }
+      
+      .course-subtitle {
+        font-size: 1.125rem;
+      }
+      
+      .category-list {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+      
+      .category-item {
+        white-space: nowrap;
+      }
+      
+      .course-details-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .course-fee {
+        font-size: 1.75rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .course-hero-banner {
+        height: 250px;
+      }
+      
+      .course-hero-content {
+        padding: 1.5rem;
+      }
+      
+      .course-hero-content h1 {
+        font-size: 1.75rem;
+      }
+      
+      .course-hero-content p {
+        font-size: 1rem;
+      }
+      
+      .course-header,
+      .course-details-grid,
+      .course-features-grid,
+      .course-cta {
+        padding: 1.5rem;
+      }
+      
+      .course-header h2 {
+        font-size: 1.75rem;
+      }
+      
+      .course-features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .course-pricing {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="page-header-content animate-on-scroll">
+            <h1 class="display-2 mb-4 animate-on-scroll" data-en="Japanese Language Courses" data-ja="日本語教育コース">Japanese Language Courses</h1>
+            <p class="lead mb-5 animate-on-scroll" style="transition-delay: 120ms;"
+               data-en="Structured offline classroom training designed to help you achieve Japanese language proficiency for study, work, and life in Japan. Our intensive N5 and N4 courses prepare you for success."
+               data-ja="日本での勉強、仕事、生活のために日本語能力を達成するために設計された体系的な対面教室トレーニング。当社の集中N5・N4コースは成功への準備を整えます。">
+              Structured offline classroom training designed to help you achieve Japanese language proficiency for study, work, and life in Japan. Our intensive N5 and N4 courses prepare you for success.
+            </p>
+            
+            <!-- Course Category Navigation -->
+            <div class="course-category-nav animate-on-scroll" style="transition-delay: 240ms;">
+              <div class="category-list">
+                <a href="#n5-course" class="category-item active" data-en="N5 Course (Beginner)" data-ja="N5コース（初心者）">N5 Course (Beginner)</a>
+                <a href="#n4-course" class="category-item" data-en="N4 Course (Intermediate)" data-ja="N4コース（中級）">N4 Course (Intermediate)</a>
+                <a href="#why-learn" class="category-item" data-en="Why Learn Japanese" data-ja="日本語を学ぶ理由">Why Learn Japanese</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Hero Banner -->
+  <section class="course-hero-banner animate-on-scroll">
+    <img src="images/japanese-course-banner.jpg" alt="Japanese language classroom training at Eminent Overseas" class="course-hero-image" loading="lazy">
+    <div class="course-hero-content">
+      <h1 data-en="Master Japanese for Your Japan Study Journey" data-ja="日本留学の旅のために日本語をマスター">Master Japanese for Your Japan Study Journey</h1>
+      <p data-en="Offline classroom training | 3 hours daily | 6 days per week | N5/N4 levels | JLPT/NAT exam preparation"
+         data-ja="対面教室トレーニング | 毎日3時間 | 週6日 | N5/N4レベル | JLPT/NAT試験対策">
+        Offline classroom training | 3 hours daily | 6 days per week | N5/N4 levels | JLPT/NAT exam preparation
+      </p>
+    </div>
+  </section>
+
+  <!-- N5 Course -->
+  <section class="detailed-course-section" id="n5-course">
+    <div class="container">
+      <div class="detailed-course-card animate-on-scroll">
+        <div class="course-header">
+          <span class="course-badge" data-en="Beginner Level" data-ja="初心者レベル">Beginner Level</span>
+          <h2 data-en="Japanese Language Course – N5" data-ja="日本語コース – N5">Japanese Language Course – N5</h2>
+          <p class="course-subtitle" 
+             data-en="Begin your Japanese language journey with our comprehensive N5 course designed for absolute beginners. Master the fundamentals and build a strong foundation for Japanese language proficiency."
+             data-ja="完全な初心者向けに設計された包括的なN5コースで日本語の旅を始めましょう。基礎をマスターし、日本語能力の強固な基盤を築きます。">
+            Begin your Japanese language journey with our comprehensive N5 course designed for absolute beginners. Master the fundamentals and build a strong foundation for Japanese language proficiency.
+          </p>
+          
+          <!-- Course Pricing -->
+          <div class="course-pricing">
+            <div class="course-label" data-en="Course Fee" data-ja="コース料金">Course Fee</div>
+            <div class="course-fee">15,000 BDT</div>
+            <div class="course-label" data-en="Japanese N5 Course - Beginner Level" data-ja="日本語N5コース - 初心者レベル">Japanese N5 Course - Beginner Level</div>
+          </div>
+        </div>
+        
+        <!-- Course Details Grid -->
+        <div class="course-details-grid">
+          <!-- Course Objective -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3 class="section-title" data-en="Course Objective" data-ja="コース目標">Course Objective</h3>
+            </div>
+            <div class="section-content">
+              <p data-en="The N5 course is designed for students with no prior knowledge of the Japanese language. We start from absolute basics and build a solid foundation for Japanese language learning."
+                 data-ja="N5コースは事前の日本語知識を持たない学生向けに設計されています。絶対的な基礎から始め、日本語学習の強固な基盤を構築します。">
+                The N5 course is designed for students with no prior knowledge of the Japanese language. We start from absolute basics and build a solid foundation for Japanese language learning.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Curriculum Coverage -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3 class="section-title" data-en="Curriculum Coverage" data-ja="カリキュラム内容">Curriculum Coverage</h3>
+            </div>
+            <div class="section-content">
+              <ul class="feature-list">
+                <li data-en="Hiragana and Katakana" data-ja="ひらがなとカタカナ">Hiragana and Katakana</li>
+                <li data-en="Basic grammar structures" data-ja="基本文法構造">Basic grammar structures</li>
+                <li data-en="Everyday vocabulary" data-ja="日常語彙">Everyday vocabulary</li>
+                <li data-en="Sentence construction" data-ja="文構築">Sentence construction</li>
+                <li data-en="Common daily expressions" data-ja="一般的な日常表現">Common daily expressions</li>
+                <li data-en="Basic listening & speaking" data-ja="基本リスニング＆スピーキング">Basic listening & speaking</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Learning Outcomes -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="section-title" data-en="Learning Outcomes" data-ja="学習成果">Learning Outcomes</h3>
+            </div>
+            <div class="section-content">
+              <p data-en="After completing the N5 course, students will be able to:" data-ja="N5コース修了後、学生は以下のことができるようになります：">
+                After completing the N5 course, students will be able to:
+              </p>
+              <ul class="outcome-list">
+                <li data-en="Understand basic Japanese" data-ja="基本的な日本語を理解する">Understand basic Japanese</li>
+                <li data-en="Communicate at beginner level" data-ja="初心者レベルでコミュニケーションする">Communicate at beginner level</li>
+                <li data-en="Read & write basic scripts" data-ja="基本的な文字を読み書きする">Read & write basic scripts</li>
+                <li data-en="Prepare for JLPT/NAT N5" data-ja="JLPT/NAT N5の準備をする">Prepare for JLPT/NAT N5</li>
+                <li data-en="Progress to N4 level" data-ja="N4レベルに進む">Progress to N4 level</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Course Features -->
+        <div class="course-features-grid">
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Duration" data-ja="期間">Duration</h4>
+              <p data-en="3 Months" data-ja="3ヶ月">3 Months</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Schedule" data-ja="スケジュール">Schedule</h4>
+              <p data-en="6 Days/Week" data-ja="週6日">6 Days/Week</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Daily Hours" data-ja="日次時間">Daily Hours</h4>
+              <p data-en="3 Hours/Day" data-ja="1日3時間">3 Hours/Day</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Mode" data-ja="形式">Mode</h4>
+              <p data-en="Offline Only" data-ja="対面のみ">Offline Only</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CTA for N5 -->
+        <div class="course-cta">
+          <h3 data-en="Ready to Start Your Japanese Journey?" data-ja="日本語の旅を始める準備はできていますか？">Ready to Start Your Japanese Journey?</h3>
+          <p data-en="Join our N5 course and build a solid foundation for your Japan study plans. Limited seats available for the next batch."
+             data-ja="N5コースに参加して、日本留学計画のための強固な基礎を築きましょう。次期バッチの座席は限られています。">
+            Join our N5 course and build a solid foundation for your Japan study plans. Limited seats available for the next batch.
+          </p>
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Enroll Now for N5" data-ja="N5に今すぐ登録">Enroll Now for N5</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- N4 Course -->
+  <section class="detailed-course-section" id="n4-course">
+    <div class="container">
+      <div class="detailed-course-card animate-on-scroll" style="transition-delay: 120ms;">
+        <div class="course-header">
+          <span class="course-badge" data-en="Intermediate Level" data-ja="中級レベル">Intermediate Level</span>
+          <h2 data-en="Japanese Language Course – N4" data-ja="日本語コース – N4">Japanese Language Course – N4</h2>
+          <p class="course-subtitle" 
+             data-en="Advance your Japanese language skills with our intensive N4 course. Build upon your foundation and develop practical communication abilities for real-life situations in Japan."
+             data-ja="集中N4コースで日本語スキルを向上させましょう。基礎を築き、日本の実生活状況のための実践的コミュニケーション能力を開発します。">
+            Advance your Japanese language skills with our intensive N4 course. Build upon your foundation and develop practical communication abilities for real-life situations in Japan.
+          </p>
+          
+          <!-- Course Pricing -->
+          <div class="course-pricing">
+            <div class="course-label" data-en="Course Fee" data-ja="コース料金">Course Fee</div>
+            <div class="course-fee">15,000 BDT</div>
+            <div class="course-label" data-en="Japanese N4 Course - Intermediate Level" data-ja="日本語N4コース - 中級レベル">Japanese N4 Course - Intermediate Level</div>
+          </div>
+        </div>
+        
+        <!-- Course Details Grid -->
+        <div class="course-details-grid">
+          <!-- Course Objective -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3 class="section-title" data-en="Course Objective" data-ja="コース目標">Course Objective</h3>
+            </div>
+            <div class="section-content">
+              <p data-en="The N4 course is designed for students who have completed the N5 level or possess basic Japanese language knowledge. We focus on developing practical communication skills for daily situations."
+                 data-ja="N4コースはN5レベルを修了したか基本的な日本語知識を持つ学生向けに設計されています。日常状況のための実践的コミュニケーションスキルの開発に焦点を当てます。">
+                The N4 course is designed for students who have completed the N5 level or possess basic Japanese language knowledge. We focus on developing practical communication skills for daily situations.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Curriculum Coverage -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3 class="section-title" data-en="Curriculum Coverage" data-ja="カリキュラム内容">Curriculum Coverage</h3>
+            </div>
+            <div class="section-content">
+              <ul class="feature-list">
+                <li data-en="Intermediate grammar patterns" data-ja="中級文法パターン">Intermediate grammar patterns</li>
+                <li data-en="Expanded vocabulary" data-ja="拡張語彙">Expanded vocabulary</li>
+                <li data-en="Introduction to Kanji" data-ja="漢字入門">Introduction to Kanji</li>
+                <li data-en="Reading short passages" data-ja="短い文章読解">Reading short passages</li>
+                <li data-en="Listening comprehension" data-ja="リスニング理解">Listening comprehension</li>
+                <li data-en="Speaking fluency development" data-ja="スピーキング流暢性開発">Speaking fluency development</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Learning Outcomes -->
+          <div class="course-section">
+            <div class="section-header">
+              <div class="section-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="section-title" data-en="Learning Outcomes" data-ja="学習成果">Learning Outcomes</h3>
+            </div>
+            <div class="section-content">
+              <p data-en="After completing the N4 course, students will be able to:" data-ja="N4コース修了後、学生は以下のことができるようになります：">
+                After completing the N4 course, students will be able to:
+              </p>
+              <ul class="outcome-list">
+                <li data-en="Communicate confidently in daily situations" data-ja="日常状況で自信を持ってコミュニケーションする">Communicate confidently in daily situations</li>
+                <li data-en="Understand commonly used written Japanese" data-ja="一般的に使用される日本語の文章を理解する">Understand commonly used written Japanese</li>
+                <li data-en="Prepare for JLPT/NAT N4" data-ja="JLPT/NAT N4の準備をする">Prepare for JLPT/NAT N4</li>
+                <li data-en="Use Japanese effectively in academic & social environments" data-ja="学術的・社会的環境で効果的に日本語を使用する">Use Japanese effectively in academic & social environments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Course Features -->
+        <div class="course-features-grid">
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Duration" data-ja="期間">Duration</h4>
+              <p data-en="3 Months" data-ja="3ヶ月">3 Months</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Schedule" data-ja="スケジュール">Schedule</h4>
+              <p data-en="6 Days/Week" data-ja="週6日">6 Days/Week</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Daily Hours" data-ja="日次時間">Daily Hours</h4>
+              <p data-en="3 Hours/Day" data-ja="1日3時間">3 Hours/Day</p>
+            </div>
+          </div>
+          
+          <div class="course-feature-item">
+            <div class="course-feature-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="course-feature-content">
+              <h4 data-en="Mode" data-ja="形式">Mode</h4>
+              <p data-en="Offline Only" data-ja="対面のみ">Offline Only</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CTA for N4 -->
+        <div class="course-cta">
+          <h3 data-en="Advance Your Japanese Proficiency" data-ja="日本語能力を向上させましょう">Advance Your Japanese Proficiency</h3>
+          <p data-en="Take your Japanese to the next level with our N4 course. Essential for students planning to study in Japanese technical colleges or universities."
+             data-ja="N4コースで日本語を次のレベルに進めましょう。日本の専門学校や大学での留学を計画する学生に必須です。">
+            Take your Japanese to the next level with our N4 course. Essential for students planning to study in Japanese technical colleges or universities.
+          </p>
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Enroll Now for N4" data-ja="N4に今すぐ登録">Enroll Now for N4</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Learn Japanese Section -->
+  <section class="why-learn-section" id="why-learn">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Why Learn Japanese with Eminent?" data-ja="エミネントで日本語を学ぶ理由">Why Learn Japanese with Eminent?</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="We provide more than just language training. Our approach prepares you for academic success, cultural adaptation, and professional opportunities in Japan."
+             data-ja="当社は単なる語学研修以上のものを提供します。日本の学業成功、文化適応、就労機会に向けた準備を整えるアプローチです。">
+            We provide more than just language training. Our approach prepares you for academic success, cultural adaptation, and professional opportunities in Japan.
+          </p>
+        </div>
+      </div>
+
+      <div class="reason-grid">
+        <div class="reason-item animate-on-scroll">
+          <div class="reason-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h4 data-en="Academic Preparation" data-ja="学業準備">Academic Preparation</h4>
+          <p data-en="Meet Japanese language requirements for schools and universities. Our training aligns with academic expectations in Japan."
+             data-ja="日本の学校・大学の語学要件を満たします。当社のトレーニングは日本の学術的期待に沿っています。">
+            Meet Japanese language requirements for schools and universities. Our training aligns with academic expectations in Japan.
+          </p>
+        </div>
+        
+        <div class="reason-item animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="reason-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h4 data-en="Work Readiness" data-ja="就労準備">Work Readiness</h4>
+          <p data-en="Prepare for part-time work in Japan. Learn workplace Japanese, customer service phrases, and professional communication."
+             data-ja="日本のアルバイトに備えます。職場の日本語、接客フレーズ、プロフェッショナルなコミュニケーションを学びます。">
+            Prepare for part-time work in Japan. Learn workplace Japanese, customer service phrases, and professional communication.
+          </p>
+        </div>
+        
+        <div class="reason-item animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="reason-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h4 data-en="Cultural Integration" data-ja="文化統合">Cultural Integration</h4>
+          <p data-en="Understand Japanese customs, etiquette, and social norms. Language learning includes cultural context for smoother adaptation."
+             data-ja="日本の習慣、礼儀作法、社会的規範を理解します。言語学習には円滑な適応のための文化的文脈が含まれます。">
+            Understand Japanese customs, etiquette, and social norms. Language learning includes cultural context for smoother adaptation.
+          </p>
+        </div>
+        
+        <div class="reason-item animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="reason-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4 data-en="Structured Progression" data-ja="体系的な進歩">Structured Progression</h4>
+          <p data-en="From N5 to N4, our curriculum ensures logical progression. Regular assessments track improvement and identify focus areas."
+             data-ja="N5からN4まで、当社のカリキュラムは論理的な進歩を保証します。定期的な評価で進捗を追跡し、重点分野を特定します。">
+            From N5 to N4, our curriculum ensures logical progression. Regular assessments track improvement and identify focus areas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll" style="transition-delay: 480ms;">
+        <h2 class="cta-title" data-en="Start Your Japanese Language Journey Today" data-ja="今日から日本語の旅を始めましょう">Start Your Japanese Language Journey Today</h2>
+        <p class="cta-subtitle" 
+           data-en="Join our structured Japanese language courses and build the language skills you need for success in Japan. Limited seats available for each batch."
+           data-ja="体系的な日本語コースに参加して、日本での成功に必要な言語スキルを築きましょう。各バッチの座席は限られています。">
+          Join our structured Japanese language courses and build the language skills you need for success in Japan. Limited seats available for each batch.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Course Consultation" data-ja="コース相談を予約">Book Course Consultation</span>
+          </a>
+          <a href="tel:+880XXXXXXXXXX" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call for Course Details" data-ja="コース詳細についてお電話">Call for Course Details</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Dhaka, Bangladesh | Class Time: 9:00 AM - 12:00 PM & 2:00 PM - 5:00 PM"
+                data-ja="所在地: ダッカ、バングラデシュ | 授業時間: 午前9時 - 午後12時 & 午後2時 - 午後5時">
+            Location: Dhaka, Bangladesh | Class Time: 9:00 AM - 12:00 PM & 2:00 PM - 5:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants provides structured Japanese language training for students planning to study in Japan. Our offline courses focus on building practical language skills for academic and daily life success."
+             data-ja="エミネント海外留学コンサルタントは、日本留学を計画する学生に体系的な日本語トレーニングを提供します。当社の対面コースは、学業と日常生活の成功のための実践的言語スキル構築に焦点を当てています。">
+            Eminent Overseas & Consultants provides structured Japanese language training for students planning to study in Japan. Our offline courses focus on building practical language skills for academic and daily life success.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#course-faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Japanese Courses" data-ja="日本語コース">Japanese Courses</h5>
+          <a href="japanese-course.html#n5-course" class="footer-link" data-en="N5 Course (Beginner)" data-ja="N5コース（初心者）">N5 Course (Beginner)</a>
+          <a href="japanese-course.html#n4-course" class="footer-link" data-en="N4 Course (Intermediate)" data-ja="N4コース（中級）">N4 Course (Intermediate)</a>
+          <a href="japanese-course.html#why-learn" class="footer-link" data-en="Why Learn Japanese" data-ja="日本語を学ぶ理由">Why Learn Japanese</a>
+          <a href="contact.php" class="footer-link" data-en="Course Consultation" data-ja="コース相談">Course Consultation</a>
+          <a href="contact.php" class="footer-link" data-en="Course Enrollment" data-ja="コース登録">Course Enrollment</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">Dhaka, Bangladesh</div>
+                <div class="text-tertiary small" data-en="(Exact address provided upon appointment)" data-ja="（正確な住所は予約時に提供します）">(Exact address provided upon appointment)</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call for course details" data-ja="コース詳細についてお電話">Call for course details</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We provide language training and preparation support. Course completion does not guarantee visa approval."
+           data-ja="語学トレーニングと準備サポートを提供します。コース修了はビザ承認を保証するものではありません。">
+          We provide language training and preparation support. Course completion does not guarantee visa approval.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JavaScript -->
+  <script>
+    // Japanese Course Page Specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for category navigation
+      document.querySelectorAll('.category-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Update active category
+            document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Calculate offset
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+            const pageHeaderHeight = document.querySelector('.page-header')?.offsetHeight || 0;
+            
+            // Scroll to target
+            const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight;
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Update active category on scroll
+      const sections = document.querySelectorAll('.detailed-course-section, .why-learn-section');
+      const categoryItems = document.querySelectorAll('.category-item');
+      
+      const updateActiveCategory = () => {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 200;
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = sectionId;
+          }
+        });
+        
+        // Update active category
+        categoryItems.forEach(item => {
+          const href = item.getAttribute('href');
+          if (href === `#${currentSection}`) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      };
+      
+      // Throttle scroll event
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActiveCategory();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      
+      // Initialize current year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Initialize app if not already initialized
+      if (typeof app !== 'undefined') {
+        // Update marquee content for Japanese course page
+        if (app.languageManager) {
+          app.languageManager.marqueeContent = {
+            en: [
+              "Japanese Language Courses | N5 & N4 Training | Offline Classes Only",
+              "3 Hours Daily | 6 Days/Week | JLPT/NAT Preparation | 15,000 BDT per course",
+              "Beginner to Intermediate | Structured Curriculum | Practical Focus",
+              "Dhaka Office | Book Your Course Consultation Today"
+            ],
+            ja: [
+              "日本語コース | N5・N4トレーニング | 対面クラスのみ",
+              "毎日3時間 | 週6日 | JLPT/NAT準備 | コースあたり15,000 BDT",
+              "初心者から中級 | 体系的なカリキュラム | 実践的焦点",
+              "ダッカオフィス | 今日コース相談を予約"
+            ]
+          };
+          app.languageManager.updateMarquee();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

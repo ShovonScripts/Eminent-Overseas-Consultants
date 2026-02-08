@@ -48,13 +48,24 @@ class LanguageManager {
   }
 
   updateAllText() {
+    // First, update the current year before any language changes
+    this.updateCurrentYear();
+    
     // Update all elements with data-en and data-ja attributes
+    // BUT skip elements that contain #currentYear
     document.querySelectorAll('[data-en], [data-ja]').forEach(element => {
+      // Skip updating if this element contains the current year span
+      if (element.innerHTML.includes('currentYear')) {
+        return;
+      }
+      
       const text = element.dataset[this.currentLang];
       if (text) {
-        // Handle HTML content (for headings with spans)
-        if (text.includes('<span') || text.includes('<br')) {
-          element.innerHTML = text;
+        // Check if the text contains the current year placeholder
+        if (text.includes('currentYear')) {
+          // Replace placeholder with actual year
+          const currentYear = new Date().getFullYear();
+          element.innerHTML = text.replace('currentYear', `<span id="currentYear">${currentYear}</span>`);
         } else {
           element.textContent = text;
         }
@@ -62,19 +73,14 @@ class LanguageManager {
     });
 
     // Update title tag
-    if (this.currentLang === 'ja') {
-      document.title = 'エミネント海外留学コンサルタント | 日本・英国留学ガイダンス';
-    } else {
-      document.title = 'Eminent Overseas & Consultants | Japan & UK Study Abroad Guidance';
-    }
-
-    // Update meta description
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
+    const titleElement = document.querySelector('title');
+    if (titleElement) {
       if (this.currentLang === 'ja') {
-        metaDesc.content = 'エミネント海外留学コンサルタントは、日本と英国で高等教育を目指すバングラデシュ人学生に透明で倫理的なガイダンスを提供します。日本語研修(N5/N4)とビザサポート。';
+        const jaTitle = titleElement.getAttribute('data-ja') || 'エミネント海外留学コンサルタント | 日本・英国留学ガイダンス';
+        titleElement.textContent = jaTitle;
       } else {
-        metaDesc.content = 'Eminent Overseas & Consultants provides transparent, ethical guidance for Bangladeshi students pursuing higher education in Japan and the UK. Japanese language training (N5/N4) and visa support.';
+        const enTitle = titleElement.getAttribute('data-en') || 'Eminent Overseas & Consultants | Japan & UK Study Abroad Guidance';
+        titleElement.textContent = enTitle;
       }
     }
   }
@@ -104,9 +110,20 @@ class LanguageManager {
     
     // Restart animation
     marqueeTrack.style.animation = 'none';
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       marqueeTrack.style.animation = 'marqueeMove 25s linear infinite';
-    }, 10);
+    });
+  }
+
+  // NEW METHOD: Update current year
+  updateCurrentYear() {
+    const yearElements = document.querySelectorAll('#currentYear');
+    if (yearElements.length > 0) {
+      const currentYear = new Date().getFullYear();
+      yearElements.forEach(element => {
+        element.textContent = currentYear;
+      });
+    }
   }
 
   switchLanguage() {
@@ -204,7 +221,7 @@ class FullscreenHeroSlider {
     return this.totalSlides;
   }
 
-  goToSlide(index, direction = 'next') {
+  goToSlide(index) {
     if (this.isTransitioning || this.totalSlides === 0) return;
     
     this.isTransitioning = true;
@@ -230,25 +247,21 @@ class FullscreenHeroSlider {
     // Reset transitioning flag after animation
     setTimeout(() => {
       this.isTransitioning = false;
-    }, 1200); // Match CSS transition duration
+    }, 1200);
   }
 
   nextSlide() {
-    this.goToSlide(this.currentSlide + 1, 'next');
+    this.goToSlide(this.currentSlide + 1);
   }
 
   prevSlide() {
-    this.goToSlide(this.currentSlide - 1, 'prev');
+    this.goToSlide(this.currentSlide - 1);
   }
 
   updateSlider() {
     // Ensure only current slide is active
     this.slides.forEach((slide, index) => {
-      if (index === this.currentSlide) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
+      slide.classList.toggle('active', index === this.currentSlide);
     });
     
     this.updateIndicators();
@@ -258,11 +271,7 @@ class FullscreenHeroSlider {
   updateIndicators() {
     const indicators = document.querySelectorAll('.fullscreen-hero .indicator');
     indicators.forEach((indicator, index) => {
-      if (index === this.currentSlide) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
+      indicator.classList.toggle('active', index === this.currentSlide);
     });
   }
 
@@ -325,18 +334,13 @@ class FullscreenHeroSlider {
     }
 
     // Dot indicators
-    const indicatorsContainer = document.querySelector('.fullscreen-hero .slide-indicators');
-    if (indicatorsContainer) {
-      indicatorsContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('indicator')) {
-          const slideIndex = parseInt(e.target.getAttribute('data-slide'));
-          if (!isNaN(slideIndex)) {
-            this.goToSlide(slideIndex);
-            this.restartAutoSlide();
-          }
-        }
+    const indicators = document.querySelectorAll('.fullscreen-hero .indicator');
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        this.goToSlide(index);
+        this.restartAutoSlide();
       });
-    }
+    });
 
     // Pause on hover
     const hero = document.querySelector('.fullscreen-hero');
@@ -404,6 +408,7 @@ class CompanyOverviewSlider {
   constructor() {
     this.currentSlide = 0;
     this.slides = [];
+    this.totalSlides = 0;
     this.autoSlideInterval = null;
     this.autoSlideDelay = 5000; // 5 seconds
     this.isAutoPlaying = true;
@@ -411,22 +416,25 @@ class CompanyOverviewSlider {
 
   init() {
     this.getSlides();
+    if (this.totalSlides === 0) return;
+    
     this.setupEventListeners();
     this.updateSliderPosition();
     this.startAutoSlide();
+    this.updateCounter();
   }
 
   getSlides() {
     this.slides = document.querySelectorAll('.overview-slide');
-    return this.slides.length;
+    this.totalSlides = this.slides.length;
+    return this.totalSlides;
   }
 
   goToSlide(index) {
-    const totalSlides = this.getSlides();
-    if (index >= totalSlides) {
+    if (index >= this.totalSlides) {
       this.currentSlide = 0;
     } else if (index < 0) {
-      this.currentSlide = totalSlides - 1;
+      this.currentSlide = this.totalSlides - 1;
     } else {
       this.currentSlide = index;
     }
@@ -461,18 +469,14 @@ class CompanyOverviewSlider {
   updateActiveDot() {
     const dots = document.querySelectorAll('.slider-dot');
     dots.forEach((dot, index) => {
-      if (index === this.currentSlide) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
+      dot.classList.toggle('active', index === this.currentSlide);
     });
   }
 
   updateProgressBar() {
     const progressBar = document.getElementById('progressBar');
-    if (progressBar && this.slides.length > 0) {
-      const progress = ((this.currentSlide + 1) / this.slides.length) * 100;
+    if (progressBar && this.totalSlides > 0) {
+      const progress = ((this.currentSlide + 1) / this.totalSlides) * 100;
       progressBar.style.width = `${progress}%`;
     }
   }
@@ -486,7 +490,7 @@ class CompanyOverviewSlider {
     }
     
     if (totalSlidesEl) {
-      totalSlidesEl.textContent = this.slides.length;
+      totalSlidesEl.textContent = this.totalSlides;
     }
   }
 
@@ -529,16 +533,13 @@ class CompanyOverviewSlider {
     }
 
     // Dot navigation
-    const dotsContainer = document.getElementById('overviewSliderDots');
-    if (dotsContainer) {
-      dotsContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('slider-dot')) {
-          const slideIndex = parseInt(e.target.getAttribute('data-slide'));
-          this.goToSlide(slideIndex);
-          this.restartAutoSlide();
-        }
+    const dots = document.querySelectorAll('.slider-dot');
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        this.goToSlide(index);
+        this.restartAutoSlide();
       });
-    }
+    });
 
     // Pause auto-slide on hover
     const sliderWrapper = document.querySelector('.overview-slider-wrapper');
@@ -553,27 +554,6 @@ class CompanyOverviewSlider {
       });
     }
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      const overviewSection = document.getElementById('overview');
-      if (!overviewSection) return;
-      
-      const rect = overviewSection.getBoundingClientRect();
-      const isInView = rect.top < window.innerHeight && rect.bottom >= 0;
-      
-      if (isInView) {
-        if (e.key === 'ArrowLeft') {
-          e.preventDefault();
-          this.prevSlide();
-          this.restartAutoSlide();
-        } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          this.nextSlide();
-          this.restartAutoSlide();
-        }
-      }
-    });
-
     // Touch/swipe support
     let touchStartX = 0;
     let touchEndX = 0;
@@ -582,12 +562,12 @@ class CompanyOverviewSlider {
     if (sliderContainer) {
       sliderContainer.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
-      });
+      }, { passive: true });
       
       sliderContainer.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         this.handleSwipe(touchStartX, touchEndX);
-      });
+      }, { passive: true });
     }
   }
 
@@ -623,7 +603,6 @@ class App {
     this.themeManager = new ThemeManager();
     this.heroSlider = new FullscreenHeroSlider();
     this.companyOverviewSlider = new CompanyOverviewSlider();
-    this.init();
   }
 
   init() {
@@ -648,10 +627,14 @@ class App {
     this.initBackToTop();
     this.initEventListeners();
     this.initCurrentYear();
-    this.initMarqueePause();
     this.initMobileMenu();
-    this.initPlayButton();
     this.initFAQAccordion();
+    this.initSmoothScroll();
+    
+    // Force update current year on load
+    setTimeout(() => {
+      this.languageManager.updateCurrentYear();
+    }, 100);
   }
 
   initScrollAnimations() {
@@ -674,8 +657,8 @@ class App {
     // Make sections visible immediately if already in view
     window.addEventListener('load', () => {
       animateEls.forEach(el => {
-        const r = el.getBoundingClientRect();
-        if (r.top < window.innerHeight - 20) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
           el.classList.add('visible');
         }
       });
@@ -725,10 +708,10 @@ class App {
         }
       });
 
-      const stillCounting = [...counters].some(c => {
-        const t = Number(c.getAttribute('data-count') || 0);
-        const v = Number(c.innerText.replace(/[^0-9]/g, '') || 0);
-        return v < t;
+      const stillCounting = Array.from(counters).some(c => {
+        const target = Number(c.getAttribute('data-count') || 0);
+        const value = Number(c.innerText.replace(/[^0-9]/g, '') || 0);
+        return value < target;
       });
 
       if (stillCounting) {
@@ -800,39 +783,35 @@ class App {
         if (track) track.style.animationPlayState = 'running';
       });
     }
-
-    // Testimonial marquee pause on hover (if exists)
-    const testimonialTrack = document.querySelector('.testimonial-marquee-track');
-    const testimonialPause = document.querySelector('.testimonial-pause');
-    
-    if (testimonialTrack && testimonialPause) {
-      testimonialPause.addEventListener('mouseenter', () => {
-        testimonialTrack.style.animationPlayState = 'paused';
-      });
-      
-      testimonialPause.addEventListener('mouseleave', () => {
-        testimonialTrack.style.animationPlayState = 'running';
-      });
-    }
   }
 
   initCurrentYear() {
-    const yearEl = document.getElementById('currentYear');
-    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-  }
-
-  initMarqueePause() {
-    // Already handled in initEventListeners
+    // Use the LanguageManager's method to update current year
+    if (this.languageManager && this.languageManager.updateCurrentYear) {
+      this.languageManager.updateCurrentYear();
+    } else {
+      // Fallback
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    }
   }
 
   initMobileMenu() {
-    const navLinks = document.querySelectorAll('.nav-link');
+    // FIXED VERSION: Don't interfere with dropdown toggles
+    // Only close navbar when clicking regular nav links (not dropdown toggles)
+    const regularNavLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     
-    if (navLinks && navbarCollapse) {
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+    if (regularNavLinks && navbarCollapse) {
+      regularNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          // Only on mobile
           if (window.innerWidth < 992) {
+            // Don't close if clicking a link inside a dropdown
+            if (e.target.closest('.dropdown-menu')) {
+              return;
+            }
+            
             const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
             if (bsCollapse) {
               bsCollapse.hide();
@@ -841,18 +820,63 @@ class App {
         });
       });
     }
-  }
-
-  initPlayButton() {
-    const playButton = document.querySelector('.play-button');
-    if (playButton) {
-      playButton.addEventListener('click', function(e) {
-        e.stopPropagation();
-        console.log('Facility tour video would play here.');
-        // Add video functionality here
-        // Example: open a modal with a video player
+    
+    // Fix for dropdown toggles on mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        // On mobile, prevent the navbar from closing when clicking dropdown toggle
+        if (window.innerWidth < 992) {
+          e.stopPropagation();
+          
+          // Get the dropdown menu
+          const dropdownMenu = this.nextElementSibling;
+          if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+            // Toggle the dropdown
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-toggle').forEach(otherToggle => {
+              if (otherToggle !== this) {
+                otherToggle.setAttribute('aria-expanded', 'false');
+                const otherMenu = otherToggle.nextElementSibling;
+                if (otherMenu && otherMenu.classList.contains('dropdown-menu')) {
+                  otherMenu.style.display = 'none';
+                }
+              }
+            });
+            
+            // Toggle current dropdown
+            if (isExpanded) {
+              this.setAttribute('aria-expanded', 'false');
+              dropdownMenu.style.display = 'none';
+            } else {
+              this.setAttribute('aria-expanded', 'true');
+              dropdownMenu.style.display = 'block';
+            }
+          }
+        }
       });
-    }
+    });
+    
+    // Close dropdowns when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) {
+        const isDropdownToggle = e.target.closest('.dropdown-toggle');
+        const isDropdownMenu = e.target.closest('.dropdown-menu');
+        
+        if (!isDropdownToggle && !isDropdownMenu) {
+          // Close all dropdowns
+          document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.setAttribute('aria-expanded', 'false');
+            const menu = toggle.nextElementSibling;
+            if (menu && menu.classList.contains('dropdown-menu')) {
+              menu.style.display = 'none';
+            }
+          });
+        }
+      }
+    });
   }
 
   initFAQAccordion() {
@@ -877,68 +901,36 @@ class App {
       });
     });
   }
-}
 
-// ======================
-// GLOBAL SWIPE SUPPORT FOR MOBILE
-// ======================
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-document.addEventListener('touchstart', (e) => {
-  touchStartX = e.changedTouches[0].screenX;
-}, false);
-
-document.addEventListener('touchend', (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleGlobalSwipe();
-}, false);
-
-function handleGlobalSwipe() {
-  // Check which slider is in view and handle accordingly
-  const overviewSection = document.getElementById('overview');
-  const heroSection = document.querySelector('.fullscreen-hero');
-  
-  // Check hero slider
-  if (heroSection) {
-    const heroRect = heroSection.getBoundingClientRect();
-    const heroInView = heroRect.top < window.innerHeight && heroRect.bottom >= 0;
-    
-    if (heroInView && window.app && window.app.heroSlider) {
-      const swipeThreshold = 50;
-      
-      if (touchEndX < touchStartX - swipeThreshold) {
-        // Swipe left - next slide
-        window.app.heroSlider.nextSlide();
-        window.app.heroSlider.restartAutoSlide();
-      } else if (touchEndX > touchStartX + swipeThreshold) {
-        // Swipe right - previous slide
-        window.app.heroSlider.prevSlide();
-        window.app.heroSlider.restartAutoSlide();
-      }
-      return;
-    }
-  }
-  
-  // Check overview slider
-  if (overviewSection) {
-    const overviewRect = overviewSection.getBoundingClientRect();
-    const overviewInView = overviewRect.top < window.innerHeight && overviewRect.bottom >= 0;
-    
-    if (overviewInView && window.app && window.app.companyOverviewSlider) {
-      const swipeThreshold = 50;
-      
-      if (touchEndX < touchStartX - swipeThreshold) {
-        // Swipe left - next slide
-        window.app.companyOverviewSlider.nextSlide();
-        window.app.companyOverviewSlider.restartAutoSlide();
-      } else if (touchEndX > touchStartX + swipeThreshold) {
-        // Swipe right - previous slide
-        window.app.companyOverviewSlider.prevSlide();
-        window.app.companyOverviewSlider.restartAutoSlide();
-      }
-    }
+  initSmoothScroll() {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+          const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+          const heroHeight = document.querySelector('.fullscreen-hero')?.offsetHeight || 0;
+          let offsetTop = targetElement.offsetTop;
+          
+          // Adjust offset based on whether we have a hero slider
+          if (heroHeight > 0 && targetId !== '#home') {
+            offsetTop = offsetTop - navbarHeight - marqueeHeight;
+          } else {
+            offsetTop = offsetTop - navbarHeight - marqueeHeight - heroHeight;
+          }
+          
+          window.scrollTo({
+            top: Math.max(offsetTop, 0),
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   }
 }
 
@@ -948,182 +940,55 @@ function handleGlobalSwipe() {
 
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Override marquee content for Eminent
-  if (typeof LanguageManager !== 'undefined') {
-    const originalInit = LanguageManager.prototype.init;
-    LanguageManager.prototype.init = function() {
-      this.marqueeContent = {
-        en: [
-          "Eminent Overseas & Consultants | Japan & UK Study Guidance | Ethical Visa Support",
-          "Japanese Language Training (N5/N4) | UK Higher Education Counseling",
-          "No Visa Guarantees | Transparent Process | Guardian-Friendly Approach",
-          "Dhaka Office | Sat–Thu, 10:00 AM–6:00 PM | Book Your Free Consultation"
-        ],
-        ja: [
-          "エミネント海外留学コンサルタント | 日本・英国留学サポート | 倫理的ビザガイダンス",
-          "日本語研修 (N5/N4) | 英国高等教育カウンセリング",
-          "ビザ保証なし | 透明なプロセス | 保護者向けサポート",
-          "ダッカオフィス | 土〜木、午前10時〜午後6時 | 無料相談予約"
-        ]
-      };
-      originalInit.call(this);
-    };
-  }
-  
-  const app = new App();
-  window.app = app; // Make app globally accessible
-  
-  // Initialize Bootstrap tooltips if any
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-  
-  // Initialize Bootstrap collapse for mobile menu
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  if (navbarCollapse) {
-    new bootstrap.Collapse(navbarCollapse, {
-      toggle: false
-    });
-  }
-  
-  // Initialize all accordions
-  const accordionElements = document.querySelectorAll('.accordion');
-  accordionElements.forEach(accordion => {
-    new bootstrap.Collapse(accordion, {
-      toggle: false
-    });
-  });
-});
-
-// ======================
-// WINDOW RESIZE HANDLER
-// ======================
-
-let resizeTimer;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    // Update any responsive features here
-    if (window.app) {
-      // Reinitialize language manager for responsive text updates
-      window.app.languageManager.updateAllText();
-    }
-  }, 250);
-});
-
-// ======================
-// ERROR HANDLING
-// ======================
-
-// Global error handler for better debugging
-window.addEventListener('error', function(e) {
-  console.error('Global error:', e.message, e.filename, e.lineno);
-});
-
-// Promise rejection handler
-window.addEventListener('unhandledrejection', function(e) {
-  console.error('Unhandled promise rejection:', e.reason);
-});
-
-// ======================
-// ADDITIONAL UTILITIES
-// ======================
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
-    if (targetId === '#') return;
+  try {
+    const app = new App();
+    app.init();
+    window.app = app; // Make app globally accessible
     
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      e.preventDefault();
-      const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-      const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
-      const heroHeight = document.querySelector('.fullscreen-hero')?.offsetHeight || 0;
-      let offsetTop = targetElement.offsetTop;
-      
-      // Adjust offset based on whether we have a hero slider
-      if (heroHeight > 0 && targetId !== '#home') {
-        offsetTop = offsetTop - navbarHeight - marqueeHeight;
-      } else {
-        offsetTop = offsetTop - navbarHeight - marqueeHeight - heroHeight;
-      }
-      
-      window.scrollTo({
-        top: Math.max(offsetTop, 0),
-        behavior: 'smooth'
+    // Initialize Bootstrap tooltips if any
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    if (tooltipTriggerList.length > 0 && typeof bootstrap !== 'undefined') {
+      tooltipTriggerList.forEach(tooltipTriggerEl => {
+        new bootstrap.Tooltip(tooltipTriggerEl);
       });
     }
-  });
-});
-
-// Form validation helper
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
-
-function validatePhone(phone) {
-  const re = /^[\d\s\-\+\(\)]{10,}$/;
-  return re.test(phone);
-}
-
-// Add loading state to buttons
-document.addEventListener('submit', function(e) {
-  if (e.target.tagName === 'FORM') {
-    const submitButton = e.target.querySelector('button[type="submit"]');
-    if (submitButton) {
-      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
-      submitButton.disabled = true;
+    
+    // Initialize Bootstrap collapse for mobile menu
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse && typeof bootstrap !== 'undefined') {
+      new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
     }
+    
+    console.log('App initialized successfully');
+  } catch (error) {
+    console.error('Error initializing app:', error);
   }
 });
 
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        const src = img.getAttribute('data-src');
-        if (src) {
-          img.src = src;
-          img.removeAttribute('data-src');
+// ======================
+// ADDITIONAL FIX FOR CURRENT YEAR
+// ======================
+
+// This ensures the current year is always updated
+(function() {
+  // Function to update current year
+  function updateCurrentYear() {
+    const yearElements = document.querySelectorAll('#currentYear');
+    if (yearElements.length > 0) {
+      const currentYear = new Date().getFullYear();
+      yearElements.forEach(element => {
+        if (element.textContent !== currentYear.toString()) {
+          element.textContent = currentYear;
         }
-        observer.unobserve(img);
-      }
-    });
-  });
-
-  document.querySelectorAll('img[data-src]').forEach(img => {
-    imageObserver.observe(img);
-  });
-}
-
-// Preload critical images
-function preloadImage(url) {
-  const img = new Image();
-  img.src = url;
-}
-
-// Preload hero images on page load
-window.addEventListener('load', () => {
-  const heroImages = [
-    'images/hero-banner-1.jpg',
-    'images/hero-banner-2.jpg',
-    'images/hero-banner-3.jpg'
-  ];
+      });
+    }
+  }
   
-  heroImages.forEach(url => preloadImage(url));
-});
-
-// Add CSS for print styles
-window.addEventListener('beforeprint', () => {
-  document.body.classList.add('print-mode');
-});
-
-window.addEventListener('afterprint', () => {
-  document.body.classList.remove('print-mode');
-});
+  // Update on page load
+  document.addEventListener('DOMContentLoaded', updateCurrentYear);
+  
+  // Update every second for safety (in case language manager overwrites it)
+  setInterval(updateCurrentYear, 1000);
+})();

@@ -33,6 +33,359 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
   
+  <!-- Contact Page Specific CSS -->
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-hero {
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.08) 0%, 
+        rgba(14, 165, 233, 0.03) 100%);
+      border-bottom: 1px solid var(--border-color);
+      margin-top: calc(var(--marquee-height) + var(--navbar-height));
+    }
+
+    [data-theme="dark"] .contact-hero {
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.05) 0%, 
+        rgba(14, 165, 233, 0.02) 100%);
+    }
+
+    .contact-info-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+      height: 100%;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-300);
+    }
+
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+    }
+
+    .contact-info-card h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .contact-info-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-link {
+      color: var(--primary-600);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+
+    .contact-link:hover {
+      color: var(--primary-700);
+      text-decoration: underline;
+    }
+
+    .contact-form-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      height: 100%;
+    }
+
+    .contact-form-card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .contact-form-subtitle {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .map-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      height: 100%;
+    }
+
+    .map-card h3 {
+      font-size: 1.75rem;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .map-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 75%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .map-card ul li {
+      padding: 0.375rem 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .map-card ul li i {
+      margin-top: 0.25rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .contact-faq {
+      background: var(--bg-secondary) !important;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="dark"] .contact-faq {
+      background: var(--bg-primary) !important;
+    }
+
+    /* Form Styles */
+    .form-control, .form-select {
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+    }
+
+    [data-theme="dark"] .form-control,
+    [data-theme="dark"] .form-select {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary-500);
+      box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+    }
+
+    [data-theme="dark"] .form-control:focus,
+    [data-theme="dark"] .form-select:focus {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--primary-500);
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-check-input:checked {
+      background-color: var(--primary-600);
+      border-color: var(--primary-600);
+    }
+
+    .form-check-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* Alert Styles */
+    .alert {
+      border-radius: var(--radius-md);
+      border: 1px solid;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .alert-success {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: var(--text-primary);
+    }
+
+    .alert-success i {
+      color: var(--success);
+    }
+
+    [data-theme="dark"] .alert-success {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .alert-danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: var(--text-primary);
+    }
+
+    .alert-danger i {
+      color: var(--error);
+    }
+
+    [data-theme="dark"] .alert-danger {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.25);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .contact-form-card,
+      .map-card {
+        padding: 2rem;
+      }
+      
+      .contact-info-card {
+        padding: 1.75rem 1.25rem;
+      }
+      
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 3rem 0;
+      }
+      
+      .contact-form-section {
+        padding: 3rem 0;
+      }
+      
+      .contact-form-card,
+      .map-card {
+        padding: 1.75rem;
+      }
+      
+      .contact-form-card h2 {
+        font-size: 1.75rem;
+      }
+      
+      .map-card h3 {
+        font-size: 1.5rem;
+      }
+      
+      .form-control, .form-select {
+        padding: 0.75rem 0.875rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact-form-card,
+      .map-card {
+        padding: 1.5rem;
+      }
+      
+      .contact-info-card {
+        padding: 1.5rem 1rem;
+      }
+      
+      .contact-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.375rem;
+        margin-bottom: 1rem;
+      }
+      
+      .map-container {
+        padding-bottom: 100%;
+      }
+    }
+
+    /* Validation Styles */
+    .was-validated .form-control:valid {
+      border-color: var(--success);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2310b981' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right calc(0.375em + 0.1875rem) center;
+      background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    }
+
+    .was-validated .form-control:invalid {
+      border-color: var(--error);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ef4444'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ef4444' stroke='none'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right calc(0.375em + 0.1875rem) center;
+      background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+    }
+
+    .invalid-feedback {
+      display: none;
+      width: 100%;
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--error);
+    }
+
+    .was-validated .form-control:invalid ~ .invalid-feedback {
+      display: block;
+    }
+
+    /* Fix for placeholder text in dark mode */
+    [data-theme="dark"] ::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+      opacity: 1;
+    }
+
+    [data-theme="dark"] ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    [data-theme="dark"] ::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+      opacity: 1;
+    }
+
+    [data-theme="dark"] :-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  </style>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -52,7 +405,7 @@
       "addressCountry": "Bangladesh"
     },
     "telephone": "+880 XXXX-XXXXXX",
-    "email": "info@eminentoverseas.com",
+    "email": "info@eminentoverseas.uk",
     "openingHours": "Sa-Th 10:00-18:00",
     "url": "https://eminentoverseas.uk",
     "sameAs": [
@@ -151,7 +504,7 @@
   <!-- Main Content -->
   <main class="main-content">
     <!-- Contact Hero Section -->
-    <section class="contact-hero py-5" style="margin-top: calc(var(--marquee-height) + var(--navbar-height));">
+    <section class="contact-hero py-5">
       <div class="container py-5">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
@@ -209,7 +562,6 @@
       </div>
     </section>
 
-    
     <!-- Contact Form & Map Section -->
     <section class="contact-form-section py-5">
       <div class="container">
@@ -223,106 +575,102 @@
                  data-ja="以下のフォームにご記入ください。カウンセラーが24時間以内にご連絡いたします">
                 Fill out the form below and our counselors will contact you within 24 hours
               </p>
-              
 
-<!-- Replace the entire form section (lines 215-292) with this: -->
-
-<form id="enquiryForm" class="needs-validation" action="send_email.php" method="POST" novalidate>
-  <input type="hidden" name="form_type" value="contact_form">
-  
-  <div class="row g-3">
-    <div class="col-md-6">
-      <label for="firstName" class="form-label" data-en="First Name *" data-ja="名 *">First Name *</label>
-      <input type="text" class="form-control" id="firstName" name="firstName" required>
-      <div class="invalid-feedback" data-en="Please enter your first name" data-ja="名を入力してください">
-        Please enter your first name
-      </div>
-    </div>
-    <div class="col-md-6">
-      <label for="lastName" class="form-label" data-en="Last Name *" data-ja="姓 *">Last Name *</label>
-      <input type="text" class="form-control" id="lastName" name="lastName" required>
-      <div class="invalid-feedback" data-en="Please enter your last name" data-ja="姓を入力してください">
-        Please enter your last name
-      </div>
-    </div>
-  </div>
-  
-  <div class="mb-3 mt-3">
-    <label for="email" class="form-label" data-en="Email Address *" data-ja="メールアドレス *">Email Address *</label>
-    <input type="email" class="form-control" id="email" name="email" required>
-    <div class="invalid-feedback" data-en="Please enter a valid email address" data-ja="有効なメールアドレスを入力してください">
-      Please enter a valid email address
-    </div>
-  </div>
-  
-  <div class="mb-3">
-    <label for="phone" class="form-label" data-en="Phone Number *" data-ja="電話番号 *">Phone Number *</label>
-    <input type="tel" class="form-control" id="phone" name="phone" required>
-    <div class="invalid-feedback" data-en="Please enter your phone number" data-ja="電話番号を入力してください">
-      Please enter your phone number
-    </div>
-  </div>
-  
-  <div class="mb-3">
-    <label for="country" class="form-label" data-en="Country of Interest *" data-ja="希望留学先国 *">Country of Interest *</label>
-    <select class="form-select" id="country" name="country" required>
-      <option value="" selected disabled data-en="Select a country" data-ja="国を選択してください">Select a country</option>
-      <option value="japan" data-en="Japan" data-ja="日本">Japan</option>
-      <option value="uk" data-en="United Kingdom" data-ja="英国">United Kingdom</option>
-      <option value="both" data-en="Both Japan & UK" data-ja="日本と英国の両方">Both Japan & UK</option>
-      <option value="not-sure" data-en="Not Sure Yet" data-ja="まだ決めていません">Not Sure Yet</option>
-    </select>
-    <div class="invalid-feedback" data-en="Please select a country" data-ja="国を選択してください">
-      Please select a country
-    </div>
-  </div>
-  
-  <div class="mb-3">
-    <label for="educationLevel" class="form-label" data-en="Current Education Level" data-ja="現在の学歴">Current Education Level</label>
-    <select class="form-select" id="educationLevel" name="educationLevel">
-      <option value="" selected data-en="Select education level" data-ja="学歴を選択してください">Select education level</option>
-      <option value="hsc" data-en="HSC / A-Level Completed" data-ja="HSC / A-Level 修了">HSC / A-Level Completed</option>
-      <option value="diploma" data-en="Diploma Completed" data-ja="ディプロマ修了">Diploma Completed</option>
-      <option value="bachelor" data-en="Bachelor's Degree" data-ja="学士号">Bachelor's Degree</option>
-      <option value="master" data-en="Master's Degree" data-ja="修士号">Master's Degree</option>
-      <option value="other" data-en="Other" data-ja="その他">Other</option>
-    </select>
-  </div>
-  
-  <div class="mb-3">
-    <label for="message" class="form-label" data-en="Your Message *" data-ja="メッセージ *">Your Message *</label>
-    <textarea class="form-control" id="message" name="message" rows="4" required 
-              data-en-placeholder="Tell us about your study goals, timeline, and any specific questions..."
-              data-ja-placeholder="留学の目標、タイムライン、具体的な質問などをお知らせください"></textarea>
-    <div class="invalid-feedback" data-en="Please enter your message" data-ja="メッセージを入力してください">
-      Please enter your message
-    </div>
-  </div>
-  
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
-    <label class="form-check-label" for="consent" 
-           data-en="I agree to receive information and updates about study abroad programs"
-           data-ja="留学プログラムに関する情報と更新を受け取ることに同意します">
-      I agree to receive information and updates about study abroad programs
-    </label>
-    <div class="invalid-feedback" data-en="You must agree before submitting" data-ja="送信前に同意が必要です">
-      You must agree before submitting
-    </div>
-  </div>
-  
-  <!-- Honeypot spam protection -->
-  <div style="display: none;">
-    <input type="text" name="honeypot" id="honeypot">
-  </div>
-  
-  <button type="submit" class="btn btn-primary w-100 py-3">
-    <i class="fas fa-paper-plane me-2"></i>
-    <span data-en="Send Enquiry" data-ja="お問い合わせを送信">Send Enquiry</span>
-  </button>
-</form>
-
-
+              <!-- Form Section -->
+              <form id="enquiryForm" class="needs-validation" action="send_email.php" method="POST" novalidate>
+                <input type="hidden" name="form_type" value="contact_form">
+                
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label" data-en="First Name *" data-ja="名 *">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    <div class="invalid-feedback" data-en="Please enter your first name" data-ja="名を入力してください">
+                      Please enter your first name
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label" data-en="Last Name *" data-ja="姓 *">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    <div class="invalid-feedback" data-en="Please enter your last name" data-ja="姓を入力してください">
+                      Please enter your last name
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label" data-en="Email Address *" data-ja="メールアドレス *">Email Address *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback" data-en="Please enter a valid email address" data-ja="有効なメールアドレスを入力してください">
+                    Please enter a valid email address
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="phone" class="form-label" data-en="Phone Number *" data-ja="電話番号 *">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                  <div class="invalid-feedback" data-en="Please enter your phone number" data-ja="電話番号を入力してください">
+                    Please enter your phone number
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="country" class="form-label" data-en="Country of Interest *" data-ja="希望留学先国 *">Country of Interest *</label>
+                  <select class="form-select" id="country" name="country" required>
+                    <option value="" selected disabled data-en="Select a country" data-ja="国を選択してください">Select a country</option>
+                    <option value="japan" data-en="Japan" data-ja="日本">Japan</option>
+                    <option value="uk" data-en="United Kingdom" data-ja="英国">United Kingdom</option>
+                    <option value="both" data-en="Both Japan & UK" data-ja="日本と英国の両方">Both Japan & UK</option>
+                    <option value="not-sure" data-en="Not Sure Yet" data-ja="まだ決めていません">Not Sure Yet</option>
+                  </select>
+                  <div class="invalid-feedback" data-en="Please select a country" data-ja="国を選択してください">
+                    Please select a country
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="educationLevel" class="form-label" data-en="Current Education Level" data-ja="現在の学歴">Current Education Level</label>
+                  <select class="form-select" id="educationLevel" name="educationLevel">
+                    <option value="" selected data-en="Select education level" data-ja="学歴を選択してください">Select education level</option>
+                    <option value="hsc" data-en="HSC / A-Level Completed" data-ja="HSC / A-Level 修了">HSC / A-Level Completed</option>
+                    <option value="diploma" data-en="Diploma Completed" data-ja="ディプロマ修了">Diploma Completed</option>
+                    <option value="bachelor" data-en="Bachelor's Degree" data-ja="学士号">Bachelor's Degree</option>
+                    <option value="master" data-en="Master's Degree" data-ja="修士号">Master's Degree</option>
+                    <option value="other" data-en="Other" data-ja="その他">Other</option>
+                  </select>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="message" class="form-label" data-en="Your Message *" data-ja="メッセージ *">Your Message *</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required 
+                            data-en-placeholder="Tell us about your study goals, timeline, and any specific questions..."
+                            data-ja-placeholder="留学の目標、タイムライン、具体的な質問などをお知らせください"></textarea>
+                  <div class="invalid-feedback" data-en="Please enter your message" data-ja="メッセージを入力してください">
+                    Please enter your message
+                  </div>
+                </div>
+                
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
+                  <label class="form-check-label" for="consent" 
+                         data-en="I agree to receive information and updates about study abroad programs"
+                         data-ja="留学プログラムに関する情報と更新を受け取ることに同意します">
+                    I agree to receive information and updates about study abroad programs
+                  </label>
+                  <div class="invalid-feedback" data-en="You must agree before submitting" data-ja="送信前に同意が必要です">
+                    You must agree before submitting
+                  </div>
+                </div>
+                
+                <!-- Honeypot spam protection -->
+                <div style="display: none;">
+                  <input type="text" name="honeypot" id="honeypot">
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 py-3">
+                  <i class="fas fa-paper-plane me-2"></i>
+                  <span data-en="Send Enquiry" data-ja="お問い合わせを送信">Send Enquiry</span>
+                </button>
+              </form>
             </div>
           </div>
           
@@ -375,10 +723,8 @@
       </div>
     </section>
 
-
-
     <!-- FAQ Section -->
-    <section class="contact-faq py-5 bg-light">
+    <section class="contact-faq py-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mb-5">
@@ -602,9 +948,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
   
-  <!-- Contact Page JavaScript -->
+  <!-- Contact Page Specific JavaScript -->
   <script>
+    // Contact Page JavaScript
     document.addEventListener('DOMContentLoaded', function() {
+      // Update current year in footer
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
       // Initialize the app with custom marquee content for contact page
       if (typeof LanguageManager !== 'undefined') {
         const originalInit = LanguageManager.prototype.init;
@@ -614,111 +967,241 @@
               "Contact Eminent Overseas & Consultants | Book Your Free Consultation | Dhaka Office",
               "Japan & UK Study Guidance | Ethical Counseling | No Visa Guarantees | Transparent Process",
               "Visit Our Office: 16/9, Indira Road, Dhaka | Sat-Thu: 10:00 AM - 6:00 PM",
-              "Call/WhatsApp: +880 XXXX-XXXXXX | Email: info@eminentoverseas.com"
+              "Call/WhatsApp: +880 XXXX-XXXXXX | Email: info@eminentoverseas.uk"
             ],
             ja: [
               "エミネント海外留学コンサルタントにお問い合わせ | 無料相談予約 | ダッカオフィス",
               "日本・英国留学ガイダンス | 倫理的カウンセリング | ビザ保証なし | 透明なプロセス",
               "オフィス訪問: 16/9 インディラ通り, ダッカ | 土-木: 午前10時 - 午後6時",
-              "電話/WhatsApp: +880 XXXX-XXXXXX | メール: info@eminentoverseas.com"
+              "電話/WhatsApp: +880 XXXX-XXXXXX | メール: info@eminentoverseas.uk"
             ]
           };
           originalInit.call(this);
         };
       }
-      
-      // Form validation and submission
+
+      // Form functionality
       const form = document.getElementById('enquiryForm');
-      
       if (form) {
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          
-          if (form.checkValidity()) {
-            // Simulate form submission
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i><span data-en="Sending..." data-ja="送信中...">Sending...</span>';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-              // Show success message
-              const successHTML = `
-                <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
-                  <i class="fas fa-check-circle me-2"></i>
-                  <span data-en="Thank you! Your enquiry has been submitted. We'll contact you within 24 hours."
-                        data-ja="ありがとうございます！お問い合わせが送信されました。24時間以内にご連絡いたします。">
-                    Thank you! Your enquiry has been submitted. We'll contact you within 24 hours.
-                  </span>
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-              `;
-              
-              form.insertAdjacentHTML('beforebegin', successHTML);
-              form.reset();
-              form.classList.remove('was-validated');
-              submitBtn.innerHTML = originalText;
-              submitBtn.disabled = false;
-              
-              // Update button text based on language
-              const currentLang = document.documentElement.lang;
-              const sendText = submitBtn.querySelector('span');
-              if (sendText) {
-                sendText.textContent = currentLang === 'ja' ? 'お問い合わせを送信' : 'Send Enquiry';
-              }
-              
-              // Scroll to success message
-              const alert = document.querySelector('.alert-success');
-              if (alert) {
-                alert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-              }
-            }, 1500);
-          }
-          
-          form.classList.add('was-validated');
-        });
-        
-        // Real-time phone validation
-        const phoneInput = document.getElementById('phone');
-        if (phoneInput) {
-          phoneInput.addEventListener('input', function() {
-            const phone = this.value.replace(/\D/g, '');
-            if (phone.length >= 11) {
-              this.setCustomValidity('');
-            } else {
-              this.setCustomValidity('Please enter a valid phone number');
-            }
-          });
-        }
-        
-        // Update placeholder text for textarea
+        // Update textarea placeholder based on language
         function updateFormPlaceholders() {
-          const currentLang = document.documentElement.lang;
+          const currentLang = document.documentElement.lang || 'en';
           const messageTextarea = document.getElementById('message');
           if (messageTextarea) {
             const placeholder = messageTextarea.getAttribute(`data-${currentLang}-placeholder`);
-            messageTextarea.placeholder = placeholder || '';
+            if (placeholder) {
+              messageTextarea.placeholder = placeholder;
+            }
           }
         }
-        
+
         // Initialize placeholders
         updateFormPlaceholders();
-        
+
         // Listen for language changes
         const observer = new MutationObserver(updateFormPlaceholders);
         observer.observe(document.documentElement, { 
           attributes: true, 
           attributeFilter: ['lang'] 
         });
+
+        // Form submission handler
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+          }
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalContent = submitBtn.innerHTML;
+          const currentLang = document.documentElement.lang || 'en';
+
+          // Update button to loading state
+          if (currentLang === 'ja') {
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>送信中...';
+          } else {
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+          }
+          submitBtn.disabled = true;
+
+          // Honeypot check
+          const honeypot = document.getElementById('honeypot');
+          if (honeypot && honeypot.value) {
+            // Likely spam
+            showAlert('danger', currentLang === 'ja' ? 'スパムが検出されました' : 'Spam detected');
+            resetSubmitButton(submitBtn, originalContent);
+            return;
+          }
+
+          // Prepare form data
+          const formData = new FormData(form);
+
+          // Submit via fetch
+          fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(data => {
+            // Handle response
+            if (data.includes('success') || data.includes('Success')) {
+              showAlert('success', currentLang === 'ja' 
+                ? 'ありがとうございます！お問い合わせが送信されました。24時間以内にご連絡いたします。'
+                : 'Thank you! Your enquiry has been submitted. We\'ll contact you within 24 hours.');
+              form.reset();
+              form.classList.remove('was-validated');
+            } else {
+              showAlert('danger', currentLang === 'ja' 
+                ? '送信エラーが発生しました。もう一度お試しください。'
+                : 'Submission error. Please try again.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            showAlert('danger', currentLang === 'ja' 
+              ? '送信中にエラーが発生しました。後でもう一度お試しください。'
+              : 'An error occurred while sending. Please try again later.');
+          })
+          .finally(() => {
+            resetSubmitButton(submitBtn, originalContent);
+          });
+        });
+
+        // Helper function to reset submit button
+        function resetSubmitButton(button, originalContent) {
+          setTimeout(() => {
+            button.innerHTML = originalContent;
+            button.disabled = false;
+          }, 2000);
+        }
+
+        // Helper function to show alerts
+        function showAlert(type, message) {
+          // Remove existing alerts
+          const existingAlerts = document.querySelectorAll('.alert');
+          existingAlerts.forEach(alert => alert.remove());
+
+          const icon = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+          const alertHTML = `
+            <div class="alert alert-${type} alert-dismissible fade show mt-4" role="alert">
+              <i class="fas ${icon} me-2"></i>
+              ${message}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          `;
+
+          form.insertAdjacentHTML('beforebegin', alertHTML);
+
+          // Scroll to alert
+          const alertElement = document.querySelector('.alert');
+          if (alertElement) {
+            alertElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }
       }
-      
-      // Initialize the app
-      if (typeof App !== 'undefined') {
-        window.app = new App();
+
+      // Initialize scroll animations
+      function initScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        elements.forEach(element => observer.observe(element));
+
+        // Check initial state
+        window.addEventListener('load', () => {
+          elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+              element.classList.add('visible');
+            }
+          });
+        });
       }
+
+      // Initialize back to top button
+      function initBackToTop() {
+        const backTopBtn = document.getElementById('backTop');
+        if (!backTopBtn) return;
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backTopBtn.classList.add('show');
+          } else {
+            backTopBtn.classList.remove('show');
+          }
+        });
+
+        backTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Initialize FAQ accordion
+      function initFAQAccordion() {
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        
+        accordionButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const collapseElement = button.nextElementSibling;
+            if (collapseElement.classList.contains('show')) {
+              collapseElement.style.maxHeight = collapseElement.scrollHeight + 'px';
+              setTimeout(() => {
+                collapseElement.style.maxHeight = '0';
+              }, 10);
+            } else {
+              collapseElement.style.maxHeight = collapseElement.scrollHeight + 'px';
+              setTimeout(() => {
+                collapseElement.style.maxHeight = 'none';
+              }, 300);
+            }
+          });
+        });
+      }
+
+      // Initialize all functions
+      initScrollAnimations();
+      initBackToTop();
+      initFAQAccordion();
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const navbar = document.querySelector('.navbar');
+            const marquee = document.querySelector('.top-marquee');
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const marqueeHeight = marquee ? marquee.offsetHeight : 0;
+            
+            const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight;
+            
+            window.scrollTo({
+              top: Math.max(offsetTop, 0),
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
     });
   </script>
 </body>

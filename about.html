@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="About Us | Eminent Overseas & Consultants" data-ja="会社概要 | エミネント海外留学コンサルタント">About Us | Eminent Overseas & Consultants</title>
+  <meta name="description" data-en="Learn about Eminent Overseas & Consultants - ethical overseas education consultancy specializing in Japan & UK studies for Bangladeshi students. Our mission, vision, team, and approach."
+         data-ja="エミネント海外留学コンサルタントについて - バングラデシュ人学生のための日本・英国留学に特化した倫理的海外教育コンサルタント。ミッション、ビジョン、チーム、アプローチをご紹介します。">
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="About Us | Eminent Overseas & Consultants">
+  <meta property="og:description" content="Ethical overseas education consultancy specializing in Japan & UK studies. Transparent, professional guidance for Bangladeshi students.">
+  <meta property="og:image" content="images/about-hero.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/about.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Eminent Overseas & Consultants">
+  <meta name="twitter:description" content="Professional study abroad guidance for Japan & UK">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- About Page Specific CSS -->
+  <style>
+    /* ========================
+       ABOUT PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* About Hero Section */
+    .about-hero {
+      margin-top: calc(var(--marquee-height) + var(--navbar-height));
+      padding: 6rem 0 4rem;
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.08) 0%, 
+        rgba(56, 189, 248, 0.04) 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    [data-theme="dark"] .about-hero {
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.05) 0%, 
+        rgba(56, 189, 248, 0.02) 100%);
+    }
+
+    .about-hero .lead {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    /* Mission & Vision Section */
+    .mission-vision-section {
+      padding: 5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .mission-vision-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .mission-card, .vision-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .mission-card:hover, .vision-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .mission-icon, .vision-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+    }
+
+    .mission-icon {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+    }
+
+    .vision-icon {
+      background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    }
+
+    .mission-card h3, .vision-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .mission-card p, .vision-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Philosophy Section */
+    .philosophy-section {
+      padding: 5rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    [data-theme="dark"] .philosophy-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .philosophy-points {
+      margin-top: 3rem;
+    }
+
+    .philosophy-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      transition: var(--transition-base);
+    }
+
+    .philosophy-point:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-300);
+    }
+
+    .point-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .point-content h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .point-content p {
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .team-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    /* Team Tabs */
+    .team-tabs {
+      margin-top: 3rem;
+    }
+
+    .team-tab-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .team-tab-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.5rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+
+    .team-tab-btn:hover {
+      background: var(--bg-secondary);
+      color: var(--primary-600);
+      border-color: var(--primary-300);
+      transform: translateY(-2px);
+    }
+
+    .team-tab-btn.active {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    .team-tab-content {
+      display: none;
+    }
+
+    .team-tab-content.active {
+      display: block;
+    }
+
+    /* Team Member Cards */
+    .team-member-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .team-member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+
+    .team-member-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 4px solid var(--border-light);
+    }
+
+    .team-member-name {
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .team-member-role {
+      color: var(--primary-600);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .team-member-qualification {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .team-member-experience {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .team-member-expertise {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .expertise-tag {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      padding: 0.375rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+
+    /* CTA Section */
+    .about-cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-900));
+      color: white;
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .about-cta p {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive Design for About Page */
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .about-hero .display-2 {
+        font-size: 2.25rem;
+      }
+
+      .about-hero .lead {
+        font-size: 1.125rem;
+      }
+
+      .mission-vision-section,
+      .philosophy-section,
+      .team-section {
+        padding: 3rem 0;
+      }
+
+      .mission-card, .vision-card {
+        padding: 2rem;
+      }
+
+      .philosophy-point {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+
+      .team-tab-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .team-tab-btn {
+        justify-content: center;
+      }
+
+      .team-member-card {
+        padding: 1.5rem;
+      }
+
+      .about-cta {
+        padding: 3rem 0;
+      }
+
+      .about-cta h2 {
+        font-size: 2rem;
+      }
+
+      .about-cta p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about-hero .display-2 {
+        font-size: 2rem;
+      }
+
+      .mission-card, .vision-card {
+        padding: 1.5rem;
+      }
+
+      .team-member-card {
+        padding: 1.25rem;
+      }
+
+      .about-cta h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us (Active) -->
+          <li class="nav-item"><a class="nav-link active" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero Section -->
+  <section class="about-hero" id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h1 class="display-2 mb-4 animate-on-scroll">
+            <span class="text-gradient" data-en="About Eminent Overseas & Consultants" data-ja="エミネント海外留学コンサルタントについて">About Eminent Overseas & Consultants</span>
+          </h1>
+          <p class="lead animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="We are a professional overseas education consultancy based in Dhaka, Bangladesh, dedicated to guiding students toward internationally recognized academic opportunities in Japan and the United Kingdom through ethical counseling, structured preparation, and responsible guidance."
+             data-ja="私たちはダッカ（バングラデシュ）を拠点とするプロフェッショナルな海外教育コンサルタントです。倫理的カウンセリング、体系的な準備、責任あるガイダンスを通じて、学生を日本と英国における国際的に認められた学術的機会へ導くことを使命としています。">
+            We are a professional overseas education consultancy based in Dhaka, Bangladesh, dedicated to guiding students toward internationally recognized academic opportunities in Japan and the United Kingdom through ethical counseling, structured preparation, and responsible guidance.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#mission" class="btn btn-primary">
+              <i class="fas fa-bullseye me-2"></i> <span data-en="Our Mission & Vision" data-ja="ミッションとビジョン">Our Mission & Vision</span>
+            </a>
+            <a href="#team" class="btn btn-secondary">
+              <i class="fas fa-users me-2"></i> <span data-en="Meet Our Team" data-ja="チーム紹介">Meet Our Team</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="mission-vision-section" id="mission">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Our Mission & Vision" data-ja="ミッションとビジョン">Our Mission & Vision</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Guided by ethical principles and a commitment to student success, we provide transparent, realistic guidance for study abroad aspirants."
+             data-ja="倫理的原理と学生の成功へのコミットメントに導かれ、留学志望者に透明で現実的なガイダンスを提供します。">
+            Guided by ethical principles and a commitment to student success, we provide transparent, realistic guidance for study abroad aspirants.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 animate-on-scroll">
+          <div class="mission-card">
+            <div class="mission-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 data-en="Our Mission" data-ja="ミッション">Our Mission</h3>
+            <p data-en="To deliver accurate information, structured support, and ethical guidance throughout the overseas education journey. We are committed to providing honest counseling, supporting appropriate country and institution selection, offering intensive Japanese language training, assisting with compliant documentation, preparing students for interviews, and encouraging realistic expectations regarding admissions, financial responsibilities, and visa procedures."
+               data-ja="留学の旅全体を通じて正確な情報、体系的なサポート、倫理的ガイダンスを提供すること。誠実なカウンセリングの提供、適切な国と教育機関の選択の支援、集中的な日本語研修の提供、準拠した書類作成の支援、学生の面接準備、入学、経済的責任、ビザ手続きに関する現実的な期待の奨励に取り組んでいます。">
+              To deliver accurate information, structured support, and ethical guidance throughout the overseas education journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="vision-card">
+            <div class="vision-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3 data-en="Our Vision" data-ja="ビジョン">Our Vision</h3>
+            <p data-en="To become a trusted and ethically responsible overseas education consultancy recognized for integrity, transparency, and academic reliability. We aim to empower students by connecting them with quality education opportunities while ensuring they are academically, linguistically, and financially prepared for international study environments. We aspire to contribute positively to global education mobility by promoting responsible student migration and helping Bangladeshi students build meaningful academic and professional futures abroad."
+               data-ja="誠実さ、透明性、学術的信頼性で認められる信頼できる倫理的責任ある海外教育コンサルタントになること。学生を質の高い教育機会と結びつけながら、国際的な学習環境に学術的、語学的、経済的に備えることを確保することで学生をエンパワーメントすることを目指しています。責任ある学生の移住を促進し、バングラデシュ人学生が海外で有意義な学術的・職業的未来を築くのを支援することで、グローバル教育モビリティに積極的に貢献することを志望しています。">
+              To become a trusted and ethically responsible overseas education consultancy recognized for integrity, transparency, and academic reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy-section" id="philosophy">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Our Core Philosophy" data-ja="核となる哲学">Our Core Philosophy</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="We operate on the belief that overseas education must be approached with discipline, responsibility, and ethical clarity. No shortcuts, no false promises."
+             data-ja="私たちは、留学は規律、責任、倫理的明確さをもって取り組まれるべきであるという信念に基づいて運営しています。近道はなく、偽りの約束もありません。">
+            We operate on the belief that overseas education must be approached with discipline, responsibility, and ethical clarity. No shortcuts, no false promises.
+          </p>
+        </div>
+      </div>
+
+      <div class="philosophy-points">
+        <div class="philosophy-point animate-on-scroll">
+          <div class="point-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="point-content">
+            <h4 data-en="Ethical Practice First" data-ja="倫理的実践第一">Ethical Practice First</h4>
+            <p data-en="We prioritize honest guidance over empty promises. No visa guarantees, just proper preparation and support. We maintain strict professional standards to ensure students receive truthful information at every stage."
+               data-ja="空虚な約束よりも誠実なガイダンスを優先します。ビザ保証はなく、適切な準備とサポートのみです。学生がすべての段階で真実の情報を受け取ることを保証するために、厳格な専門基準を維持します。">
+              We prioritize honest guidance over empty promises. No visa guarantees, just proper preparation and support.
+            </p>
+          </div>
+        </div>
+
+        <div class="philosophy-point animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="point-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="point-content">
+            <h4 data-en="Student-Centered Approach" data-ja="学生中心のアプローチ">Student-Centered Approach</h4>
+            <p data-en="Every student profile is unique and requires individualized assessment. We carefully evaluate academic qualifications, language proficiency, financial capacity, and long-term career objectives before making recommendations."
+               data-ja="すべての学生プロファイルはユニークであり、個別の評価が必要です。推奨を行う前に、学歴、語学力、経済能力、長期的キャリア目標を注意深く評価します。">
+              Every student profile is unique and requires individualized assessment.
+            </p>
+          </div>
+        </div>
+
+        <div class="philosophy-point animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="point-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="point-content">
+            <h4 data-en="Transparency & Honesty" data-ja="透明性と誠実さ">Transparency & Honesty</h4>
+            <p data-en="We clearly explain responsibilities and risks. We respect institutional and immigration regulations and never encourage fraudulent documentation. Visa approvals and institutional decisions are made solely by respective authorities."
+               data-ja="責任とリスクを明確に説明します。教育機関と入国管理規制を尊重し、不正な書類作成を決して奨励しません。ビザ承認と教育機関の決定はそれぞれの当局によってのみ行われます。">
+              We clearly explain responsibilities and risks. We respect institutional and immigration regulations.
+            </p>
+          </div>
+        </div>
+
+        <div class="philosophy-point animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="point-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="point-content">
+            <h4 data-en="Preparation Over Promises" data-ja="約束よりも準備">Preparation Over Promises</h4>
+            <p data-en="We focus on building strong academic foundations and ensuring students understand the responsibilities associated with studying abroad. Success is measured through responsible placement, academic continuity, and positive student development."
+               data-ja="強固な学術的基盤の構築と、学生が留学に関連する責任を理解することを確保することに焦点を当てます。成功は責任ある配置、学業の継続性、前向きな学生の発展によって測定されます。">
+              We focus on building strong academic foundations and ensuring students understand the responsibilities associated with studying abroad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Meet Our Professional Team" data-ja="プロフェッショナルチームの紹介">Meet Our Professional Team</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Our dedicated team of professionals includes student counselors, language instructors, academic coordinators, and administrative staff. Each member contributes to maintaining service quality, operational discipline, and student satisfaction."
+             data-ja="献身的な専門家チームには、学生カウンセラー、語学講師、学術コーディネーター、管理スタッフが含まれます。各メンバーは、サービス品質、運営規律、学生満足度の維持に貢献しています。">
+            Our dedicated team of professionals includes student counselors, language instructors, academic coordinators, and administrative staff.
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Tabs -->
+      <div class="team-tabs">
+        <div class="team-tab-nav">
+          <button class="team-tab-btn active" data-tab="leadership">
+            <i class="fas fa-user-tie"></i>
+            <span data-en="Leadership" data-ja="リーダーシップ">Leadership</span>
+          </button>
+          <button class="team-tab-btn" data-tab="visa">
+            <i class="fas fa-passport"></i>
+            <span data-en="Visa Team" data-ja="ビザチーム">Visa Team</span>
+          </button>
+          <button class="team-tab-btn" data-tab="teachers">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span data-en="Teaching Faculty" data-ja="教員陣">Teaching Faculty</span>
+          </button>
+          <button class="team-tab-btn" data-tab="admin">
+            <i class="fas fa-laptop-code"></i>
+            <span data-en="Support Staff" data-ja="サポートスタッフ">Support Staff</span>
+          </button>
+        </div>
+
+        <!-- Leadership Team -->
+        <div class="team-tab-content active" id="leadership-tab">
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4 animate-on-scroll">
+              <div class="team-member-card">
+                <img src="images/team/chairman.jpg" alt="Mahadee Hasan - Chairman of Eminent Overseas & Consultants" class="team-member-image">
+                <h3 class="team-member-name">Mahadee Hasan</h3>
+                <div class="team-member-role" data-en="Chairman" data-ja="会長">Chairman</div>
+                <div class="team-member-qualification" data-en="Founder & Visionary" data-ja="創設者兼ビジョナリー">Founder & Visionary</div>
+                <p class="team-member-experience" data-en="Founder and visionary leader of Eminent Overseas & Consultants. With extensive experience in overseas education consultancy, he established the organization with a clear mission to provide ethical and transparent guidance for Bangladeshi students pursuing education in Japan and UK."
+                   data-ja="エミネント海外留学コンサルタントの創設者兼ビジョナリーリーダー。海外教育コンサルティングにおける豊富な経験を持ち、日本と英国で教育を追求するバングラデシュ人学生に倫理的で透明なガイダンスを提供する明確なミッションを持って組織を設立しました。">
+                  Founder and visionary leader of Eminent Overseas & Consultants.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Strategic Leadership" data-ja="戦略的リーダーシップ">Strategic Leadership</span>
+                  <span class="expertise-tag" data-en="Educational Vision" data-ja="教育ビジョン">Educational Vision</span>
+                  <span class="expertise-tag" data-en="Institution Building" data-ja="機関構築">Institution Building</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+              <div class="team-member-card">
+                <img src="images/team/director.jpg" alt="Sultana Sathi - Director of Eminent Overseas & Consultants" class="team-member-image">
+                <h3 class="team-member-name">Sultana Sathi</h3>
+                <div class="team-member-role" data-en="Director" data-ja="ディレクター">Director</div>
+                <div class="team-member-qualification" data-en="Operational Excellence" data-ja="運営の卓越性">Operational Excellence</div>
+                <p class="team-member-experience" data-en="Oversees daily operations and strategic implementation. Ensures quality standards, student satisfaction, and smooth functioning of all departments including counseling, language training, and visa processing."
+                   data-ja="日常業務と戦略的実施を監督します。カウンセリング、語学研修、ビザ処理を含むすべての部門の品質基準、学生満足度、円滑な機能を確保します。">
+                  Oversees daily operations and strategic implementation.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Operations Management" data-ja="運営管理">Operations Management</span>
+                  <span class="expertise-tag" data-en="Quality Assurance" data-ja="品質保証">Quality Assurance</span>
+                  <span class="expertise-tag" data-en="Team Leadership" data-ja="チームリーダーシップ">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visa Team -->
+        <div class="team-tab-content" id="visa-tab">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/sumaiya.jpg" alt="Sumaiya Islam Torjoma - Senior Executive Visa Processing" class="team-member-image">
+                <h3 class="team-member-name">Sumaiya Islam Torjoma</h3>
+                <div class="team-member-role" data-en="Senior Executive" data-ja="シニアエグゼクティブ">Senior Executive</div>
+                <div class="team-member-qualification" data-en="Visa Processing & Documentation Team" data-ja="ビザ処理・書類チーム">Visa Processing & Documentation Team</div>
+                <p class="team-member-experience" data-en="Expert in Japan student visa documentation with 4+ years experience. Specializes in preparing flawless visa applications and guiding students through complex documentation processes."
+                   data-ja="4年以上の経験を持つ日本学生ビザ書類の専門家。完璧なビザ申請書類の作成と複雑な書類プロセスを通じた学生の指導を専門としています。">
+                  Expert in Japan student visa documentation with 4+ years experience.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Visa Documentation" data-ja="ビザ書類作成">Visa Documentation</span>
+                  <span class="expertise-tag" data-en="Application Review" data-ja="申請書レビュー">Application Review</span>
+                  <span class="expertise-tag" data-en="Process Guidance" data-ja="プロセスガイダンス">Process Guidance</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/orpa.jpg" alt="Orpa Moni - Senior Executive Visa Processing" class="team-member-image">
+                <h3 class="team-member-name">Mst. Arpa Moni</h3>
+                <div class="team-member-role" data-en="Senior Executive" data-ja="シニアエグゼクティブ">Senior Executive</div>
+                <div class="team-member-qualification" data-en="Visa Processing & Documentation Team" data-ja="ビザ処理・書類チーム">Visa Processing & Documentation Team</div>
+                <p class="team-member-experience" data-en="Specializes in Japan student visa processing with expertise in financial documentation and sponsor verification. Ensures all applications meet embassy requirements for highest approval chances."
+                   data-ja="財務書類とスポンサー検証の専門知識を持つ日本学生ビザ処理を専門としています。すべての申請が大使館の要件を満たし、最高の承認確率を確保します。">
+                  Specializes in Japan student visa processing with expertise in financial documentation.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Financial Documentation" data-ja="財務書類">Financial Documentation</span>
+                  <span class="expertise-tag" data-en="Sponsor Verification" data-ja="スポンサー確認">Sponsor Verification</span>
+                  <span class="expertise-tag" data-en="Compliance Check" data-ja="コンプライアンスチェック">Compliance Check</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/boisakhi.jpg" alt="Boisakhi Akter - Junior Executive" class="team-member-image">
+                <h3 class="team-member-name">Boisakhi Akter</h3>
+                <div class="team-member-role" data-en="Junior Executive" data-ja="ジュニアエグゼクティブ">Junior Executive</div>
+                <div class="team-member-qualification" data-en="Visa Support & Documentation" data-ja="ビザサポート・書類">Visa Support & Documentation</div>
+                <p class="team-member-experience" data-en="Assists senior executives in visa documentation and provides support to students throughout the application process. Manages documentation tracking and appointment scheduling."
+                   data-ja="シニアエグゼクティブをビザ書類作成で支援し、申請プロセス全体を通じて学生をサポートします。書類追跡と予約スケジューリングを管理します。">
+                  Assists senior executives in visa documentation and provides support to students.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Document Support" data-ja="書類サポート">Document Support</span>
+                  <span class="expertise-tag" data-en="Student Assistance" data-ja="学生支援">Student Assistance</span>
+                  <span class="expertise-tag" data-en="Appointment Management" data-ja="予約管理">Appointment Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Faculty -->
+        <div class="team-tab-content" id="teachers-tab">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/rifat.jpg" alt="Rifat Islam Eram - Japanese Language Teacher" class="team-member-image">
+                <h3 class="team-member-name">Rifat Islam Eram</h3>
+                <div class="team-member-role" data-en="Japanese Language Teacher" data-ja="日本語教師">Japanese Language Teacher</div>
+                <div class="team-member-qualification" data-en="3+ Years Experience" data-ja="3年以上の指導経験">3+ Years Experience</div>
+                <p class="team-member-experience" data-en="Specializes in beginner-level Japanese instruction with focus on pronunciation fundamentals and basic conversation skills. Known for patient teaching style and clear explanations."
+                   data-ja="発音基礎と基本会話スキルに焦点を当てた初心者レベルの日本語指導を専門としています。忍耐強い教育スタイルと明確な説明で知られています。">
+                  Specializes in beginner-level Japanese instruction with focus on pronunciation fundamentals.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Beginner Japanese" data-ja="初心者日本語">Beginner Japanese</span>
+                  <span class="expertise-tag" data-en="Pronunciation" data-ja="発音">Pronunciation</span>
+                  <span class="expertise-tag" data-en="Basic Conversation" data-ja="基本会話">Basic Conversation</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/sheikh.jpg" alt="Sheikh Monujurl Islam - Japanese Language Teacher" class="team-member-image">
+                <h3 class="team-member-name">Sheikh Monujurl Islam</h3>
+                <div class="team-member-role" data-en="Japanese Language Teacher" data-ja="日本語教師">Japanese Language Teacher</div>
+                <div class="team-member-qualification" data-en="4+ Years Experience" data-ja="4年以上の指導経験">4+ Years Experience</div>
+                <p class="team-member-experience" data-en="Focuses on Japanese grammar and sentence structure with innovative teaching methods. Helps students understand complex grammatical patterns through practical examples and exercises."
+                   data-ja="革新的な教育方法による日本語文法と文構造に焦点を当てています。実用的な例と練習を通じて学生が複雑な文法パターンを理解できるよう支援します。">
+                  Focuses on Japanese grammar and sentence structure with innovative teaching methods.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Japanese Grammar" data-ja="日本語文法">Japanese Grammar</span>
+                  <span class="expertise-tag" data-en="Sentence Structure" data-ja="文構造">Sentence Structure</span>
+                  <span class="expertise-tag" data-en="Practical Exercises" data-ja="実践的練習">Practical Exercises</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/jahanggir.jpg" alt="Md. Jahanggir Alam - Japanese Language Teacher" class="team-member-image">
+                <h3 class="team-member-name">Md. Jahanggir Alam</h3>
+                <div class="team-member-role" data-en="Japanese Language Teacher" data-ja="日本語教師">Japanese Language Teacher</div>
+                <div class="team-member-qualification" data-en="3+ Years Experience" data-ja="3年以上の指導経験">3+ Years Experience</div>
+                <p class="team-member-experience" data-en="Specializes in Kanji instruction and vocabulary building. Develops memory techniques for character recognition and helps students build practical vocabulary for daily conversations."
+                   data-ja="漢字指導と語彙構築を専門としています。文字認識のための記憶技術を開発し、日常会話のための実用的な語彙を構築する学生を支援します。">
+                  Specializes in Kanji instruction and vocabulary building.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Kanji Instruction" data-ja="漢字指導">Kanji Instruction</span>
+                  <span class="expertise-tag" data-en="Vocabulary Building" data-ja="語彙構築">Vocabulary Building</span>
+                  <span class="expertise-tag" data-en="Memory Techniques" data-ja="記憶技術">Memory Techniques</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/ovi.jpg" alt="Abdul Kaium Ovi - Japanese Language Teacher" class="team-member-image">
+                <h3 class="team-member-name">Abdul Kaium Ovi</h3>
+                <div class="team-member-role" data-en="Japanese Language Teacher" data-ja="日本語教師">Japanese Language Teacher</div>
+                <div class="team-member-qualification" data-en="3+ Years Experience" data-ja="3年以上の指導経験">3+ Years Experience</div>
+                <p class="team-member-experience" data-en="Specializes in JLPT test preparation and practical Japanese for daily life. Focuses on helping students achieve their target JLPT levels through structured practice and mock tests."
+                   data-ja="JLPTテスト準備と日常生活のための実用的な日本語を専門としています。体系的な練習と模擬テストを通じて学生が目標のJLPTレベルを達成できるよう支援することに焦点を当てています。">
+                  Specializes in JLPT test preparation and practical Japanese for daily life.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="JLPT Preparation" data-ja="JLPT準備">JLPT Preparation</span>
+                  <span class="expertise-tag" data-en="Practical Japanese" data-ja="実用日本語">Practical Japanese</span>
+                  <span class="expertise-tag" data-en="Test Strategies" data-ja="テスト戦略">Test Strategies</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Staff -->
+        <div class="team-tab-content" id="admin-tab">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="team-member-card">
+                <img src="images/team/johirul.jpg" alt="Johirul Islam Shovon - Web Developer" class="team-member-image">
+                <h3 class="team-member-name">Johirul Islam Shovon</h3>
+                <div class="team-member-role" data-en="Web Developer" data-ja="ウェブ開発者">Web Developer</div>
+                <div class="team-member-qualification" data-en="Full Stack Developer" data-ja="フルスタック開発者">Full Stack Developer</div>
+                <p class="team-member-experience" data-en="Manages the organization's digital presence including website development, online systems, and digital resources. Ensures seamless technology integration for enhanced student experience."
+                   data-ja="ウェブサイト開発、オンラインシステム、デジタルリソースを含む組織のデジタルプレゼンスを管理します。強化された学生体験のためのシームレスな技術統合を確保します。">
+                  Manages the organization's digital presence including website development and online systems.
+                </p>
+                <div class="team-member-expertise">
+                  <span class="expertise-tag" data-en="Web Development" data-ja="ウェブ開発">Web Development</span>
+                  <span class="expertise-tag" data-en="Digital Systems" data-ja="デジタルシステム">Digital Systems</span>
+                  <span class="expertise-tag" data-en="Tech Integration" data-ja="技術統合">Tech Integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 480ms;">
+        <p class="text-secondary mb-4" data-en="Our team works together to provide comprehensive support for your study abroad journey to Japan or UK. We are committed to your success through ethical guidance and proper preparation."
+           data-ja="私たちのチームは、日本または英国への留学の旅に包括的なサポートを提供するために協力しています。倫理的ガイダンスと適切な準備を通じて、あなたの成功に取り組んでいます。">
+          Our team works together to provide comprehensive support for your study abroad journey to Japan or UK.
+        </p>
+        <a href="contact.php" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-users me-2"></i> <span data-en="Meet Our Team in Person" data-ja="チームに直接会う">Meet Our Team in Person</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About CTA Section -->
+  <section class="about-cta" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="animate-on-scroll" data-en="Start Your Journey with Eminent" data-ja="エミネントで旅を始めましょう">Start Your Journey with Eminent</h2>
+          <p class="animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Experience ethical, transparent guidance for your Japan or UK study plans. Our professional team is ready to provide you with realistic counseling, proper preparation, and comprehensive support throughout your study abroad journey."
+             data-ja="日本または英国の留学計画に対する倫理的で透明なガイダンスを体験してください。私たちのプロフェッショナルチームは、現実的なカウンセリング、適切な準備、留学の旅全体を通じた包括的なサポートを提供する準備ができています。">
+            Experience ethical, transparent guidance for your Japan or UK study plans.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="contact.php" class="btn btn-light px-5 py-3">
+              <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Free Consultation" data-ja="無料相談を予約">Book Free Consultation</span>
+            </a>
+            <a href="process.html" class="btn btn-outline-light px-5 py-3">
+              <i class="fas fa-list-ol me-2"></i> <span data-en="View Our Process" data-ja="プロセスを見る">View Our Process</span>
+            </a>
+          </div>
+
+          <p class="mt-4 animate-on-scroll" style="transition-delay: 360ms;">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <span data-en="Office: 16/9, Indira Road (Behind Tejgaon College), Dhaka 1212, Bangladesh | Hours: Sat-Thu, 10:00 AM – 6:00 PM"
+                  data-ja="オフィス: ダッカ1212、インディラロード16/9（テジガンカレッジ裏） | 営業時間: 土〜木、午前10時 – 午後6時">
+              Office: 16/9, Indira Road (Behind Tejgaon College), Dhaka 1212, Bangladesh | Hours: Sat-Thu, 10:00 AM – 6:00 PM
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants provides ethical, transparent study abroad guidance for Bangladesh students pursuing education in Japan and United Kingdom. We focus on proper preparation and honest counseling."
+             data-ja="エミネント海外留学コンサルタントは、日本と英国で教育を追求するバングラデシュ人学生に倫理的で透明性のある留学ガイダンスを提供します。適切な準備と誠実なカウンセリングに焦点を当てています。">
+            Eminent Overseas & Consultants provides ethical, transparent study abroad guidance 
+            for Bangladesh students pursuing education in Japan and United Kingdom. 
+            We focus on proper preparation and honest counseling.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Our Services" data-ja="サービス一覧">Our Services</h5>
+          <a href="study-japan.html" class="footer-link" data-en="Japan Study Guidance" data-ja="日本留学ガイダンス">Japan Study Guidance</a>
+          <a href="study-uk.html" class="footer-link" data-en="UK Study Guidance" data-ja="英国留学ガイダンス">UK Study Guidance</a>
+          <a href="japanese-course.html#n5" class="footer-link" data-en="Japanese N5 Course" data-ja="日本語N5コース">Japanese N5 Course</a>
+          <a href="japanese-course.html#n4" class="footer-link" data-en="Japanese N4 Course" data-ja="日本語N4コース">Japanese N4 Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Student Visa Support" data-ja="学生ビザサポート">Student Visa Support</a>
+          <a href="process.html" class="footer-link" data-en="Application Process" data-ja="申請プロセス">Application Process</a>
+          <a href="contact.php" class="footer-link" data-en="Free Counseling" data-ja="無料相談">Free Counseling</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">16/9, Indira Road (Behind Tejgaon College)</div>
+                <div class="text-tertiary">Dhaka 1212, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call or message for appointment" data-ja="予約のためにお電話またはメッセージを">Call or message for appointment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes."
+           data-ja="ガイダンスと準備サポートを提供します。ビザ承認や入学結果を保証するものではありません。">
+          We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize the app with custom marquee content
+    document.addEventListener('DOMContentLoaded', function() {
+      // Override marquee content for About page
+      if (typeof LanguageManager !== 'undefined') {
+        const originalInit = LanguageManager.prototype.init;
+        LanguageManager.prototype.init = function() {
+          this.marqueeContent = {
+            en: [
+              "Eminent Overseas & Consultants | About Us | Ethical Study Abroad Guidance",
+              "Professional Team: Leadership, Visa Experts, Language Teachers, Support Staff",
+              "Mission: Ethical Guidance | Vision: Trusted Education Partner | Philosophy: Transparency First",
+              "Dhaka Office: 16/9, Indira Road | Sat–Thu, 10:00 AM–6:00 PM | Meet Our Team"
+            ],
+            ja: [
+              "エミネント海外留学コンサルタント | 会社概要 | 倫理的留学ガイダンス",
+              "プロフェッショナルチーム: リーダーシップ、ビザ専門家、語学教師、サポートスタッフ",
+              "ミッション: 倫理的ガイダンス | ビジョン: 信頼できる教育パートナー | 哲学: 透明性第一",
+              "ダッカオフィス: インディラロード16/9 | 土〜木、午前10時〜午後6時 | チームに会う"
+            ]
+          };
+          originalInit.call(this);
+        };
+      }
+      
+      // Initialize the app
+      if (typeof App !== 'undefined') {
+        window.app = new App();
+      }
+
+      // Team tabs functionality
+      const teamTabBtns = document.querySelectorAll('.team-tab-btn');
+      const teamTabContents = document.querySelectorAll('.team-tab-content');
+      
+      if (teamTabBtns.length > 0) {
+        teamTabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            teamTabBtns.forEach(b => b.classList.remove('active'));
+            teamTabContents.forEach(content => {
+              content.classList.remove('active');
+              content.style.display = 'none';
+            });
+            
+            // Add active class to clicked button and corresponding content
+            btn.classList.add('active');
+            const targetContent = document.getElementById(`${tabId}-tab`);
+            if (targetContent) {
+              targetContent.classList.add('active');
+              targetContent.style.display = 'block';
+            }
+          });
+        });
+      }
+
+      // Initialize current year in footer
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>

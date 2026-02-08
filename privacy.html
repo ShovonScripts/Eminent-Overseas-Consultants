@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Privacy Policy - Eminent Overseas & Consultants" data-ja="プライバシーポリシー - エミネント海外留学コンサルタント">Privacy Policy - Eminent Overseas & Consultants</title>
+  <meta name="description" content="Privacy Policy for Eminent Overseas & Consultants. Learn how we collect, use, and protect your personal information in compliance with data protection regulations." />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Privacy Policy - Eminent Overseas & Consultants">
+  <meta property="og:description" content="Our commitment to protecting your personal information and privacy.">
+  <meta property="og:image" content="images/privacy-policy.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/privacy.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy Policy">
+  <meta name="twitter:description" content="How we protect your personal information">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Page Specific CSS -->
+  <style>
+    /* ========================
+       PRIVACY POLICY PAGE STYLES
+       ======================== */
+    
+    /* Page Header */
+    .privacy-header {
+      padding-top: calc(var(--marquee-height) + var(--navbar-height) + 4rem);
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    [data-theme="dark"] .privacy-header {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    }
+    
+    .privacy-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-200) 0%, transparent 70%);
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    
+    [data-theme="dark"] .privacy-header::before {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+    }
+    
+    .privacy-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Last Updated Banner */
+    .last-updated {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: var(--radius-lg);
+      margin: 2rem auto 3rem;
+      max-width: 800px;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .last-updated i {
+      font-size: 1.25rem;
+    }
+    
+    /* Privacy Content Container */
+    .privacy-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    /* Section Cards */
+    .privacy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition-base);
+    }
+    
+    .privacy-section:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    
+    .section-header {
+      padding: 2rem 2.5rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .section-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .section-header h2 {
+      font-size: 1.75rem;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    
+    .section-content {
+      padding: 2.5rem;
+    }
+    
+    /* Content Typography */
+    .section-content h3 {
+      font-size: 1.375rem;
+      color: var(--text-primary);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+    }
+    
+    .section-content h3:first-child {
+      margin-top: 0;
+    }
+    
+    .section-content p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-content ul, .section-content ol {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .section-content li {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    
+    .section-content ul li:before {
+      content: '•';
+      color: var(--primary-600);
+      font-weight: bold;
+      position: absolute;
+      left: -1rem;
+    }
+    
+    .section-content ol {
+      counter-reset: item;
+    }
+    
+    .section-content ol li {
+      counter-increment: item;
+    }
+    
+    .section-content ol li:before {
+      content: counter(item) '.';
+      color: var(--primary-600);
+      font-weight: bold;
+      position: absolute;
+      left: -1.5rem;
+    }
+    
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+      border-left: 4px solid var(--primary-600);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    
+    [data-theme="dark"] .highlight-box {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .highlight-box p {
+      margin: 0;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    
+    /* Table Styles */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .data-table th {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    
+    .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+    
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    /* Quick Navigation */
+    .privacy-nav {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      position: sticky;
+      top: calc(var(--marquee-height) + var(--navbar-height) + 2rem);
+      z-index: 100;
+    }
+    
+    .privacy-nav h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .nav-link-item {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      transition: var(--transition-base);
+      font-size: 0.95rem;
+    }
+    
+    .nav-link-item:hover {
+      color: var(--primary-600);
+      transform: translateX(4px);
+    }
+    
+    .nav-link-item:before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-500);
+      opacity: 0;
+      transition: var(--transition-base);
+    }
+    
+    .nav-link-item:hover:before {
+      opacity: 1;
+    }
+    
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      margin: 4rem auto;
+      text-align: center;
+      box-shadow: var(--shadow-xl);
+      max-width: 800px;
+    }
+    
+    .contact-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .contact-card p {
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .section-header {
+        padding: 1.5rem 2rem;
+      }
+      
+      .section-content {
+        padding: 2rem;
+      }
+      
+      .privacy-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .privacy-header {
+        padding-top: calc(var(--marquee-height) + var(--navbar-height) + 3rem);
+        padding-bottom: 3rem;
+      }
+      
+      .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .section-header h2 {
+        font-size: 1.5rem;
+      }
+      
+      .section-content {
+        padding: 1.5rem;
+      }
+      
+      .section-content h3 {
+        font-size: 1.25rem;
+      }
+      
+      .last-updated {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      
+      .contact-card {
+        padding: 2rem;
+        margin: 3rem auto;
+      }
+      
+      .data-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .privacy-header h1 {
+        font-size: 2rem;
+      }
+      
+      .section-header {
+        padding: 1.25rem;
+      }
+      
+      .section-content {
+        padding: 1.25rem;
+      }
+      
+      .contact-card {
+        padding: 1.5rem;
+        margin: 2rem auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="privacy-header" id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="privacy-header-content animate-on-scroll">
+            <h1 class="display-2 mb-4 animate-on-scroll" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</h1>
+            <p class="lead mb-5 animate-on-scroll" style="transition-delay: 120ms;"
+               data-en="At Eminent Overseas & Consultants, we are committed to protecting your privacy and personal information. This policy explains how we collect, use, and safeguard your data."
+               data-ja="エミネント海外留学コンサルタントでは、お客様のプライバシーと個人情報の保護に取り組んでいます。本ポリシーでは、データの収集、使用、保護方法について説明します。">
+              At Eminent Overseas & Consultants, we are committed to protecting your privacy and personal information. This policy explains how we collect, use, and safeguard your data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Last Updated -->
+  <div class="container">
+    <div class="last-updated animate-on-scroll">
+      <i class="fas fa-calendar-alt"></i>
+      <span data-en="Last Updated: February 1, 2024" data-ja="最終更新日：2024年2月1日">Last Updated: February 1, 2024</span>
+    </div>
+  </div>
+
+  <!-- Quick Navigation -->
+  <div class="container">
+    <div class="privacy-nav animate-on-scroll" style="transition-delay: 180ms;">
+      <h3><i class="fas fa-bookmark"></i> <span data-en="Quick Navigation" data-ja="クイックナビゲーション">Quick Navigation</span></h3>
+      <div class="nav-links">
+        <a href="#information-collection" class="nav-link-item" data-en="1. Information We Collect" data-ja="1. 収集する情報">1. Information We Collect</a>
+        <a href="#information-use" class="nav-link-item" data-en="2. How We Use Your Information" data-ja="2. 情報の使用方法">2. How We Use Your Information</a>
+        <a href="#data-sharing" class="nav-link-item" data-en="3. Data Sharing & Disclosure" data-ja="3. データ共有と開示">3. Data Sharing & Disclosure</a>
+        <a href="#data-security" class="nav-link-item" data-en="4. Data Security" data-ja="4. データセキュリティ">4. Data Security</a>
+        <a href="#data-retention" class="nav-link-item" data-en="5. Data Retention" data-ja="5. データ保持">5. Data Retention</a>
+        <a href="#your-rights" class="nav-link-item" data-en="6. Your Rights" data-ja="6. お客様の権利">6. Your Rights</a>
+        <a href="#cookies" class="nav-link-item" data-en="7. Cookies & Tracking" data-ja="7. クッキーとトラッキング">7. Cookies & Tracking</a>
+        <a href="#third-party" class="nav-link-item" data-en="8. Third-Party Links" data-ja="8. サードパーティリンク">8. Third-Party Links</a>
+        <a href="#policy-changes" class="nav-link-item" data-en="9. Policy Changes" data-ja="9. ポリシーの変更">9. Policy Changes</a>
+        <a href="#contact" class="nav-link-item" data-en="10. Contact Us" data-ja="10. お問い合わせ">10. Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="privacy-container">
+    <!-- Section 1: Information Collection -->
+    <section id="information-collection" class="privacy-section animate-on-scroll">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h2 data-en="1. Information We Collect" data-ja="1. 収集する情報">1. Information We Collect</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We collect information necessary to provide our overseas education consulting services. This includes:"
+           data-ja="海外留学コンサルティングサービスを提供するために必要な情報を収集します。これには以下が含まれます：">
+          We collect information necessary to provide our overseas education consulting services. This includes:
+        </p>
+        
+        <h3 data-en="Personal Information" data-ja="個人情報">Personal Information</h3>
+        <ul>
+          <li data-en="Full name, date of birth, and contact details" data-ja="氏名、生年月日、連絡先詳細">Full name, date of birth, and contact details</li>
+          <li data-en="Email address, phone number, and mailing address" data-ja="メールアドレス、電話番号、郵送先住所">Email address, phone number, and mailing address</li>
+          <li data-en="Passport details and national identification information" data-ja="パスポート詳細および国民識別情報">Passport details and national identification information</li>
+          <li data-en="Emergency contact information" data-ja="緊急連絡先情報">Emergency contact information</li>
+        </ul>
+        
+        <h3 data-en="Academic Information" data-ja="学業情報">Academic Information</h3>
+        <ul>
+          <li data-en="Educational qualifications, certificates, and transcripts" data-ja="学歴、証明書、成績証明書">Educational qualifications, certificates, and transcripts</li>
+          <li data-en="Language proficiency test scores (IELTS, JLPT, etc.)" data-ja="語学能力テストスコア（IELTS、JLPTなど）">Language proficiency test scores (IELTS, JLPT, etc.)</li>
+          <li data-en="Academic references and recommendation letters" data-ja="学術的参考文献と推薦状">Academic references and recommendation letters</li>
+          <li data-en="Statement of purpose and study plans" data-ja="目的声明と学習計画">Statement of purpose and study plans</li>
+        </ul>
+        
+        <h3 data-en="Financial Information" data-ja="財務情報">Financial Information</h3>
+        <ul>
+          <li data-en="Bank statements and financial documents" data-ja="銀行取引明細書と財務書類">Bank statements and financial documents</li>
+          <li data-en="Sponsorship information and income certificates" data-ja="スポンサーシップ情報と所得証明書">Sponsorship information and income certificates</li>
+          <li data-en="Tax documents and financial statements" data-ja="税務書類と財務諸表">Tax documents and financial statements</li>
+        </ul>
+        
+        <div class="highlight-box">
+          <p data-en="We only collect information that is necessary for providing our services. You have the right to know what information we collect and how it is used."
+             data-ja="当社はサービスの提供に必要な情報のみを収集します。お客様には、どのような情報を収集し、どのように使用されるかを知る権利があります。">
+            We only collect information that is necessary for providing our services. You have the right to know what information we collect and how it is used.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Information Use -->
+    <section id="information-use" class="privacy-section animate-on-scroll" style="transition-delay: 60ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h2 data-en="2. How We Use Your Information" data-ja="2. 情報の使用方法">2. How We Use Your Information</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We use your information for legitimate business purposes related to our educational consulting services:"
+           data-ja="当社は、教育コンサルティングサービスに関連する正当な事業目的のために、お客様の情報を使用します：">
+          We use your information for legitimate business purposes related to our educational consulting services:
+        </p>
+        
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-en="Purpose" data-ja="目的">Purpose</th>
+              <th data-en="Information Used" data-ja="使用される情報">Information Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-en="Educational Counseling" data-ja="教育カウンセリング">Educational Counseling</td>
+              <td data-en="Academic background, interests, and goals" data-ja="学歴、興味、目標">Academic background, interests, and goals</td>
+            </tr>
+            <tr>
+              <td data-en="University Applications" data-ja="大学申請">University Applications</td>
+              <td data-en="Academic records, test scores, personal statements" data-ja="学業記録、テストスコア、個人声明">Academic records, test scores, personal statements</td>
+            </tr>
+            <tr>
+              <td data-en="Visa Processing Support" data-ja="ビザ処理サポート">Visa Processing Support</td>
+              <td data-en="Personal details, financial documents, passport information" data-ja="個人詳細、財務書類、パスポート情報">Personal details, financial documents, passport information</td>
+            </tr>
+            <tr>
+              <td data-en="Service Communication" data-ja="サービス連絡">Service Communication</td>
+              <td data-en="Contact information for updates and notifications" data-ja="更新と通知のための連絡先情報">Contact information for updates and notifications</td>
+            </tr>
+            <tr>
+              <td data-en="Compliance & Legal Requirements" data-ja="コンプライアンスと法的要件">Compliance & Legal Requirements</td>
+              <td data-en="Information required by educational institutions and immigration authorities" data-ja="教育機関と移民局が要求する情報">Information required by educational institutions and immigration authorities</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 data-en="Legal Basis for Processing" data-ja="処理の法的根拠">Legal Basis for Processing</h3>
+        <p data-en="We process your information based on:"
+           data-ja="当社は以下の根拠に基づいてお客様の情報を処理します：">
+          We process your information based on:
+        </p>
+        <ol>
+          <li data-en="Contractual necessity to provide requested services" data-ja="要求されたサービスを提供するための契約上の必要性">Contractual necessity to provide requested services</li>
+          <li data-en="Legal obligations and compliance requirements" data-ja="法的義務とコンプライアンス要件">Legal obligations and compliance requirements</li>
+          <li data-en="Legitimate interests in providing educational consulting services" data-ja="教育コンサルティングサービスを提供する正当な利益">Legitimate interests in providing educational consulting services</li>
+          <li data-en="Your consent for specific processing activities" data-ja="特定の処理活動に対するお客様の同意">Your consent for specific processing activities</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section 3: Data Sharing -->
+    <section id="data-sharing" class="privacy-section animate-on-scroll" style="transition-delay: 120ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <h2 data-en="3. Data Sharing & Disclosure" data-ja="3. データ共有と開示">3. Data Sharing & Disclosure</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We share your information only when necessary and with appropriate safeguards:"
+           data-ja="当社は、必要な場合にのみ適切な保護措置を講じてお客様の情報を共有します：">
+          We share your information only when necessary and with appropriate safeguards:
+        </p>
+        
+        <h3 data-en="With Educational Institutions" data-ja="教育機関との共有">With Educational Institutions</h3>
+        <p data-en="We share your academic information with universities, colleges, and language schools in Japan and UK for admission purposes only."
+           data-ja="入学目的でのみ、日本の大学・専門学校・語学学校および英国の大学と学業情報を共有します。">
+          We share your academic information with universities, colleges, and language schools in Japan and UK for admission purposes only.
+        </p>
+        
+        <h3 data-en="With Government Authorities" data-ja="政府機関との共有">With Government Authorities</h3>
+        <p data-en="We may share information with immigration authorities, embassies, and consulates as required for visa processing and compliance."
+           data-ja="ビザ処理とコンプライアンスのために必要な場合、移民局、大使館、領事館と情報を共有することがあります。">
+          We may share information with immigration authorities, embassies, and consulates as required for visa processing and compliance.
+        </p>
+        
+        <h3 data-en="With Service Providers" data-ja="サービスプロバイダーとの共有">With Service Providers</h3>
+        <ul>
+          <li data-en="IT service providers for system maintenance" data-ja="システム保守のためのITサービスプロバイダー">IT service providers for system maintenance</li>
+          <li data-en="Document translation and verification services" data-ja="書類翻訳と検証サービス">Document translation and verification services</li>
+          <li data-en="Secure document storage and management services" data-ja="安全な文書保管と管理サービス">Secure document storage and management services</li>
+        </ul>
+        
+        <div class="highlight-box">
+          <p data-en="We never sell your personal information to third parties. All data sharing is done with proper confidentiality agreements and data protection measures."
+             data-ja="当社はお客様の個人情報を第三者に販売することはありません。すべてのデータ共有は適切な機密保持契約とデータ保護措置を講じて行われます。">
+            We never sell your personal information to third parties. All data sharing is done with proper confidentiality agreements and data protection measures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Data Security -->
+    <section id="data-security" class="privacy-section animate-on-scroll" style="transition-delay: 180ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h2 data-en="4. Data Security" data-ja="4. データセキュリティ">4. Data Security</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We implement robust security measures to protect your personal information:"
+           data-ja="お客様の個人情報を保護するために、堅牢なセキュリティ対策を実施しています：">
+          We implement robust security measures to protect your personal information:
+        </p>
+        
+        <h3 data-en="Technical Security Measures" data-ja="技術的セキュリティ対策">Technical Security Measures</h3>
+        <ul>
+          <li data-en="Encryption of sensitive data in transit and at rest" data-ja="転送中および保存時の機密データの暗号化">Encryption of sensitive data in transit and at rest</li>
+          <li data-en="Secure servers with firewall protection" data-ja="ファイアウォール保護付きの安全なサーバー">Secure servers with firewall protection</li>
+          <li data-en="Regular security updates and vulnerability assessments" data-ja="定期的なセキュリティ更新と脆弱性評価">Regular security updates and vulnerability assessments</li>
+          <li data-en="Access controls and authentication mechanisms" data-ja="アクセス制御と認証メカニズム">Access controls and authentication mechanisms</li>
+        </ul>
+        
+        <h3 data-en="Organizational Security Measures" data-ja="組織的セキュリティ対策">Organizational Security Measures</h3>
+        <ul>
+          <li data-en="Staff training on data protection and privacy" data-ja="データ保護とプライバシーに関するスタッフ研修">Staff training on data protection and privacy</li>
+          <li data-en="Confidentiality agreements with all employees" data-ja="全従業員との機密保持契約">Confidentiality agreements with all employees</li>
+          <li data-en="Clear data handling policies and procedures" data-ja="明確なデータ処理方針と手順">Clear data handling policies and procedures</li>
+          <li data-en="Regular privacy compliance audits" data-ja="定期的なプライバシーコンプライアンス監査">Regular privacy compliance audits</li>
+        </ul>
+        
+        <h3 data-en="Physical Security Measures" data-ja="物理的セキュリティ対策">Physical Security Measures</h3>
+        <p data-en="Our office premises are secured with access controls, surveillance systems, and secure document storage facilities."
+           data-ja="当社のオフィスは、アクセス制御、監視システム、安全な文書保管施設で保護されています。">
+          Our office premises are secured with access controls, surveillance systems, and secure document storage facilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Data Retention -->
+    <section id="data-retention" class="privacy-section animate-on-scroll" style="transition-delay: 240ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-archive"></i>
+        </div>
+        <h2 data-en="5. Data Retention" data-ja="5. データ保持">5. Data Retention</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We retain your personal information only for as long as necessary:"
+           data-ja="当社は、必要な期間のみ個人情報を保持します：">
+          We retain your personal information only for as long as necessary:
+        </p>
+        
+        <h3 data-en="Retention Periods" data-ja="保持期間">Retention Periods</h3>
+        <ul>
+          <li data-en="Active client data: Retained for 5 years after service completion" data-ja="アクティブなクライアントデータ：サービス完了後5年間保持">Active client data: Retained for 5 years after service completion</li>
+          <li data-en="Inquiry data: Retained for 2 years after last contact" data-ja="お問い合わせデータ：最終連絡後2年間保持">Inquiry data: Retained for 2 years after last contact</li>
+          <li data-en="Financial records: Retained for 7 years for tax compliance" data-ja="財務記録：税務コンプライアンスのため7年間保持">Financial records: Retained for 7 years for tax compliance</li>
+          <li data-en="Legal documents: Retained as required by applicable laws" data-ja="法的文書：適用される法律で要求される期間保持">Legal documents: Retained as required by applicable laws</li>
+        </ul>
+        
+        <h3 data-en="Data Deletion" data-ja="データ削除">Data Deletion</h3>
+        <p data-en="Upon expiration of retention periods, we securely delete or anonymize your personal information using industry-standard methods."
+           data-ja="保持期間が満了すると、業界標準の方法を使用してお客様の個人情報を安全に削除または匿名化します。">
+          Upon expiration of retention periods, we securely delete or anonymize your personal information using industry-standard methods.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6: Your Rights -->
+    <section id="your-rights" class="privacy-section animate-on-scroll" style="transition-delay: 300ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h2 data-en="6. Your Rights" data-ja="6. お客様の権利">6. Your Rights</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="You have the following rights regarding your personal information:"
+           data-ja="お客様の個人情報に関して以下の権利があります：">
+          You have the following rights regarding your personal information:
+        </p>
+        
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-en="Right" data-ja="権利">Right</th>
+              <th data-en="Description" data-ja="説明">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-en="Access" data-ja="アクセス権">Access</td>
+              <td data-en="Request a copy of your personal information" data-ja="個人情報のコピーを要求する権利">Request a copy of your personal information</td>
+            </tr>
+            <tr>
+              <td data-en="Correction" data-ja="訂正権">Correction</td>
+              <td data-en="Request correction of inaccurate information" data-ja="不正確な情報の訂正を要求する権利">Request correction of inaccurate information</td>
+            </tr>
+            <tr>
+              <td data-en="Deletion" data-ja="削除権">Deletion</td>
+              <td data-en="Request deletion of your information in certain circumstances" data-ja="特定の状況で情報の削除を要求する権利">Request deletion of your information in certain circumstances</td>
+            </tr>
+            <tr>
+              <td data-en="Restriction" data-ja="制限権">Restriction</td>
+              <td data-en="Request restriction of processing in certain cases" data-ja="特定のケースで処理の制限を要求する権利">Request restriction of processing in certain cases</td>
+            </tr>
+            <tr>
+              <td data-en="Objection" data-ja="異議申し立て権">Objection</td>
+              <td data-en="Object to processing based on legitimate interests" data-ja="正当な利益に基づく処理に異議を申し立てる権利">Object to processing based on legitimate interests</td>
+            </tr>
+            <tr>
+              <td data-en="Portability" data-ja="移植性権">Portability</td>
+              <td data-en="Receive your information in a structured format" data-ja="構造化された形式で情報を受け取る権利">Receive your information in a structured format</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 data-en="Exercising Your Rights" data-ja="権利の行使">Exercising Your Rights</h3>
+        <p data-en="To exercise any of these rights, please contact us using the information provided in Section 10. We will respond to your request within 30 days."
+           data-ja="これらの権利を行使するには、セクション10に記載されている連絡先情報を使用してお問い合わせください。お客様のリクエストには30日以内に対応いたします。">
+          To exercise any of these rights, please contact us using the information provided in Section 10. We will respond to your request within 30 days.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7: Cookies -->
+    <section id="cookies" class="privacy-section animate-on-scroll" style="transition-delay: 360ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-cookie-bite"></i>
+        </div>
+        <h2 data-en="7. Cookies & Tracking Technologies" data-ja="7. クッキーと追跡技術">7. Cookies & Tracking Technologies</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="Our website uses cookies and similar technologies to enhance user experience and analyze website traffic:"
+           data-ja="当社のウェブサイトは、ユーザーエクスペリエンスを向上させ、ウェブサイトトラフィックを分析するためにクッキーと類似の技術を使用しています：">
+          Our website uses cookies and similar technologies to enhance user experience and analyze website traffic:
+        </p>
+        
+        <h3 data-en="Types of Cookies We Use" data-ja="使用するクッキーの種類">Types of Cookies We Use</h3>
+        <ul>
+          <li data-en="Essential cookies: Required for website functionality" data-ja="必須クッキー：ウェブサイト機能に必要なもの">Essential cookies: Required for website functionality</li>
+          <li data-en="Preference cookies: Remember your language and theme preferences" data-ja="設定クッキー：言語とテーマ設定を記憶">Preference cookies: Remember your language and theme preferences</li>
+          <li data-en="Analytics cookies: Help us understand how visitors use our site" data-ja="分析クッキー：訪問者がサイトをどのように使用するかを理解するのに役立つ">Analytics cookies: Help us understand how visitors use our site</li>
+        </ul>
+        
+        <h3 data-en="Cookie Management" data-ja="クッキー管理">Cookie Management</h3>
+        <p data-en="You can control cookie settings through your browser. Most browsers allow you to block or delete cookies. However, disabling essential cookies may affect website functionality."
+           data-ja="ブラウザを通じてクッキー設定を制御できます。ほとんどのブラウザではクッキーをブロックまたは削除できます。ただし、必須クッキーを無効にするとウェブサイトの機能に影響する場合があります。">
+          You can control cookie settings through your browser. Most browsers allow you to block or delete cookies. However, disabling essential cookies may affect website functionality.
+        </p>
+        
+        <div class="highlight-box">
+          <p data-en="We do not use cookies for advertising purposes or to track you across other websites."
+             data-ja="当社は広告目的や他のウェブサイトでの追跡のためにクッキーを使用していません。">
+            We do not use cookies for advertising purposes or to track you across other websites.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Third-Party Links -->
+    <section id="third-party" class="privacy-section animate-on-scroll" style="transition-delay: 420ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-external-link-alt"></i>
+        </div>
+        <h2 data-en="8. Third-Party Links" data-ja="8. サードパーティリンク">8. Third-Party Links</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="Our website may contain links to third-party websites:"
+           data-ja="当社のウェブサイトには、サードパーティのウェブサイトへのリンクが含まれている場合があります：">
+          Our website may contain links to third-party websites:
+        </p>
+        
+        <h3 data-en="Educational Institutions" data-ja="教育機関">Educational Institutions</h3>
+        <p data-en="Links to universities, colleges, and language schools in Japan and UK for reference purposes."
+           data-ja="参考のために日本と英国の大学、専門学校、語学学校へのリンク。">
+          Links to universities, colleges, and language schools in Japan and UK for reference purposes.
+        </p>
+        
+        <h3 data-en="Government Resources" data-ja="政府リソース">Government Resources</h3>
+        <p data-en="Links to official embassy websites, immigration authorities, and government education portals."
+           data-ja="公式大使館ウェブサイト、移民局、政府教育ポータルへのリンク。">
+          Links to official embassy websites, immigration authorities, and government education portals.
+        </p>
+        
+        <div class="highlight-box">
+          <p data-en="We are not responsible for the privacy practices or content of third-party websites. We encourage you to review their privacy policies before providing any personal information."
+             data-ja="当社は、サードパーティウェブサイトのプライバシー慣行やコンテンツについて責任を負いません。個人情報を提供する前に、それらのプライバシーポリシーを確認することをお勧めします。">
+            We are not responsible for the privacy practices or content of third-party websites. We encourage you to review their privacy policies before providing any personal information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Policy Changes -->
+    <section id="policy-changes" class="privacy-section animate-on-scroll" style="transition-delay: 480ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h2 data-en="9. Policy Changes" data-ja="9. ポリシーの変更">9. Policy Changes</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="We may update this Privacy Policy from time to time:"
+           data-ja="当社は、このプライバシーポリシーを随時更新することがあります：">
+          We may update this Privacy Policy from time to time:
+        </p>
+        
+        <h3 data-en="Update Notification" data-ja="更新通知">Update Notification</h3>
+        <ul>
+          <li data-en="We will update the 'Last Updated' date at the top of this policy" data-ja="本ポリシーの上部にある「最終更新日」を更新します">We will update the 'Last Updated' date at the top of this policy</li>
+          <li data-en="Significant changes will be communicated via email if we have your contact information" data-ja="重要な変更は、お客様の連絡先情報がある場合、メールで通知します">Significant changes will be communicated via email if we have your contact information</li>
+          <li data-en="Updated policies will be posted on our website" data-ja="更新されたポリシーは当社のウェブサイトに掲載されます">Updated policies will be posted on our website</li>
+        </ul>
+        
+        <h3 data-en="Your Continued Use" data-ja="継続的使用">Your Continued Use</h3>
+        <p data-en="By continuing to use our services after policy changes, you accept the updated Privacy Policy."
+           data-ja="ポリシー変更後も当社のサービスを継続して使用することにより、更新されたプライバシーポリシーを受け入れるものとします。">
+          By continuing to use our services after policy changes, you accept the updated Privacy Policy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 10: Contact -->
+    <section id="contact" class="privacy-section animate-on-scroll" style="transition-delay: 540ms;">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h2 data-en="10. Contact Us" data-ja="10. お問い合わせ">10. Contact Us</h2>
+      </div>
+      <div class="section-content">
+        <p data-en="If you have any questions or concerns about our Privacy Policy or how we handle your personal information, please contact us:"
+           data-ja="プライバシーポリシーや個人情報の取り扱いについてご質問や懸念がある場合は、以下までお問い合わせください：">
+          If you have any questions or concerns about our Privacy Policy or how we handle your personal information, please contact us:
+        </p>
+        
+        <div class="contact-card">
+          <h3 data-en="Eminent Overseas & Consultants" data-ja="エミネント海外留学コンサルタント">Eminent Overseas & Consultants</h3>
+          <p>
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <span data-en="Dhaka, Bangladesh" data-ja="ダッカ、バングラデシュ">Dhaka, Bangladesh</span>
+          </p>
+          <p>
+            <i class="fas fa-phone me-2"></i>
+            <a href="tel:+880XXXXXXXXXX" class="text-white">+880 XXXX-XXXXXX</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope me-2"></i>
+            <a href="mailto:privacy@eminentoverseas.uk" class="text-white">privacy@eminentoverseas.uk</a>
+          </p>
+          <p class="mt-4" data-en="We take all privacy concerns seriously and will respond promptly to your inquiries."
+             data-ja="すべてのプライバシーに関する懸念を真剣に受け止め、お問い合わせに迅速に対応いたします。">
+            We take all privacy concerns seriously and will respond promptly to your inquiries.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants is committed to protecting your privacy and personal information. We follow ethical practices in all our data handling processes."
+             data-ja="エミネント海外留学コンサルタントは、お客様のプライバシーと個人情報の保護に取り組んでいます。すべてのデータ処理プロセスで倫理的慣行に従います。">
+            Eminent Overseas & Consultants is committed to protecting your privacy and personal information. We follow ethical practices in all our data handling processes.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="privacy.html" class="footer-link" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Legal Documents" data-ja="法的文書">Legal Documents</h5>
+          <a href="privacy.html" class="footer-link" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="terms.html" class="footer-link" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="disclaimer.html" class="footer-link" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" class="footer-link" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+          <a href="#information-collection" class="footer-link" data-en="Information Collection" data-ja="情報収集">Information Collection</a>
+          <a href="#your-rights" class="footer-link" data-en="Your Rights" data-ja="お客様の権利">Your Rights</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Privacy Contact" data-ja="プライバシー連絡先">Privacy Contact</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-user-shield mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Privacy Officer" data-ja="プライバシー担当者">Privacy Officer</div>
+                <div class="text-tertiary" data-en="Data Protection Team" data-ja="データ保護チーム">Data Protection Team</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-envelope mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Email" data-ja="メール">Email</div>
+                <a href="mailto:privacy@eminentoverseas.uk" class="footer-link">privacy@eminentoverseas.uk</a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Response Time" data-ja="対応時間">Response Time</div>
+                <div class="text-tertiary" data-en="Within 30 days" data-ja="30日以内">Within 30 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We are committed to protecting your privacy and complying with applicable data protection laws."
+           data-ja="お客様のプライバシーを保護し、適用されるデータ保護法に準拠することに取り組んでいます。">
+          We are committed to protecting your privacy and complying with applicable data protection laws.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JavaScript -->
+  <script>
+    // Privacy Policy Page Specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for navigation links
+      document.querySelectorAll('.nav-link-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+            const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight - 20;
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Update active navigation link on scroll
+      const sections = document.querySelectorAll('.privacy-section');
+      const navLinks = document.querySelectorAll('.nav-link-item');
+      
+      const updateActiveNav = () => {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 200;
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = sectionId;
+          }
+        });
+        
+        // Update active nav
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === `#${currentSection}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      };
+      
+      // Throttle scroll event
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActiveNav();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      
+      // Initialize current year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Initialize app if not already initialized
+      if (typeof app !== 'undefined') {
+        // Update marquee content for privacy page
+        if (app.languageManager) {
+          app.languageManager.marqueeContent = {
+            en: [
+              "Privacy Policy | Your Data Protection Rights | Eminent Overseas & Consultants",
+              "We Protect Your Personal Information | Ethical Data Practices | Compliance",
+              "Your Privacy Matters | Secure Data Handling | Transparent Policies",
+              "Dhaka Office | Contact Our Privacy Team | Last Updated: Feb 1, 2024"
+            ],
+            ja: [
+              "プライバシーポリシー | データ保護権利 | エミネント海外留学コンサルタント",
+              "個人情報の保護 | 倫理的なデータ慣行 | コンプライアンス",
+              "お客様のプライバシーが大切 | 安全なデータ処理 | 透明なポリシー",
+              "ダッカオフィス | プライバシーチームにお問い合わせ | 最終更新: 2024年2月1日"
+            ]
+          };
+          app.languageManager.updateMarquee();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

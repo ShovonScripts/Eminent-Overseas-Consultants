@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Study in UK | Eminent Overseas & Consultants" data-ja="英国留学 | エミネント海外留学コンサルタント">Study in UK | Eminent Overseas & Consultants</title>
+  <meta name="description" data-en="Complete guide to studying in United Kingdom for Bangladeshi students. UK university requirements, visa process, costs, scholarships, and work opportunities. Ethical guidance from Eminent Overseas."
+         data-ja="バングラデシュ人学生のための英国留学完全ガイド。英国大学要件、ビザプロセス、費用、奨学金、就労機会。エミネント海外留学コンサルタントからの倫理的ガイダンス。">
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Study in UK | Eminent Overseas & Consultants">
+  <meta property="og:description" content="Complete guide to studying in United Kingdom. UK university admissions, visa support, scholarship information for Bangladeshi students.">
+  <meta property="og:image" content="images/uk-hero.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/study-uk.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Study in UK Guide">
+  <meta name="twitter:description" content="UK study guidance for Bangladeshi students">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- UK Study Page Specific CSS -->
+  <style>
+    /* ========================
+       UK STUDY PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* UK Hero Section */
+    .uk-hero {
+      margin-top: calc(var(--marquee-height) + var(--navbar-height));
+      padding: 6rem 0 4rem;
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.08) 0%, 
+        rgba(56, 189, 248, 0.04) 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    [data-theme="dark"] .uk-hero {
+      background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.05) 0%, 
+        rgba(56, 189, 248, 0.02) 100%);
+    }
+
+    .uk-hero .lead {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    /* UK Overview Section */
+    .uk-overview {
+      padding: 5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .uk-overview {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .uk-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .uk-feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .uk-feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #1d4ed8;
+    }
+
+    .uk-feature-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1.25rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 6px 16px rgba(29, 78, 216, 0.3);
+    }
+
+    .uk-feature-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .uk-feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Education System Section */
+    .uk-education-system {
+      padding: 5rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    [data-theme="dark"] .uk-education-system {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .uk-education-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .uk-education-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #1d4ed8;
+    }
+
+    .uk-education-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+    }
+
+    .uk-education-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .uk-education-card p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .uk-education-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .uk-education-details li {
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .uk-education-details li:last-child {
+      border-bottom: none;
+    }
+
+    .uk-education-details li i {
+      color: #1d4ed8;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    /* Requirements Section */
+    .uk-requirements {
+      padding: 5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .uk-requirements {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .uk-requirement-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .uk-requirement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #1d4ed8;
+    }
+
+    .uk-requirement-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .uk-requirement-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .uk-requirement-header h4 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: var(--text-primary);
+    }
+
+    .uk-requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .uk-requirement-list li {
+      padding: 0.75rem 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .uk-requirement-list li:last-child {
+      border-bottom: none;
+    }
+
+    .uk-requirement-list li i {
+      color: #1d4ed8;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    /* Work & Life Section */
+    .uk-work-life {
+      padding: 5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    [data-theme="dark"] .uk-work-life {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .uk-benefit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      height: 100%;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .uk-benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: #1d4ed8;
+    }
+
+    .uk-benefit-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+    }
+
+    .uk-benefit-card h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .uk-benefit-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .uk-faq {
+      padding: 5rem 0;
+      background-color: var(--bg-secondary);
+    }
+
+    [data-theme="dark"] .uk-faq {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+
+    .uk-faq-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+
+    .uk-faq-card:hover {
+      border-color: #1d4ed8;
+      box-shadow: var(--shadow-md);
+    }
+
+    .uk-faq-card.active {
+      border-color: #1d4ed8;
+      background: rgba(29, 78, 216, 0.05);
+    }
+
+    .uk-faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    .uk-faq-answer {
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .uk-faq-card.active .uk-faq-answer {
+      display: block;
+    }
+
+    .uk-faq-icon {
+      color: #1d4ed8;
+      transition: transform 0.3s ease;
+    }
+
+    .uk-faq-card.active .uk-faq-icon {
+      transform: rotate(180deg);
+    }
+
+    /* CTA Section */
+    .uk-cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #1d4ed8, #1e40af);
+      color: white;
+      text-align: center;
+    }
+
+    .uk-cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .uk-cta p {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive Design for UK Page */
+    @media (max-width: 768px) {
+      .uk-hero {
+        padding: 4rem 0 3rem;
+      }
+
+      .uk-hero .display-2 {
+        font-size: 2.25rem;
+      }
+
+      .uk-hero .lead {
+        font-size: 1.125rem;
+      }
+
+      .uk-overview,
+      .uk-education-system,
+      .uk-requirements,
+      .uk-cost-timeline,
+      .uk-work-life,
+      .uk-faq {
+        padding: 3rem 0;
+      }
+
+      .uk-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .uk-education-card,
+      .uk-requirement-card,
+      .uk-cost-card,
+      .uk-timeline-card,
+      .uk-benefit-card {
+        padding: 1.5rem;
+      }
+
+      .uk-cta {
+        padding: 3rem 0;
+      }
+
+      .uk-cta h2 {
+        font-size: 2rem;
+      }
+
+      .uk-cta p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .uk-hero .display-2 {
+        font-size: 2rem;
+      }
+
+      .uk-education-card,
+      .uk-requirement-card,
+      .uk-cost-card,
+      .uk-timeline-card,
+      .uk-benefit-card {
+        padding: 1.25rem;
+      }
+
+      .uk-cta h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown (Active - UK) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item active" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- UK Hero Section -->
+  <section class="uk-hero" id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h1 class="display-2 mb-4 animate-on-scroll">
+            <span class="text-gradient" data-en="Study in United Kingdom" data-ja="英国留学">Study in United Kingdom</span>
+          </h1>
+          <p class="lead animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="The UK offers world-renowned education with shorter degree durations, strong post-study work opportunities, and globally recognized qualifications. Build your future with prestigious UK universities."
+             data-ja="英国は、短期の学位期間、強力な卒業後就労機会、世界的に認められた資格を持つ世界的に有名な教育を提供します。権威ある英国の大学で未来を築きましょう。">
+            The UK offers world-renowned education with shorter degree durations and strong post-study work opportunities.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="#requirements" class="btn btn-primary" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6); border-color: #1d4ed8;">
+              <i class="fas fa-list-check me-2"></i> <span data-en="View Requirements" data-ja="要件を見る">View Requirements</span>
+            </a>
+            <a href="#work" class="btn btn-secondary">
+              <i class="fas fa-pound-sign me-2"></i> <span data-en="Work & Life in UK" data-ja="英国での仕事と生活">Work & Life in UK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UK Overview Section -->
+  <section class="uk-overview" id="overview">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Why Study in UK?" data-ja="なぜ英国で学ぶのか？">Why Study in UK?</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="The UK combines centuries of academic tradition with modern innovation, providing international students with globally respected qualifications and excellent career prospects."
+             data-ja="英国は何世紀もの学術的伝統と現代の革新を組み合わせ、留学生に世界的に尊重される資格と優れたキャリア展望を提供します。">
+            The UK combines centuries of academic tradition with modern innovation.
+          </p>
+        </div>
+      </div>
+
+      <div class="uk-feature-grid">
+        <div class="uk-feature-card animate-on-scroll">
+          <div class="uk-feature-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <h4 data-en="World-Ranked Universities" data-ja="世界ランクの大学">World-Ranked Universities</h4>
+          <p data-en="UK universities consistently rank among the world's top 100. Institutions like Oxford, Cambridge, Imperial College, and LSE are globally recognized for excellence."
+             data-ja="英国の大学は一貫して世界トップ100にランクされます。オックスフォード、ケンブリッジ、インペリアル・カレッジ、LSEなどの機関は卓越性で世界的に認められています。">
+            UK universities consistently rank among the world's top 100.
+          </p>
+        </div>
+
+        <div class="uk-feature-card animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="uk-feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h4 data-en="Shorter Degree Duration" data-ja="短期学位期間">Shorter Degree Duration</h4>
+          <p data-en="UK bachelor's degrees take 3 years (vs 4 years in many countries), master's degrees take 1 year (vs 2 years). This reduces overall costs and allows faster career entry."
+             data-ja="英国の学士号は3年（多くの国では4年）、修士号は1年（2年）。これにより総費用が削減され、より早くキャリアに参入できます。">
+            UK bachelor's degrees take 3 years, master's degrees take 1 year.
+          </p>
+        </div>
+
+        <div class="uk-feature-card animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="uk-feature-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h4 data-en="Post-Study Work Visa" data-ja="卒業後就労ビザ">Post-Study Work Visa</h4>
+          <p data-en="Graduate Route allows international students to work in the UK for 2 years after bachelor's/master's, or 3 years after PhD. Excellent pathway to UK employment."
+             data-ja="卒業生ルートは、留学生が学士号/修士号取得後2年間、博士号取得後3年間英国で働くことを可能にします。英国就職への優れた経路です。">
+            Graduate Route allows 2 years work after bachelor's/master's, 3 years after PhD.
+          </p>
+        </div>
+
+        <div class="uk-feature-card animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="uk-feature-icon">
+            <i class="fas fa-globe-europe"></i>
+          </div>
+          <h4 data-en="Global Recognition" data-ja="世界的認知">Global Recognition</h4>
+          <p data-en="UK qualifications are respected worldwide. English language proficiency gained in UK enhances global employability. Strong alumni networks across industries."
+             data-ja="英国の資格は世界中で尊重されます。英国で習得した英語能力は世界的な就職可能性を高めます。産業全体での強力な卒業生ネットワーク。">
+            UK qualifications are respected worldwide with strong global alumni networks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education System Section -->
+  <section class="uk-education-system" id="education">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="UK Education System" data-ja="英国の教育制度">UK Education System</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="The UK offers diverse educational pathways with internationally recognized qualifications and flexible study options for international students."
+             data-ja="英国は、国際的に認められた資格と留学生のための柔軟な学習オプションを持つ多様な教育経路を提供します。">
+            The UK offers diverse educational pathways with internationally recognized qualifications.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="uk-education-card">
+            <div class="uk-education-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 data-en="Foundation Programs" data-ja="ファウンデーションプログラム">Foundation Programs</h3>
+            <p data-en="1-year preparatory courses for students who don't meet direct entry requirements. Bridges academic gaps and improves English proficiency for undergraduate study."
+               data-ja="直接入学要件を満たさない学生のための1年間の準備コース。学問的ギャップを埋め、学部学習のための英語能力を向上させます。">
+              1-year preparatory courses for students who don't meet direct entry requirements.
+            </p>
+            <ul class="uk-education-details">
+              <li><i class="fas fa-check"></i><span data-en="Duration: 1 year" data-ja="期間: 1年">Duration: 1 year</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Entry: IELTS 5.0-5.5" data-ja="入学: IELTS 5.0-5.5">Entry: IELTS 5.0-5.5</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Focus: Academic preparation" data-ja="焦点: 学術準備">Focus: Academic preparation</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Pathway: Bachelor's degree" data-ja="進路: 学士号">Pathway: Bachelor's degree</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="uk-education-card">
+            <div class="uk-education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 data-en="Bachelor's Degrees" data-ja="学士号">Bachelor's Degrees</h3>
+            <p data-en="3-year undergraduate programs (4 years in Scotland) across diverse disciplines. Includes BA, BSc, BEng, LLB degrees with options for placement years."
+               data-ja="様々な分野の3年間の学部プログラム（スコットランドでは4年）。BA、BSc、BEng、LLB学位を含み、プラースメント年のオプションがあります。">
+              3-year undergraduate programs across diverse disciplines with placement year options.
+            </p>
+            <ul class="uk-education-details">
+              <li><i class="fas fa-check"></i><span data-en="Duration: 3 years (4 in Scotland)" data-ja="期間: 3年（スコットランドでは4年）">Duration: 3 years (4 in Scotland)</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Entry: IELTS 6.0-7.0" data-ja="入学: IELTS 6.0-7.0">Entry: IELTS 6.0-7.0</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Focus: Specialized study" data-ja="焦点: 専門学習">Focus: Specialized study</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Degree: BA, BSc, BEng, LLB" data-ja="学位: BA、BSc、BEng、LLB">Degree: BA, BSc, BEng, LLB</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="uk-education-card">
+            <div class="uk-education-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3 data-en="Master's & PhD Programs" data-ja="修士号・博士プログラム">Master's & PhD Programs</h3>
+            <p data-en="1-year master's degrees (MA, MSc, MBA) and 3-4 year PhD programs. Research-focused education with excellent facilities and supervision from world experts."
+               data-ja="1年間の修士号（MA、MSc、MBA）と3-4年間の博士プログラム。世界の専門家による優れた施設と監督を備えた研究重視の教育。">
+              1-year master's degrees and 3-4 year PhD programs with research focus.
+            </p>
+            <ul class="uk-education-details">
+              <li><i class="fas fa-check"></i><span data-en="Master's: 1 year" data-ja="修士号: 1年">Master's: 1 year</span></li>
+              <li><i class="fas fa-check"></i><span data-en="PhD: 3-4 years" data-ja="博士: 3-4年">PhD: 3-4 years</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Entry: IELTS 6.5-7.5" data-ja="入学: IELTS 6.5-7.5">Entry: IELTS 6.5-7.5</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Degree: MA, MSc, MBA, PhD" data-ja="学位: MA、MSc、MBA、PhD">Degree: MA, MSc, MBA, PhD</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requirements Section -->
+  <section class="uk-requirements" id="requirements">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Admission Requirements" data-ja="入学要件">Admission Requirements</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="UK universities have specific entry requirements that vary by institution and program. We help you understand and meet these requirements for successful admission."
+             data-ja="英国の大学には、教育機関とプログラムによって異なる特定の入学要件があります。成功した入学のためにこれらの要件を理解し満たすお手伝いをします。">
+            UK universities have specific entry requirements that vary by institution and program.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll">
+          <div class="uk-requirement-card">
+            <div class="uk-requirement-header">
+              <div class="uk-requirement-number">1</div>
+              <h4 data-en="Academic Requirements" data-ja="学術的要件">Academic Requirements</h4>
+            </div>
+            <ul class="uk-requirement-list">
+              <li><i class="fas fa-check"></i><span data-en="12 years of formal education" data-ja="12年間の正規教育">12 years of formal education</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Minimum GPA: 3.0/4.0 or equivalent" data-ja="最低GPA: 3.0/4.0または同等">Minimum GPA: 3.0/4.0 or equivalent</span></li>
+              <li><i class="fas fa-check"></i><span data-en="A-levels or equivalent qualifications" data-ja="Aレベルまたは同等資格">A-levels or equivalent qualifications</span></li>
+              <li><i class="fas fa-check"></i><span data-en="For master's: Relevant bachelor's degree" data-ja="修士向け: 関連する学士号">For master's: Relevant bachelor's degree</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Academic transcripts (all years)" data-ja="学業成績証明書（全学年）">Academic transcripts (all years)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="uk-requirement-card">
+            <div class="uk-requirement-header">
+              <div class="uk-requirement-number">2</div>
+              <h4 data-en="English Language Requirements" data-ja="英語要件">English Language Requirements</h4>
+            </div>
+            <ul class="uk-requirement-list">
+              <li><i class="fas fa-check"></i><span data-en="IELTS: 6.0-7.5 (depending on course)" data-ja="IELTS: 6.0-7.5（コースによる）">IELTS: 6.0-7.5 (depending on course)</span></li>
+              <li><i class="fas fa-check"></i><span data-en="TOEFL iBT: 80-110" data-ja="TOEFL iBT: 80-110">TOEFL iBT: 80-110</span></li>
+              <li><i class="fas fa-check"></i><span data-en="PTE Academic: 50-76" data-ja="PTE Academic: 50-76">PTE Academic: 50-76</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Some universities accept Medium of Instruction" data-ja="一部の大学は教育言語証明を受理">Some universities accept Medium of Instruction</span></li>
+              <li><i class="fas fa-check"></i><span data-en="No IELTS waiver for most top universities" data-ja="ほとんどのトップ大学ではIELTS免除なし">No IELTS waiver for most top universities</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="uk-requirement-card">
+            <div class="uk-requirement-header">
+              <div class="uk-requirement-number">3</div>
+              <h4 data-en="Financial Requirements" data-ja="経済的要件">Financial Requirements</h4>
+            </div>
+            <ul class="uk-requirement-list">
+              <li><i class="fas fa-check"></i><span data-en="Proof of funds for 1 year tuition + living" data-ja="1年間の授業料+生活費の資金証明">Proof of funds for 1 year tuition + living</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Bank statements (28 days minimum)" data-ja="銀行取引明細書（最低28日）">Bank statements (28 days minimum)</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Minimum balance: £10,000-£15,000" data-ja="最低残高: 10,000〜15,000ポンド">Minimum balance: £10,000-£15,000</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Sponsor's financial documents" data-ja="スポンサーの財務書類">Sponsor's financial documents</span></li>
+              <li><i class="fas fa-check"></i><span data-en="Income tax returns (sponsor)" data-ja="所得税申告書（スポンサー）">Income tax returns (sponsor)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-10 mx-auto">
+          <div class="uk-cost-note">
+            <p data-en="Additional requirements may include: Personal Statement, Letters of Recommendation (2-3), CV/Resume, Portfolio (for creative courses), Interview (for some courses). We provide complete guidance on document preparation and application strategy."
+               data-ja="追加要件には以下が含まれる場合があります：個人陳述書、推薦状（2-3通）、履歴書、ポートフォリオ（創造的コース向け）、面接（一部のコース）。書類準備と申請戦略に関する完全なガイダンスを提供します。">
+              Additional requirements may include: Personal Statement, Letters of Recommendation, CV, Portfolio, Interview.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Work & Life Section -->
+  <section class="uk-work-life" id="work">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Work & Life in UK" data-ja="英国での仕事と生活">Work & Life in UK</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="The UK offers excellent work opportunities during studies and after graduation, along with a rich cultural experience and high quality of life."
+             data-ja="英国は、学習期間中と卒業後の優れた就労機会、豊かな文化的体験、高い生活の質を提供します。">
+            The UK offers excellent work opportunities during studies and after graduation.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 animate-on-scroll">
+          <div class="uk-benefit-card">
+            <div class="uk-benefit-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4 data-en="Work During Studies" data-ja="学習期間中の就労">Work During Studies</h4>
+            <p data-en="Students can work up to 20 hours per week during term time and full-time during vacations. Typical student jobs: retail, hospitality, tutoring, admin."
+               data-ja="学生は学期中は週20時間まで、休暇中はフルタイムで働けます。典型的な学生の仕事：小売、接客業、家庭教師、事務。">
+              Up to 20 hours/week during term, full-time during vacations.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="uk-benefit-card">
+            <div class="uk-benefit-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4 data-en="Graduate Route Visa" data-ja="卒業生ルートビザ">Graduate Route Visa</h4>
+            <p data-en="2 years work after bachelor's/master's, 3 years after PhD. No job offer required. Excellent pathway to Skilled Worker Visa and permanent settlement."
+               data-ja="学士号/修士号取得後2年間、博士号取得後3年間の就労。仕事のオファーは不要。熟練労働者ビザと永住への優れた経路。">
+              2 years work after bachelor's/master's, 3 years after PhD.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="uk-benefit-card">
+            <div class="uk-benefit-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <h4 data-en="Salary Expectations" data-ja="給与期待値">Salary Expectations</h4>
+            <p data-en="Part-time: £8-£12/hour (£640-£960 monthly). Graduate salaries: £25,000-£35,000 starting. London salaries typically 20-30% higher than national average."
+               data-ja="アルバイト：時給8〜12ポンド（月640〜960ポンド）。卒業生給与：初任給25,000〜35,000ポンド。ロンドンの給与は通常全国平均より20〜30％高い。">
+              Part-time: £8-£12/hour. Graduate salaries: £25,000-£35,000 starting.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="uk-benefit-card">
+            <div class="uk-benefit-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h4 data-en="Accommodation & Living" data-ja="宿泊施設と生活">Accommodation & Living</h4>
+            <p data-en="University halls, private rentals, homestays. London: £800-£1,200/month. Outside London: £500-£800/month. Excellent public transport and healthcare."
+               data-ja="大学寮、民間賃貸、ホームステイ。ロンドン：月800〜1,200ポンド。ロンドン以外：月500〜800ポンド。優れた公共交通機関と医療。">
+              London: £800-£1,200/month. Outside London: £500-£800/month.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="uk-faq" id="faq">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-3 mb-4 section-title animate-on-scroll" data-en="Frequently Asked Questions" data-ja="よくある質問">Frequently Asked Questions</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Get answers to common questions about studying, working, and living in the UK as an international student from Bangladesh."
+             data-ja="バングラデシュ人留学生としての英国での学習、就労、生活に関する一般的な質問への回答をご覧ください。">
+            Get answers to common questions about studying, working, and living in the UK.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="uk-faq-card animate-on-scroll" onclick="toggleUKFAQ(this)">
+            <div class="uk-faq-question">
+              <span data-en="What is the minimum IELTS score for UK universities?" data-ja="英国大学の最低IELTSスコアは？">What is the minimum IELTS score for UK universities?</span>
+              <i class="fas fa-chevron-down uk-faq-icon"></i>
+            </div>
+            <div class="uk-faq-answer">
+              <p data-en="Minimum IELTS requirements vary: Foundation programs: 5.0-5.5, Bachelor's degrees: 6.0-6.5, Master's degrees: 6.5-7.0, Top universities (Oxbridge, Russell Group): 7.0-7.5. Some universities may accept TOEFL, PTE, or Duolingo. No IELTS waiver for most competitive programs."
+                 data-ja="最低IELTS要件は異なります：ファウンデーションプログラム：5.0-5.5、学士号：6.0-6.5、修士号：6.5-7.0、トップ大学（オックスブリッジ、ラッセルグループ）：7.0-7.5。一部の大学はTOEFL、PTE、またはDuolingoを受理する場合があります。ほとんどの競争の激しいプログラムではIELTS免除はありません。">
+                Foundation: 5.0-5.5, Bachelor's: 6.0-6.5, Master's: 6.5-7.0, Top universities: 7.0-7.5.
+              </p>
+            </div>
+          </div>
+
+          <div class="uk-faq-card animate-on-scroll" style="transition-delay: 120ms;" onclick="toggleUKFAQ(this)">
+            <div class="uk-faq-question">
+              <span data-en="How much bank balance is required for UK student visa?" data-ja="英国学生ビザに必要な銀行残高は？">How much bank balance is required for UK student visa?</span>
+              <i class="fas fa-chevron-down uk-faq-icon"></i>
+            </div>
+            <div class="uk-faq-answer">
+              <p data-en="You need to show funds covering 1 year tuition fees + £1,334/month for living costs (outside London) or £1,265/month (inside London). Typically: £10,000-£15,000 for living + tuition fees. Funds must be held for 28 consecutive days. Acceptable sources: personal savings, education loans, sponsor's funds with proper documentation."
+                 data-ja="1年間の授業料+生活費（ロンドン外）月1,334ポンドまたは（ロンドン内）月1,265ポンドをカバーする資金を示す必要があります。通常：生活費10,000〜15,000ポンド+授業料。資金は28日間連続して保有されている必要があります。受理可能な源泉：個人貯蓄、教育ローン、適切な書類を備えたスポンサーの資金。">
+                Funds covering 1 year tuition + living costs (£1,265-£1,334/month), held for 28 days.
+              </p>
+            </div>
+          </div>
+
+          <div class="uk-faq-card animate-on-scroll" style="transition-delay: 240ms;" onclick="toggleUKFAQ(this)">
+            <div class="uk-faq-question">
+              <span data-en="Can I work in UK after completing my studies?" data-ja="学業終了後、英国で働けますか？">Can I work in UK after completing my studies?</span>
+              <i class="fas fa-chevron-down uk-faq-icon"></i>
+            </div>
+            <div class="uk-faq-answer">
+              <p data-en="Yes, through the Graduate Route visa: 2 years for bachelor's/master's graduates, 3 years for PhD graduates. No job offer required. After Graduate Route, you can switch to Skilled Worker Visa if you find sponsored employment. Many international students secure UK employment through this pathway."
+                 data-ja="はい、卒業生ルートビザを通じて：学士号/修士号卒業生は2年間、博士号卒業生は3年間。仕事のオファーは不要。卒業生ルート後、スポンサー付き就職を見つければ熟練労働者ビザに切り替えられます。多くの留学生がこの経路で英国就職を確保しています。">
+                Yes, Graduate Route visa: 2 years (bachelor's/master's), 3 years (PhD).
+              </p>
+            </div>
+          </div>
+
+          <div class="uk-faq-card animate-on-scroll" style="transition-delay: 360ms;" onclick="toggleUKFAQ(this)">
+            <div class="uk-faq-question">
+              <span data-en="What is CAS and when do I receive it?" data-ja="CASとは何ですか？いつ受け取りますか？">What is CAS and when do I receive it?</span>
+              <i class="fas fa-chevron-down uk-faq-icon"></i>
+            </div>
+            <div class="uk-faq-answer">
+              <p data-en="CAS (Confirmation of Acceptance for Studies) is a unique reference number issued by UK universities to confirm your admission. You receive CAS after accepting an unconditional offer and paying tuition deposit (if required). CAS is mandatory for Student Visa application. Processing time: 2-4 weeks after meeting all conditions."
+                 data-ja="CAS（学習受け入れ確認）は、英国の大学が発行する入学を確認するための固有の参照番号です。無条件オファーを受諾し、授業料デポジット（必要な場合）を支払った後にCASを受け取ります。CASは学生ビザ申請に必須です。処理時間：すべての条件を満たした後2〜4週間。">
+                CAS is issued by universities after accepting unconditional offer, required for visa.
+              </p>
+            </div>
+          </div>
+
+          <div class="uk-faq-card animate-on-scroll" style="transition-delay: 480ms;" onclick="toggleUKFAQ(this)">
+            <div class="uk-faq-question">
+              <span data-en="Is UK education more expensive than other countries?" data-ja="英国教育は他の国よりも高価ですか？">Is UK education more expensive than other countries?</span>
+              <i class="fas fa-chevron-down uk-faq-icon"></i>
+            </div>
+            <div class="uk-faq-answer">
+              <p data-en="While UK tuition fees are higher than some countries, shorter degree durations (3 years bachelor's, 1 year master's) reduce overall costs. Also consider: Graduate Route allows 2-3 years work, potentially earning £25,000-£35,000 annually. Many scholarships available. Compared to 4-year US degrees, UK can be more cost-effective when considering time value."
+                 data-ja="英国の授業料は一部の国よりも高いですが、短期学位期間（学士号3年、修士号1年）により総費用が削減されます。また考慮すべき点：卒業生ルートは2-3年間の就労を可能にし、年間25,000〜35,000ポンドを稼ぐ可能性があります。多くの奨学金が利用可能です。4年間の米国学位と比較すると、時間価値を考慮すると英国の方が費用効果的です。">
+                Shorter degrees (3 years bachelor's, 1 year master's) reduce overall costs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UK CTA Section -->
+  <section class="uk-cta" id="start">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <h2 class="animate-on-scroll" data-en="Start Your UK Study Journey" data-ja="英国留学の旅を始めましょう">Start Your UK Study Journey</h2>
+          <p class="animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Begin with proper guidance from Eminent Overseas & Consultants. We provide transparent support for your successful UK university admission and student visa application."
+             data-ja="エミネント海外留学コンサルタントからの適切なガイダンスから始めましょう。英国大学入学と学生ビザ申請の成功のために透明なサポートを提供します。">
+            Begin with proper guidance for your successful UK university admission.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 justify-content-center animate-on-scroll" style="transition-delay: 240ms;">
+            <a href="contact.php" class="btn btn-light px-5 py-3">
+              <i class="fas fa-calendar-check me-2"></i> <span data-en="Book UK Consultation" data-ja="英国留学相談を予約">Book UK Consultation</span>
+            </a>
+            <a href="process.html" class="btn btn-outline-light px-5 py-3">
+              <i class="fas fa-list-ol me-2"></i> <span data-en="View UK Process" data-ja="英国プロセスを見る">View UK Process</span>
+            </a>
+          </div>
+
+          <p class="mt-4 animate-on-scroll" style="transition-delay: 360ms;">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <span data-en="Office: 16/9, Indira Road (Behind Tejgaon College), Dhaka 1212, Bangladesh | Hours: Sat-Thu, 10:00 AM – 6:00 PM"
+                  data-ja="オフィス: ダッカ1212、インディラロード16/9（テジガンカレッジ裏） | 営業時間: 土〜木、午前10時 – 午後6時">
+              Office: 16/9, Indira Road (Behind Tejgaon College), Dhaka 1212, Bangladesh | Hours: Sat-Thu, 10:00 AM – 6:00 PM
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants provides ethical, transparent study abroad guidance for Bangladesh students pursuing education in Japan and United Kingdom. We focus on proper preparation and honest counseling."
+             data-ja="エミネント海外留学コンサルタントは、日本と英国で教育を追求するバングラデシュ人学生に倫理的で透明性のある留学ガイダンスを提供します。適切な準備と誠実なカウンセリングに焦点を当てています。">
+            Eminent Overseas & Consultants provides ethical, transparent study abroad guidance 
+            for Bangladesh students pursuing education in Japan and United Kingdom. 
+            We focus on proper preparation and honest counseling.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Our Services" data-ja="サービス一覧">Our Services</h5>
+          <a href="study-japan.html" class="footer-link" data-en="Japan Study Guidance" data-ja="日本留学ガイダンス">Japan Study Guidance</a>
+          <a href="study-uk.html" class="footer-link" data-en="UK Study Guidance" data-ja="英国留学ガイダンス">UK Study Guidance</a>
+          <a href="japanese-course.html#n5" class="footer-link" data-en="Japanese N5 Course" data-ja="日本語N5コース">Japanese N5 Course</a>
+          <a href="japanese-course.html#n4" class="footer-link" data-en="Japanese N4 Course" data-ja="日本語N4コース">Japanese N4 Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Student Visa Support" data-ja="学生ビザサポート">Student Visa Support</a>
+          <a href="process.html" class="footer-link" data-en="Application Process" data-ja="申請プロセス">Application Process</a>
+          <a href="contact.php" class="footer-link" data-en="Free Counseling" data-ja="無料相談">Free Counseling</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">16/9, Indira Road (Behind Tejgaon College)</div>
+                <div class="text-tertiary">Dhaka 1212, Bangladesh</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call or message for appointment" data-ja="予約のためにお電話またはメッセージを">Call or message for appointment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes."
+           data-ja="ガイダンスと準備サポートを提供します。ビザ承認や入学結果を保証するものではありません。">
+          We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize the app with custom marquee content
+    document.addEventListener('DOMContentLoaded', function() {
+      // Override marquee content for UK Study page
+      if (typeof LanguageManager !== 'undefined') {
+        const originalInit = LanguageManager.prototype.init;
+        LanguageManager.prototype.init = function() {
+          this.marqueeContent = {
+            en: [
+              "Study in United Kingdom | Eminent Overseas & Consultants | UK University Admissions | Visa Support",
+              "Graduate Route: 2-3 Years Work After Studies | World-Ranked Universities | Shorter Degrees",
+              "IELTS Preparation | Scholarship Guidance | UCAS Application Support | CAS & Visa Processing",
+              "Dhaka Office | Sat–Thu, 10:00 AM–6:00 PM | Start Your UK Journey Today"
+            ],
+            ja: [
+              "英国留学 | エミネント海外留学コンサルタント | 英国大学入学 | ビザサポート",
+              "卒業生ルート：学業終了後2-3年間就労可能 | 世界ランクの大学 | 短期学位",
+              "IELTS準備 | 奨学金ガイダンス | UCAS申請サポート | CAS・ビザ処理",
+              "ダッカオフィス | 土〜木、午前10時〜午後6時 | 今日から英国留学を始めましょう"
+            ]
+          };
+          originalInit.call(this);
+        };
+      }
+      
+      // Initialize the app
+      if (typeof App !== 'undefined') {
+        window.app = new App();
+      }
+
+      // FAQ toggle functionality
+      window.toggleUKFAQ = function(element) {
+        element.classList.toggle('active');
+      };
+
+      // Close other FAQ cards when one is opened
+      const ukFaqCards = document.querySelectorAll('.uk-faq-card');
+      ukFaqCards.forEach(card => {
+        card.addEventListener('click', function() {
+          if (!this.classList.contains('active')) {
+            // Close other cards
+            ukFaqCards.forEach(otherCard => {
+              if (otherCard !== this && otherCard.classList.contains('active')) {
+                otherCard.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+
+      // Initialize current year in footer
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1523 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Visa Guidance - Eminent Overseas & Consultants" data-ja="ビザガイダンス - エミネント海外留学コンサルタント">Visa Guidance - Eminent Overseas & Consultants</title>
+  <meta name="description" content="Professional visa guidance and document preparation support for Japan and UK study visas. Ethical, transparent process with proper preparation and support." />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Visa Guidance - Eminent Overseas & Consultants">
+  <meta property="og:description" content="Professional visa guidance and document preparation for Japan & UK study visas.">
+  <meta property="og:image" content="images/visa-guidance-banner.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/visa-guidance.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visa Guidance for Study Abroad">
+  <meta name="twitter:description" content="Professional visa guidance for Japan & UK study visas">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Page Specific CSS -->
+  <style>
+    /* ========================
+       VISA GUIDANCE PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* Page Header */
+    .page-header {
+      padding-top: calc(var(--marquee-height) + var(--navbar-height) + 4rem);
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    [data-theme="dark"] .page-header {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    }
+    
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-200) 0%, transparent 70%);
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    
+    [data-theme="dark"] .page-header::before {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+    }
+    
+    .page-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Visa Category Navigation */
+    .visa-category-nav {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+    
+    .visa-category-list {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .visa-category-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.5rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-base);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .visa-category-item:hover {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      border-color: var(--primary-300);
+      transform: translateY(-2px);
+    }
+    
+    [data-theme="dark"] .visa-category-item:hover {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .visa-category-item.active {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+    }
+    
+    .visa-category-icon {
+      font-size: 1rem;
+    }
+    
+    /* Visa Hero Banner */
+    .visa-hero-banner {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-bottom: 4rem;
+      height: 400px;
+    }
+    
+    .visa-hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .visa-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 3rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+      color: white;
+    }
+    
+    .visa-hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .visa-hero-content p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    
+    /* Visa Information Cards */
+    .visa-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+    }
+    
+    .visa-info-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+    
+    .visa-header {
+      padding: 3rem 3rem 2rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .visa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.25rem;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+    
+    .visa-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .visa-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Requirements Grid */
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .requirement-category {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: var(--transition-base);
+    }
+    
+    .requirement-category:hover {
+      border-color: var(--primary-300);
+      transform: translateY(-4px);
+    }
+    
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-200);
+    }
+    
+    .category-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    
+    .requirements-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .requirements-list li {
+      padding: 0.75rem 0;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .requirements-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirements-list li:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary-600);
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    
+    /* Process Steps */
+    .visa-process {
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .visa-process h3 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      color: var(--text-primary);
+    }
+    
+    .process-steps {
+      display: grid;
+      gap: 1.5rem;
+    }
+    
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      transition: var(--transition-base);
+    }
+    
+    .process-step:hover {
+      border-color: var(--primary-300);
+      transform: translateX(4px);
+    }
+    
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+    }
+    
+    .step-content h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    
+    .step-content p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    /* Important Notes */
+    .visa-notes {
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border-color);
+      background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+    }
+    
+    [data-theme="dark"] .visa-notes {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .visa-notes h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+    
+    .notes-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .notes-list li {
+      padding: 0.75rem 0;
+      color: var(--text-secondary);
+      position: relative;
+      padding-left: 2rem;
+      border-bottom: 1px solid rgba(14, 165, 233, 0.2);
+    }
+    
+    .notes-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .notes-list li:before {
+      content: '!';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-600);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+    
+    /* Call to Action */
+    .visa-cta {
+      padding: 2rem 3rem;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      color: white;
+      text-align: center;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+    
+    .visa-cta h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .visa-cta p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Why Choose Us Section */
+    .why-choose-section {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+    
+    [data-theme="dark"] .why-choose-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+    
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .benefit-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition-base);
+    }
+    
+    .benefit-item:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .benefit-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.75rem;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+    }
+    
+    .benefit-item h4 {
+      font-size: 1.375rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    .benefit-item p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    /* FAQ Section */
+    .visa-faq {
+      padding: 5rem 0;
+      background: var(--bg-secondary);
+    }
+    
+    [data-theme="dark"] .visa-faq {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+    
+    .faq-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: 1.75rem 2rem;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition-base);
+    }
+    
+    .faq-question:hover {
+      background: var(--bg-surface);
+    }
+    
+    .faq-question:not(.collapsed) {
+      background: rgba(14, 165, 233, 0.08);
+      color: var(--primary-700);
+    }
+    
+    .faq-question::after {
+      content: '\f078';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--primary-500);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+    
+    .faq-question:not(.collapsed)::after {
+      transform: rotate(180deg);
+      color: var(--primary-600);
+    }
+    
+    .faq-answer {
+      padding: 0 2rem 1.75rem;
+    }
+    
+    .faq-answer p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .visa-hero-banner {
+        height: 350px;
+      }
+      
+      .visa-hero-content {
+        padding: 2rem;
+      }
+      
+      .visa-hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .visa-header,
+      .requirements-grid,
+      .visa-process,
+      .visa-notes,
+      .visa-cta {
+        padding: 2rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .page-header {
+        padding-top: calc(var(--marquee-height) + var(--navbar-height) + 3rem);
+        padding-bottom: 3rem;
+      }
+      
+      .visa-hero-banner {
+        height: 300px;
+        margin-bottom: 3rem;
+      }
+      
+      .visa-hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .visa-hero-content p {
+        font-size: 1.125rem;
+      }
+      
+      .visa-header h2 {
+        font-size: 2rem;
+      }
+      
+      .visa-subtitle {
+        font-size: 1.125rem;
+      }
+      
+      .visa-category-list {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+      
+      .visa-category-item {
+        white-space: nowrap;
+      }
+      
+      .requirements-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .process-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .visa-hero-banner {
+        height: 250px;
+      }
+      
+      .visa-hero-content {
+        padding: 1.5rem;
+      }
+      
+      .visa-hero-content h1 {
+        font-size: 1.75rem;
+      }
+      
+      .visa-hero-content p {
+        font-size: 1rem;
+      }
+      
+      .visa-header,
+      .requirements-grid,
+      .visa-process,
+      .visa-notes,
+      .visa-cta {
+        padding: 1.5rem;
+      }
+      
+      .visa-header h2 {
+        font-size: 1.75rem;
+      }
+      
+      .faq-question {
+        padding: 1.25rem 1rem;
+        font-size: 1rem;
+      }
+      
+      .faq-answer {
+        padding: 0 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item active" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="page-header-content animate-on-scroll">
+            <h1 class="display-2 mb-4 animate-on-scroll" data-en="Visa Guidance Support" data-ja="ビザガイダンスサポート">Visa Guidance Support</h1>
+            <p class="lead mb-5 animate-on-scroll" style="transition-delay: 120ms;"
+               data-en="Professional visa guidance and document preparation support for Japan and UK study visas. We provide ethical, transparent assistance to help you prepare accurate visa applications."
+               data-ja="日本と英国の学生ビザのためのプロフェッショナルなビザガイダンスと書類準備サポート。正確なビザ申請を準備するための倫理的で透明性のある支援を提供します。">
+              Professional visa guidance and document preparation support for Japan and UK study visas. We provide ethical, transparent assistance to help you prepare accurate visa applications.
+            </p>
+            
+            <!-- Visa Category Navigation -->
+            <div class="visa-category-nav animate-on-scroll" style="transition-delay: 240ms;">
+              <div class="visa-category-list">
+                <a href="#japan-visa" class="visa-category-item active">
+                  <i class="fas fa-flag vis-category-icon"></i>
+                  <span data-en="Japan Student Visa" data-ja="日本学生ビザ">Japan Student Visa</span>
+                </a>
+                <a href="#uk-visa" class="visa-category-item">
+                  <i class="fas fa-flag-uk vis-category-icon"></i>
+                  <span data-en="UK Student Visa" data-ja="英国学生ビザ">UK Student Visa</span>
+                </a>
+                <a href="#why-choose" class="visa-category-item">
+                  <i class="fas fa-handshake vis-category-icon"></i>
+                  <span data-en="Why Choose Us" data-ja="当社を選ぶ理由">Why Choose Us</span>
+                </a>
+                <a href="#visa-faq" class="visa-category-item">
+                  <i class="fas fa-question-circle vis-category-icon"></i>
+                  <span data-en="Visa FAQ" data-ja="ビザFAQ">Visa FAQ</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visa Hero Banner -->
+  <section class="visa-hero-banner animate-on-scroll">
+    <img src="images/visa-guidance-banner.jpg" alt="Visa document preparation and guidance at Eminent Overseas" class="visa-hero-image" loading="lazy">
+    <div class="visa-hero-content">
+      <h1 data-en="Proper Preparation for Visa Success" data-ja="ビザ成功のための適切な準備">Proper Preparation for Visa Success</h1>
+      <p data-en="We guide you through document preparation, interview readiness, and application processes. Ethical support without false promises."
+         data-ja="書類準備、面接準備、申請プロセスをガイドします。偽りの約束のない倫理的サポートです。">
+        We guide you through document preparation, interview readiness, and application processes. Ethical support without false promises.
+      </p>
+    </div>
+  </section>
+
+  <!-- Japan Student Visa Section -->
+  <section class="visa-info-section" id="japan-visa">
+    <div class="container">
+      <div class="visa-info-card animate-on-scroll">
+        <div class="visa-header">
+          <div class="visa-badge">
+            <i class="fas fa-flag"></i>
+            <span data-en="Japan Student Visa" data-ja="日本学生ビザ">Japan Student Visa</span>
+          </div>
+          <h2 data-en="Japan Student Visa Requirements" data-ja="日本学生ビザ要件">Japan Student Visa Requirements</h2>
+          <p class="visa-subtitle" 
+             data-en="Comprehensive guidance for Japan student visa applications. We help prepare accurate documentation for language schools, technical colleges, and universities."
+             data-ja="日本学生ビザ申請の包括的なガイダンス。語学学校、専門学校、大学のための正確な書類作成を支援します。">
+            Comprehensive guidance for Japan student visa applications. We help prepare accurate documentation for language schools, technical colleges, and universities.
+          </p>
+        </div>
+        
+        <!-- Requirements Grid -->
+        <div class="requirements-grid">
+          <!-- Academic Documents -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3 class="category-title" data-en="Academic Documents" data-ja="学業書類">Academic Documents</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="All academic certificates & transcripts" data-ja="すべての学業証明書・成績証明書">All academic certificates & transcripts</li>
+              <li data-en="School/college leaving certificates" data-ja="学校・大学の卒業証明書">School/college leaving certificates</li>
+              <li data-en="Japanese language proficiency certificates (N5/N4)" data-ja="日本語能力証明書（N5/N4）">Japanese language proficiency certificates (N5/N4)</li>
+              <li data-en="Acceptance letter from Japanese institution" data-ja="日本機関からの入学許可書">Acceptance letter from Japanese institution</li>
+              <li data-en="JLPT/NAT test results (if applicable)" data-ja="JLPT/NAT試験結果（該当する場合）">JLPT/NAT test results (if applicable)</li>
+            </ul>
+          </div>
+          
+          <!-- Financial Documents -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <h3 class="category-title" data-en="Financial Documents" data-ja="財務書類">Financial Documents</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="Bank statements (6 months minimum)" data-ja="銀行取引明細書（最低6ヶ月）">Bank statements (6 months minimum)</li>
+              <li data-en="Sponsor's financial documents" data-ja="スポンサーの財務書類">Sponsor's financial documents</li>
+              <li data-en="Income certificates of sponsor" data-ja="スポンサーの所得証明書">Income certificates of sponsor</li>
+              <li data-en="Tax returns (if applicable)" data-ja="納税証明書（該当する場合）">Tax returns (if applicable)</li>
+              <li data-en="Proof of relationship with sponsor" data-ja="スポンサーとの関係証明">Proof of relationship with sponsor</li>
+            </ul>
+          </div>
+          
+          <!-- Personal Documents -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h3 class="category-title" data-en="Personal Documents" data-ja="個人書類">Personal Documents</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="Valid passport (minimum 2 years)" data-ja="有効なパスポート（最低2年）">Valid passport (minimum 2 years)</li>
+              <li data-en="Passport-size photographs" data-ja="パスポートサイズ写真">Passport-size photographs</li>
+              <li data-en="Birth certificate" data-ja="出生証明書">Birth certificate</li>
+              <li data-en="National ID card copy" data-ja="国民IDカードコピー">National ID card copy</li>
+              <li data-en="Medical certificate (if required)" data-ja="健康診断書（必要な場合）">Medical certificate (if required)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Visa Process -->
+        <div class="visa-process">
+          <h3 data-en="Japan Visa Application Process" data-ja="日本ビザ申請プロセス">Japan Visa Application Process</h3>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4 data-en="Document Preparation" data-ja="書類準備">Document Preparation</h4>
+                <p data-en="We guide you in collecting and preparing all required documents. Ensuring accuracy and compliance with Japanese embassy requirements."
+                   data-ja="必要なすべての書類の収集と準備をガイドします。日本大使館の要件に準拠した正確性を確保します。">
+                  We guide you in collecting and preparing all required documents. Ensuring accuracy and compliance with Japanese embassy requirements.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4 data-en="Application Submission" data-ja="申請提出">Application Submission</h4>
+                <p data-en="Assistance with completing visa application forms accurately. Guidance on submission procedures and embassy protocols."
+                   data-ja="ビザ申請書類の正確な記入を支援します。提出手続きと大使館プロトコルのガイダンスを提供します。">
+                  Assistance with completing visa application forms accurately. Guidance on submission procedures and embassy protocols.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4 data-en="Interview Preparation" data-ja="面接準備">Interview Preparation</h4>
+                <p data-en="Mock interview sessions to prepare for embassy interviews. Focus on common questions and appropriate responses."
+                   data-ja="大使館面接のための模擬面接セッション。一般的な質問と適切な回答に焦点を当てます。">
+                  Mock interview sessions to prepare for embassy interviews. Focus on common questions and appropriate responses.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4 data-en="Follow-up Support" data-ja="フォローアップサポート">Follow-up Support</h4>
+                <p data-en="Guidance on tracking application status and responding to additional requests from the embassy."
+                   data-ja="申請状況の追跡と大使館からの追加要求への対応に関するガイダンスを提供します。">
+                  Guidance on tracking application status and responding to additional requests from the embassy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Important Notes -->
+        <div class="visa-notes">
+          <h3 data-en="Important Notes for Japan Visa" data-ja="日本ビザの重要な注意事項">Important Notes for Japan Visa</h3>
+          <ul class="notes-list">
+            <li data-en="Japanese language proficiency is mandatory for most study programs" data-ja="ほとんどの学習プログラムでは日本語能力が必須です">Japanese language proficiency is mandatory for most study programs</li>
+            <li data-en="Financial documents must show sufficient funds for tuition and living expenses" data-ja="財務書類は授業料と生活費の十分な資金を示す必要があります">Financial documents must show sufficient funds for tuition and living expenses</li>
+            <li data-en="Documents must be translated into Japanese by certified translators" data-ja="書類は認定翻訳者によって日本語に翻訳される必要があります">Documents must be translated into Japanese by certified translators</li>
+            <li data-en="Processing time: Typically 2-4 weeks after document submission" data-ja="処理時間：書類提出後通常2-4週間">Processing time: Typically 2-4 weeks after document submission</li>
+            <li data-en="No work permit during first 3 months for language school students" data-ja="語学学校の学生は最初の3ヶ月間は就労許可がありません">No work permit during first 3 months for language school students</li>
+          </ul>
+        </div>
+        
+        <!-- CTA for Japan Visa -->
+        <div class="visa-cta">
+          <h3 data-en="Need Japan Visa Guidance?" data-ja="日本ビザガイダンスが必要ですか？">Need Japan Visa Guidance?</h3>
+          <p data-en="Our team provides expert guidance for Japan student visa applications. We focus on proper preparation and accurate documentation."
+             data-ja="当社のチームは日本学生ビザ申請の専門的ガイダンスを提供します。適切な準備と正確な書類作成に焦点を当てます。">
+            Our team provides expert guidance for Japan student visa applications. We focus on proper preparation and accurate documentation.
+          </p>
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Get Visa Consultation" data-ja="ビザ相談を受ける">Get Visa Consultation</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UK Student Visa Section -->
+  <section class="visa-info-section" id="uk-visa">
+    <div class="container">
+      <div class="visa-info-card animate-on-scroll" style="transition-delay: 120ms;">
+        <div class="visa-header">
+          <div class="visa-badge">
+            <i class="fas fa-flag-uk"></i>
+            <span data-en="UK Student Visa" data-ja="英国学生ビザ">UK Student Visa</span>
+          </div>
+          <h2 data-en="UK Student Visa (Tier 4) Requirements" data-ja="英国学生ビザ（Tier 4）要件">UK Student Visa (Tier 4) Requirements</h2>
+          <p class="visa-subtitle" 
+             data-en="Comprehensive support for UK student visa applications. Guidance for university admissions and proper documentation for UK immigration."
+             data-ja="英国学生ビザ申請の包括的なサポート。大学入学と英国移民のための適切な書類作成のガイダンス。">
+            Comprehensive support for UK student visa applications. Guidance for university admissions and proper documentation for UK immigration.
+          </p>
+        </div>
+        
+        <!-- Requirements Grid -->
+        <div class="requirements-grid">
+          <!-- Academic & English Requirements -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <h3 class="category-title" data-en="Academic & English Requirements" data-ja="学業・英語要件">Academic & English Requirements</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="CAS (Confirmation of Acceptance for Studies)" data-ja="CAS（学習受け入れ確認書）">CAS (Confirmation of Acceptance for Studies)</li>
+              <li data-en="IELTS/TOEFL English test results" data-ja="IELTS/TOEFL英語テスト結果">IELTS/TOEFL English test results</li>
+              <li data-en="All academic certificates & transcripts" data-ja="すべての学業証明書・成績証明書">All academic certificates & transcripts</li>
+              <li data-en="University offer letter" data-ja="大学のオファーレター">University offer letter</li>
+              <li data-en="References (academic & professional)" data-ja="推薦状（学術的・専門的）">References (academic & professional)</li>
+            </ul>
+          </div>
+          
+          <!-- Financial Requirements -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-pound-sign"></i>
+              </div>
+              <h3 class="category-title" data-en="Financial Requirements" data-ja="財務要件">Financial Requirements</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="Bank statements (28 days minimum)" data-ja="銀行取引明細書（最低28日）">Bank statements (28 days minimum)</li>
+              <li data-en="Proof of tuition fee payment" data-ja="授業料支払い証明">Proof of tuition fee payment</li>
+              <li data-en="Sponsor's financial documents" data-ja="スポンサーの財務書類">Sponsor's financial documents</li>
+              <li data-en="Loan sanction letter (if applicable)" data-ja="ローン承認書（該当する場合）">Loan sanction letter (if applicable)</li>
+              <li data-en="Financial sponsor declaration" data-ja="財務スポンサー宣言書">Financial sponsor declaration</li>
+            </ul>
+          </div>
+          
+          <!-- Personal & Health Requirements -->
+          <div class="requirement-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <h3 class="category-title" data-en="Personal & Health Requirements" data-ja="個人・健康要件">Personal & Health Requirements</h3>
+            </div>
+            <ul class="requirements-list">
+              <li data-en="Valid passport (with blank pages)" data-ja="有効なパスポート（空白ページ付き）">Valid passport (with blank pages)</li>
+              <li data-en="Tuberculosis test certificate" data-ja="結核検査証明書">Tuberculosis test certificate</li>
+              <li data-en="ATAS certificate (for sensitive subjects)" data-ja="ATAS証明書（機微な科目の場合）">ATAS certificate (for sensitive subjects)</li>
+              <li data-en="Birth certificate" data-ja="出生証明書">Birth certificate</li>
+              <li data-en="Police clearance certificate" data-ja="警察証明書">Police clearance certificate</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Visa Process -->
+        <div class="visa-process">
+          <h3 data-en="UK Visa Application Process" data-ja="英国ビザ申請プロセス">UK Visa Application Process</h3>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4 data-en="CAS & Document Collection" data-ja="CAS・書類収集">CAS & Document Collection</h4>
+                <p data-en="Guidance on obtaining CAS from university. Assistance with collecting and verifying all required documents for UKVI."
+                   data-ja="大学からのCAS取得のガイダンス。UKVIに必要なすべての書類の収集と検証の支援。">
+                  Guidance on obtaining CAS from university. Assistance with collecting and verifying all required documents for UKVI.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4 data-en="Online Application" data-ja="オンライン申請">Online Application</h4>
+                <p data-en="Assistance with completing online visa application forms. Guidance on accurate information entry and document uploads."
+                   data-ja="オンラインビザ申請書類の記入を支援します。正確な情報入力と書類アップロードのガイダンス。">
+                  Assistance with completing online visa application forms. Guidance on accurate information entry and document uploads.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4 data-en="Biometric Appointment" data-ja="生体情報登録予約">Biometric Appointment</h4>
+                <p data-en="Guidance on booking and attending biometric appointments. Preparation for visa application center procedures."
+                   data-ja="生体情報登録予約の予約と出席のガイダンス。ビザ申請センター手続きの準備。">
+                  Guidance on booking and attending biometric appointments. Preparation for visa application center procedures.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4 data-en="Interview Preparation" data-ja="面接準備">Interview Preparation</h4>
+                <p data-en="Mock interview sessions for credibility interviews. Focus on academic intent and financial capability questions."
+                   data-ja="信頼性面接のための模擬面接セッション。学術意図と財務能力に関する質問に焦点を当てます。">
+                  Mock interview sessions for credibility interviews. Focus on academic intent and financial capability questions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Important Notes -->
+        <div class="visa-notes">
+          <h3 data-en="Important Notes for UK Visa" data-ja="英国ビザの重要な注意事項">Important Notes for UK Visa</h3>
+          <ul class="notes-list">
+            <li data-en="Financial maintenance requirement: £1,334 per month (for London)" data-ja="財務維持要件：月£1,334（ロンドン）">Financial maintenance requirement: £1,334 per month (for London)</li>
+            <li data-en="IELTS requirement: Minimum 6.0 overall for most universities" data-ja="IELTS要件：ほとんどの大学で最低6.0総合">IELTS requirement: Minimum 6.0 overall for most universities</li>
+            <li data-en="Healthcare surcharge: £470 per year (must be paid before application)" data-ja="医療保険料：年間£470（申請前に支払い必須）">Healthcare surcharge: £470 per year (must be paid before application)</li>
+            <li data-en="Processing time: Standard 3 weeks, priority 5 working days" data-ja="処理時間：標準3週間、優先5営業日">Processing time: Standard 3 weeks, priority 5 working days</li>
+            <li data-en="Work permission: 20 hours/week during term time" data-ja="就労許可：学期中週20時間">Work permission: 20 hours/week during term time</li>
+          </ul>
+        </div>
+        
+        <!-- CTA for UK Visa -->
+        <div class="visa-cta">
+          <h3 data-en="Ready for UK Visa Application?" data-ja="英国ビザ申請の準備はできていますか？">Ready for UK Visa Application?</h3>
+          <p data-en="Professional guidance for UK student visa applications. We ensure proper documentation and preparation for UKVI requirements."
+             data-ja="英国学生ビザ申請のプロフェッショナルガイダンス。UKVI要件に適した書類作成と準備を保証します。">
+            Professional guidance for UK student visa applications. We ensure proper documentation and preparation for UKVI requirements.
+          </p>
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Start UK Visa Process" data-ja="英国ビザプロセスを開始">Start UK Visa Process</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section" id="why-choose">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Why Choose Eminent for Visa Guidance?" data-ja="ビザガイダンスにエミネントを選ぶ理由">Why Choose Eminent for Visa Guidance?</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="We provide ethical, transparent visa guidance focused on proper preparation rather than empty promises. Our approach ensures you're fully prepared for the visa application process."
+             data-ja="空虚な約束ではなく適切な準備に焦点を当てた倫理的で透明性のあるビザガイダンスを提供します。当社のアプローチはビザ申請プロセスに完全に備えることを保証します。">
+            We provide ethical, transparent visa guidance focused on proper preparation rather than empty promises. Our approach ensures you're fully prepared for the visa application process.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4 data-en="Ethical Approach" data-ja="倫理的アプローチ">Ethical Approach</h4>
+          <p data-en="No visa guarantees, only proper preparation. We provide honest guidance about realistic expectations and requirements."
+             data-ja="ビザ保証はなく、適切な準備のみを提供します。現実的な期待と要件について誠実なガイダンスを提供します。">
+            No visa guarantees, only proper preparation. We provide honest guidance about realistic expectations and requirements.
+          </p>
+        </div>
+        
+        <div class="benefit-item animate-on-scroll" style="transition-delay: 120ms;">
+          <div class="benefit-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h4 data-en="Document Expertise" data-ja="書類専門知識">Document Expertise</h4>
+          <p data-en="Detailed guidance on preparing accurate documentation. We ensure compliance with embassy/immigration requirements."
+             data-ja="正確な書類作成に関する詳細なガイダンス。大使館・移民要件への準拠を保証します。">
+            Detailed guidance on preparing accurate documentation. We ensure compliance with embassy/immigration requirements.
+          </p>
+        </div>
+        
+        <div class="benefit-item animate-on-scroll" style="transition-delay: 240ms;">
+          <div class="benefit-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h4 data-en="Interview Preparation" data-ja="面接準備">Interview Preparation</h4>
+          <p data-en="Mock interview sessions to build confidence. Practice with common questions and appropriate responses."
+             data-ja="自信を築くための模擬面接セッション。一般的な質問と適切な回答の練習。">
+            Mock interview sessions to build confidence. Practice with common questions and appropriate responses.
+          </p>
+        </div>
+        
+        <div class="benefit-item animate-on-scroll" style="transition-delay: 360ms;">
+          <div class="benefit-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4 data-en="Transparent Process" data-ja="透明なプロセス">Transparent Process</h4>
+          <p data-en="Clear communication about process, costs, and timelines. No hidden charges or misleading information."
+             data-ja="プロセス、費用、タイムラインについて明確なコミュニケーション。隠れた費用や誤解を招く情報はありません。">
+            Clear communication about process, costs, and timelines. No hidden charges or misleading information.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visa FAQ Section -->
+  <section class="visa-faq" id="visa-faq">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-2 mb-4 section-title animate-on-scroll" data-en="Visa Guidance FAQs" data-ja="ビザガイダンスFAQ">Visa Guidance FAQs</h2>
+          <p class="section-subtitle animate-on-scroll" style="transition-delay: 120ms;"
+             data-en="Common questions about our visa guidance services. Clear answers about processes, expectations, and our ethical approach."
+             data-ja="当社のビザガイダンスサービスに関する一般的な質問。プロセス、期待、倫理的アプローチについての明確な回答。">
+            Common questions about our visa guidance services. Clear answers about processes, expectations, and our ethical approach.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-item animate-on-scroll">
+          <button class="faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+            <span data-en="Do you guarantee visa approval?" data-ja="ビザ承認を保証しますか？">Do you guarantee visa approval?</span>
+          </button>
+          <div id="faq1" class="collapse">
+            <div class="faq-answer">
+              <p data-en="<strong>No, we do not guarantee visa approval.</strong> We provide ethical guidance and preparation support. Final visa decisions are made by embassies/immigration authorities based on their criteria. We focus on ensuring proper documentation and preparation to give you the best possible chance."
+                     data-ja="<strong>いいえ、ビザ承認は保証しません。</strong> 倫理的ガイダンスと準備サポートを提供します。最終的なビザ決定は大使館・移民局が独自の基準に基づいて行います。適切な書類作成と準備を確保し、可能な限り最良の機会を与えることに焦点を当てます。">
+                <strong>No, we do not guarantee visa approval.</strong> We provide ethical guidance and preparation support. Final visa decisions are made by embassies/immigration authorities based on their criteria. We focus on ensuring proper documentation and preparation to give you the best possible chance.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 2 -->
+        <div class="faq-item animate-on-scroll" style="transition-delay: 120ms;">
+          <button class="faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            <span data-en="How long does visa processing take?" data-ja="ビザ処理にはどれくらい時間がかかりますか？">How long does visa processing take?</span>
+          </button>
+          <div id="faq2" class="collapse">
+            <div class="faq-answer">
+              <p data-en="<strong>Japan:</strong> Typically 2-4 weeks after document submission.<br><strong>UK:</strong> Standard service takes 3 weeks, priority service 5 working days.<br>These are average processing times; actual duration may vary based on individual cases and embassy workload."
+                     data-ja="<strong>日本：</strong> 通常書類提出後2-4週間。<br><strong>英国：</strong> 標準サービスは3週間、優先サービスは5営業日です。<br>これらは平均処理時間です。実際の期間は個々のケースと大使館の業務量によって異なる場合があります。">
+                <strong>Japan:</strong> Typically 2-4 weeks after document submission.<br>
+                <strong>UK:</strong> Standard service takes 3 weeks, priority service 5 working days.<br>
+                These are average processing times; actual duration may vary based on individual cases and embassy workload.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 3 -->
+        <div class="faq-item animate-on-scroll" style="transition-delay: 240ms;">
+          <button class="faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            <span data-en="What documents do I need to prepare?" data-ja="どんな書類を準備する必要がありますか？">What documents do I need to prepare?</span>
+          </button>
+          <div id="faq3" class="collapse">
+            <div class="faq-answer">
+              <p data-en="Document requirements vary by country and institution. Generally, you'll need:<br>• Academic certificates & transcripts<br>• Financial documents (bank statements, sponsor documents)<br>• Passport & photographs<br>• Language proficiency certificates<br>• Institution acceptance letter<br>We provide detailed checklists during consultation."
+                     data-ja="書類要件は国と機関によって異なります。一般的に必要なもの：<br>• 学業証明書・成績証明書<br>• 財務書類（銀行取引明細書、スポンサー書類）<br>• パスポート・写真<br>• 言語能力証明書<br>• 機関入学許可書<br>相談時に詳細なチェックリストを提供します。">
+                Document requirements vary by country and institution. Generally, you'll need:<br>
+                • Academic certificates & transcripts<br>
+                • Financial documents (bank statements, sponsor documents)<br>
+                • Passport & photographs<br>
+                • Language proficiency certificates<br>
+                • Institution acceptance letter<br>
+                We provide detailed checklists during consultation.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 4 -->
+        <div class="faq-item animate-on-scroll" style="transition-delay: 360ms;">
+          <button class="faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            <span data-en="Do you provide interview preparation?" data-ja="面接準備を提供しますか？">Do you provide interview preparation?</span>
+          </button>
+          <div id="faq4" class="collapse">
+            <div class="faq-answer">
+              <p data-en="Yes, we provide comprehensive interview preparation through mock interview sessions. We focus on:<br>• Common embassy interview questions<br>• Appropriate responses and presentation<br>• Building confidence and communication skills<br>• Understanding interview protocols and etiquette"
+                     data-ja="はい、模擬面接セッションを通じて包括的な面接準備を提供します。以下に焦点を当てます：<br>• 一般的な大使館面接質問<br>• 適切な回答とプレゼンテーション<br>• 自信とコミュニケーションスキルの構築<br>• 面接プロトコルとエチケットの理解">
+                Yes, we provide comprehensive interview preparation through mock interview sessions. We focus on:<br>
+                • Common embassy interview questions<br>
+                • Appropriate responses and presentation<br>
+                • Building confidence and communication skills<br>
+                • Understanding interview protocols and etiquette
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ 5 -->
+        <div class="faq-item animate-on-scroll" style="transition-delay: 480ms;">
+          <button class="faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+            <span data-en="Can parents/guardians attend visa consultations?" data-ja="保護者/後見人はビザ相談に参加できますか？">Can parents/guardians attend visa consultations?</span>
+          </button>
+          <div id="faq5" class="collapse">
+            <div class="faq-answer">
+              <p data-en="Absolutely. We encourage parents/guardians to attend visa consultations. Understanding financial requirements, documentation needs, and the overall process is crucial for family support. We provide clear explanations in simple language for all family members."
+                     data-ja="もちろんです。保護者/後見人がビザ相談に参加することを推奨します。財務要件、書類要件、全体的なプロセスを理解することは家族のサポートにとって重要です。すべての家族向けにわかりやすい言葉で明確な説明を提供します。">
+                Absolutely. We encourage parents/guardians to attend visa consultations. Understanding financial requirements, documentation needs, and the overall process is crucial for family support. We provide clear explanations in simple language for all family members.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 600ms;">
+        <a href="contact.php" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-question-circle me-2"></i> <span data-en="Have More Visa Questions? Contact Us" data-ja="さらにビザの質問がありますか？お問い合わせ">Have More Visa Questions? Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll" style="transition-delay: 720ms;">
+        <h2 class="cta-title" data-en="Start Your Visa Preparation Journey" data-ja="ビザ準備の旅を始めましょう">Start Your Visa Preparation Journey</h2>
+        <p class="cta-subtitle" 
+           data-en="Book a visa consultation with Eminent Overseas & Consultants. Get professional guidance, proper documentation support, and ethical preparation for your Japan or UK study visa."
+           data-ja="エミネント海外留学コンサルタントでビザ相談を予約しましょう。日本または英国の学生ビザのためのプロフェッショナルガイダンス、適切な書類サポート、倫理的準備を入手できます。">
+          Book a visa consultation with Eminent Overseas & Consultants. Get professional guidance, proper documentation support, and ethical preparation for your Japan or UK study visa.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Visa Consultation" data-ja="ビザ相談を予約">Book Visa Consultation</span>
+          </a>
+          <a href="tel:+880XXXXXXXXXX" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call for Visa Guidance" data-ja="ビザガイダンスについてお電話">Call for Visa Guidance</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Dhaka, Bangladesh | Office Time: Sat-Thu, 10:00 AM – 6:00 PM"
+                data-ja="所在地: ダッカ、バングラデシュ | 営業時間: 土〜木、午前10時 – 午後6時">
+            Location: Dhaka, Bangladesh | Office Time: Sat-Thu, 10:00 AM – 6:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants provides professional visa guidance and document preparation support for Japan and UK study visas. We focus on ethical, transparent processes with proper preparation."
+             data-ja="エミネント海外留学コンサルタントは、日本と英国の学生ビザのためのプロフェッショナルなビザガイダンスと書類準備サポートを提供します。適切な準備による倫理的で透明性のあるプロセスに焦点を当てています。">
+            Eminent Overseas & Consultants provides professional visa guidance and document preparation support for Japan and UK study visas. We focus on ethical, transparent processes with proper preparation.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#visa-faq" class="footer-link" data-en="FAQ" data-ja="よくある質問">FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Visa Guidance" data-ja="ビザガイダンス">Visa Guidance</h5>
+          <a href="visa-guidance.html#japan-visa" class="footer-link" data-en="Japan Student Visa" data-ja="日本学生ビザ">Japan Student Visa</a>
+          <a href="visa-guidance.html#uk-visa" class="footer-link" data-en="UK Student Visa" data-ja="英国学生ビザ">UK Student Visa</a>
+          <a href="visa-guidance.html#why-choose" class="footer-link" data-en="Why Choose Us" data-ja="当社を選ぶ理由">Why Choose Us</a>
+          <a href="visa-guidance.html#visa-faq" class="footer-link" data-en="Visa FAQ" data-ja="ビザFAQ">Visa FAQ</a>
+          <a href="contact.php" class="footer-link" data-en="Visa Consultation" data-ja="ビザ相談">Visa Consultation</a>
+          <a href="contact.php" class="footer-link" data-en="Document Review" data-ja="書類レビュー">Document Review</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">Dhaka, Bangladesh</div>
+                <div class="text-tertiary small" data-en="(Exact address provided upon appointment)" data-ja="（正確な住所は予約時に提供します）">(Exact address provided upon appointment)</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call for visa guidance" data-ja="ビザガイダンスについてお電話">Call for visa guidance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes."
+           data-ja="ガイダンスと準備サポートを提供します。ビザ承認や入学結果を保証するものではありません。">
+          We provide guidance and preparation support. We do not guarantee visa approval or admission outcomes.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JavaScript -->
+  <script>
+    // Visa Guidance Page Specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scroll for visa category navigation
+      document.querySelectorAll('.visa-category-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Update active category
+            document.querySelectorAll('.visa-category-item').forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Calculate offset
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+            const pageHeaderHeight = document.querySelector('.page-header')?.offsetHeight || 0;
+            
+            // Scroll to target
+            const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight;
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Update active category on scroll
+      const sections = document.querySelectorAll('.visa-info-section, .why-choose-section, .visa-faq');
+      const categoryItems = document.querySelectorAll('.visa-category-item');
+      
+      const updateActiveCategory = () => {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 200;
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = sectionId;
+          }
+        });
+        
+        // Update active category
+        categoryItems.forEach(item => {
+          const href = item.getAttribute('href');
+          if (href === `#${currentSection}`) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      };
+      
+      // Throttle scroll event
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActiveCategory();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      
+      // Initialize current year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Initialize app if not already initialized
+      if (typeof app !== 'undefined') {
+        // Update marquee content for visa guidance page
+        if (app.languageManager) {
+          app.languageManager.marqueeContent = {
+            en: [
+              "Visa Guidance Support | Japan & UK Student Visas | Document Preparation",
+              "Ethical Visa Support | No False Promises | Proper Preparation Focus",
+              "Document Guidance | Interview Preparation | Embassy Requirements",
+              "Dhaka Office | Book Your Visa Consultation Today"
+            ],
+            ja: [
+              "ビザガイダンスサポート | 日本・英国学生ビザ | 書類準備",
+              "倫理的ビザサポート | 偽りの約束なし | 適切な準備焦点",
+              "書類ガイダンス | 面接準備 | 大使館要件",
+              "ダッカオフィス | 今日ビザ相談を予約"
+            ]
+          };
+          app.languageManager.updateMarquee();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

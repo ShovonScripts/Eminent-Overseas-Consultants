@@ -1,0 +1,1797 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-en="Success Stories - Eminent Overseas & Consultants" data-ja="成功事例 - エミネント海外留学コンサルタント">Success Stories - Eminent Overseas & Consultants</title>
+  <meta name="description" content="Read inspiring success stories of Bangladeshi students who achieved their study abroad dreams in Japan and UK through Eminent Overseas & Consultants." />
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Success Stories - Eminent Overseas & Consultants">
+  <meta property="og:description" content="Inspiring stories of students who studied in Japan & UK through our guidance.">
+  <meta property="og:image" content="images/story/success-stories-banner.jpg">
+  <meta property="og:url" content="https://eminentoverseas.uk/success-stories.html">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Success Stories">
+  <meta name="twitter:description" content="Real stories of students studying in Japan & UK">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Page Specific CSS -->
+  <style>
+    /* ========================
+       SUCCESS STORIES PAGE SPECIFIC STYLES
+       ======================== */
+    
+    /* Page Header */
+    .page-header {
+      padding-top: calc(var(--marquee-height) + var(--navbar-height) + 4rem);
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    [data-theme="dark"] .page-header {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(14, 165, 233, 0.05) 100%);
+    }
+    
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, var(--primary-200) 0%, transparent 70%);
+      opacity: 0.3;
+      border-radius: 50%;
+    }
+    
+    [data-theme="dark"] .page-header::before {
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+    }
+    
+    .page-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Stats Banner */
+    .stats-banner {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      margin: 4rem 0;
+      color: white;
+      text-align: center;
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+    
+    /* Story Categories Navigation */
+    .story-categories {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+    
+    .category-list {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .category-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.5rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-base);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+    
+    .category-btn:hover {
+      background: var(--primary-50);
+      color: var(--primary-700);
+      border-color: var(--primary-300);
+      transform: translateY(-2px);
+    }
+    
+    [data-theme="dark"] .category-btn:hover {
+      background: rgba(14, 165, 233, 0.1);
+    }
+    
+    .category-btn.active {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.25);
+    }
+    
+    .category-icon {
+      font-size: 1rem;
+    }
+    
+    /* Featured Story */
+    .featured-story {
+      margin-bottom: 5rem;
+    }
+    
+    .featured-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-2xl);
+      transition: var(--transition-base);
+    }
+    
+    .featured-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .featured-image-container {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+    .featured-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .featured-card:hover .featured-image {
+      transform: scale(1.05);
+    }
+    
+    .featured-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+      padding: 2rem;
+      color: white;
+    }
+    
+    .featured-content {
+      padding: 3rem;
+    }
+    
+    .student-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .student-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-200);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .student-details h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    
+    .student-location {
+      color: var(--primary-600);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .story-quote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      border-left: 4px solid var(--primary-400);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+    
+    /* Story Cards Grid */
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 5rem;
+    }
+    
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition-base);
+      height: 100%;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .story-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-300);
+    }
+    
+    .story-image-container {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .story-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .story-card:hover .story-image {
+      transform: scale(1.05);
+    }
+    
+    .country-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    [data-theme="dark"] .country-badge {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+    }
+    
+    .story-content {
+      padding: 2rem;
+    }
+    
+    .student-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .student-meta-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-200);
+    }
+    
+    .student-meta-details h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    
+    .student-program {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    .story-excerpt {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .story-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .story-tag {
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+    
+    /* Testimonials Section */
+    .testimonials-section {
+      background: var(--bg-secondary);
+      padding: 5rem 0;
+      margin-bottom: 5rem;
+    }
+    
+    [data-theme="dark"] .testimonials-section {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+    
+    .testimonial-slider {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      margin: 2rem;
+    }
+    
+    .testimonial-quote {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      font-style: italic;
+      position: relative;
+    }
+    
+    .testimonial-quote:before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--primary-200);
+      position: absolute;
+      top: -1.5rem;
+      left: -1rem;
+      font-family: serif;
+      opacity: 0.5;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-200);
+    }
+    
+    .testimonial-author-info h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+    
+    .testimonial-author-location {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+    }
+    
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .slider-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-base);
+    }
+    
+    .slider-btn:hover {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      color: white;
+      border-color: transparent;
+    }
+    
+    /* Video Stories */
+    .video-stories {
+      padding: 5rem 0;
+      background: var(--bg-primary);
+    }
+    
+    [data-theme="dark"] .video-stories {
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .video-thumbnail {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .video-thumbnail iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .video-content {
+      padding: 1.5rem;
+    }
+    
+    .video-content h4 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    
+    .video-description {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    
+    /* Video Modal */
+    .video-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .video-modal.active {
+      display: flex;
+    }
+    
+    .video-modal-content {
+      width: 90%;
+      max-width: 900px;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .video-modal-header {
+      padding: 1rem 1.5rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .video-modal-body {
+      padding: 1.5rem;
+    }
+    
+    .video-modal-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-md);
+    }
+    
+    .video-modal-close:hover {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .stats-banner {
+        padding: 2rem;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .featured-image-container {
+        height: 350px;
+      }
+      
+      .featured-content {
+        padding: 2rem;
+      }
+      
+      .testimonial-card {
+        padding: 2rem;
+        margin: 1rem;
+      }
+      
+      .video-modal-content {
+        width: 95%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .page-header {
+        padding-top: calc(var(--marquee-height) + var(--navbar-height) + 3rem);
+        padding-bottom: 3rem;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .category-list {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+      }
+      
+      .category-btn {
+        white-space: nowrap;
+      }
+      
+      .featured-image-container {
+        height: 300px;
+      }
+      
+      .student-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial-quote {
+        font-size: 1.125rem;
+      }
+      
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .stats-banner {
+        padding: 1.5rem;
+        margin: 3rem 0;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .featured-image-container {
+        height: 250px;
+      }
+      
+      .featured-content {
+        padding: 1.5rem;
+      }
+      
+      .featured-badge {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem 1rem;
+      }
+      
+      .story-quote {
+        font-size: 1.125rem;
+        padding-left: 1rem;
+      }
+      
+      .video-modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+    
+    /* Loading state for videos */
+    .video-loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border-color);
+      border-top-color: var(--primary-500);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Running Marquee - FIXED -->
+  <div class="top-marquee" aria-label="Eminent Overseas Announcement">
+    <a href="contact.php" title="Start Your Study Abroad Journey">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Eminent Overseas Home">
+        <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+      </a>
+
+      <div class="mobile-controls d-lg-none">
+        <button class="lang-toggle lang-toggle-mobile" id="langToggleMobile" type="button" aria-label="Toggle language">
+          EN
+        </button>
+        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open menu" aria-expanded="false" aria-controls="navbarNav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <!-- Home -->
+          <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-ja="ホーム">Home</a></li>
+          
+          <!-- About Us -->
+          <li class="nav-item"><a class="nav-link" href="about.html" data-en="About Us" data-ja="会社概要">About Us</a></li>
+          
+          <!-- Destinations Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Destinations" data-ja="留学先">Destinations</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="study-japan.html" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a></li>
+              <li><a class="dropdown-item" href="study-uk.html" data-en="Study in UK" data-ja="英国留学">Study in UK</a></li>
+            </ul>
+          </li>
+          
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-en="Services" data-ja="サービス">Services</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="japanese-course.html" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a></li>
+              <li><a class="dropdown-item" href="visa-guidance.html" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a></li>
+            </ul>
+          </li>
+          
+          <!-- Process -->
+          <li class="nav-item"><a class="nav-link" href="process.html" data-en="Process" data-ja="プロセス">Process</a></li>
+          
+          <!-- Stories -->
+          <li class="nav-item"><a class="nav-link active" href="success-stories.html" data-en="Stories" data-ja="成功事例">Stories</a></li>
+          
+          <!-- Contact (will show as Book Consultation button on desktop) -->
+          <li class="nav-item d-lg-none"><a class="nav-link" href="contact.php" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 d-none d-lg-flex">
+          <button class="lang-toggle" id="langToggleDesktop" type="button" aria-label="Toggle language">
+            EN
+          </button>
+          <button class="theme-toggle" id="themeToggleDesktop" type="button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <!-- Contact now shows as Book Consultation button on desktop -->
+          <a href="contact.php" class="nav-highlight" data-en="Book Consultation" data-ja="相談を予約">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header" id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+          <div class="page-header-content animate-on-scroll">
+            <h1 class="display-2 mb-4 animate-on-scroll" data-en="Student Success Stories" data-ja="学生の成功事例">Student Success Stories</h1>
+            <p class="lead mb-4 animate-on-scroll" style="transition-delay: 120ms;"
+               data-en="Real stories of Bangladeshi students who achieved their study abroad dreams in Japan and UK through our guidance. Learn from their journeys, challenges, and achievements."
+               data-ja="当社のガイダンスを通じて日本と英国で留学の夢を実現したバングラデシュ人学生の実話。彼らの旅、挑戦、達成から学びましょう。">
+              Real stories of Bangladeshi students who achieved their study abroad dreams in Japan and UK through our guidance. Learn from their journeys, challenges, and achievements.
+            </p>
+            
+            <!-- Story Categories Navigation -->
+            <div class="story-categories animate-on-scroll" style="transition-delay: 240ms;">
+              <div class="category-list">
+                <button class="category-btn active" data-filter="all">
+                  <i class="fas fa-globe category-icon"></i>
+                  <span data-en="All Stories" data-ja="すべての事例">All Stories</span>
+                </button>
+                <button class="category-btn" data-filter="japan">
+                  <i class="fas fa-flag category-icon"></i>
+                  <span data-en="Japan Stories" data-ja="日本事例">Japan Stories</span>
+                </button>
+                <button class="category-btn" data-filter="uk">
+                  <i class="fas fa-flag-uk category-icon"></i>
+                  <span data-en="UK Stories" data-ja="英国事例">UK Stories</span>
+                </button>
+                <button class="category-btn" data-filter="featured">
+                  <i class="fas fa-star category-icon"></i>
+                  <span data-en="Featured" data-ja="注目事例">Featured</span>
+                </button>
+                <button class="category-btn" data-filter="video">
+                  <i class="fas fa-video category-icon"></i>
+                  <span data-en="Video Stories" data-ja="動画事例">Video Stories</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner animate-on-scroll">
+    <div class="container">
+      <h2 class="display-4 mb-4 text-center" data-en="Our Students' Success in Numbers" data-ja="数字で見る学生の成功">Our Students' Success in Numbers</h2>
+      <p class="text-center mb-5 opacity-90" data-en="Real achievements through proper preparation and guidance" data-ja="適切な準備とガイダンスによる実際の成果">Real achievements through proper preparation and guidance</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="2000">0</div>
+          <div class="stat-label" data-en="Students Guided" data-ja="ガイダンス学生数">Students Guided</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="95">0</div>
+          <div class="stat-label" data-en="Visa Success Rate" data-ja="ビザ成功率">Visa Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="1200">0</div>
+          <div class="stat-label" data-en="In Japan" data-ja="日本在住">In Japan</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="800">0</div>
+          <div class="stat-label" data-en="In UK" data-ja="英国在住">In UK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Story -->
+  <section class="featured-story" id="featured-story">
+    <div class="container">
+      <h2 class="display-3 mb-5 text-center section-title animate-on-scroll" data-en="Featured Success Story" data-ja="注目の成功事例">Featured Success Story</h2>
+      
+      <div class="featured-card animate-on-scroll">
+        <div class="featured-badge">
+          <i class="fas fa-star"></i>
+          <span data-en="Featured Story" data-ja="注目事例">Featured Story</span>
+        </div>
+        
+        <div class="featured-image-container">
+          <!-- UPDATED PATH -->
+          <img src="images/story/featured-success-story.jpg" alt="Ahmed studying at Tokyo University" class="featured-image" loading="lazy">
+          <div class="featured-overlay">
+            <h3 class="text-white mb-2" data-en="From Dhaka to Tokyo University" data-ja="ダッカから東京大学へ">From Dhaka to Tokyo University</h3>
+            <p class="text-white opacity-90" data-en="Ahmed's journey to Japan's top university" data-ja="アーメドの日本トップ大学への旅">Ahmed's journey to Japan's top university</p>
+          </div>
+        </div>
+        
+        <div class="featured-content">
+          <div class="student-info">
+            <!-- UPDATED PATH -->
+            <img src="images/story/student-ahmed.jpg" alt="Ahmed Rahman" class="student-avatar" loading="lazy">
+            <div class="student-details">
+              <h3 data-en="Ahmed Rahman" data-ja="アーメド・ラーマン">Ahmed Rahman</h3>
+              <div class="student-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-en="Tokyo University, Japan" data-ja="東京大学、日本">Tokyo University, Japan</span>
+              </div>
+              <div class="student-program">
+                <i class="fas fa-graduation-cap"></i>
+                <span data-en="Bachelor of Engineering" data-ja="工学学士">Bachelor of Engineering</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="mb-3" data-en="The Journey" data-ja="旅路">The Journey</h4>
+              <p class="mb-4" data-en="Ahmed came to us with a dream to study engineering in Japan but with zero Japanese language knowledge. Through our structured N5 and N4 Japanese courses, he built a strong language foundation in 6 months. We guided him through school selection, application process, and visa documentation. Today, he's studying at one of Japan's most prestigious universities and working part-time to support his studies."
+                     data-ja="アーメドは日本語知識ゼロで日本で工学を学ぶ夢を持って当社に来ました。体系的なN5・N4日本語コースを通じて、6ヶ月で強い言語基盤を築きました。学校選択、申請プロセス、ビザ書類作成をガイドしました。現在、彼は日本で最も権威ある大学の一つで学び、アルバイトで学業をサポートしています。">
+                Ahmed came to us with a dream to study engineering in Japan but with zero Japanese language knowledge. Through our structured N5 and N4 Japanese courses, he built a strong language foundation in 6 months. We guided him through school selection, application process, and visa documentation. Today, he's studying at one of Japan's most prestigious universities and working part-time to support his studies.
+              </p>
+              
+              <blockquote class="story-quote" data-en="'Eminent Overseas gave me honest guidance without false promises. Their Japanese language training was intense but effective. The visa guidance was thorough and transparent. I'm living my dream today because of proper preparation.'"
+                          data-ja="「エミネント海外留学は偽りの約ストなしに誠実なガイダンスをくれました。日本語研修は厳しいが効果的でした。ビザガイダンスは徹底的で透明性がありました。適切な準備のおかげで今、夢を生きています。」">
+                "Eminent Overseas gave me honest guidance without false promises. Their Japanese language training was intense but effective. The visa guidance was thorough and transparent. I'm living my dream today because of proper preparation."
+              </blockquote>
+              
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <h5 class="mb-2" data-en="Key Achievements" data-ja="主な成果">Key Achievements</h5>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><i class="fas fa-check text-success me-2"></i> <span data-en="JLPT N2 certified" data-ja="JLPT N2取得">JLPT N2 certified</span></li>
+                      <li class="mb-2"><i class="fas fa-check text-success me-2"></i> <span data-en="University scholarship recipient" data-ja="大学奨学金受給者">University scholarship recipient</span></li>
+                      <li class="mb-2"><i class="fas fa-check text-success me-2"></i> <span data-en="Part-time job at Japanese company" data-ja="日本企業でのアルバイト">Part-time job at Japanese company</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <h5 class="mb-2" data-en="Timeline" data-ja="タイムライン">Timeline</h5>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><i class="fas fa-calendar text-primary me-2"></i> <span data-en="6 months: Japanese language training" data-ja="6ヶ月：日本語研修">6 months: Japanese language training</span></li>
+                      <li class="mb-2"><i class="fas fa-calendar text-primary me-2"></i> <span data-en="3 months: University application" data-ja="3ヶ月：大学申請">3 months: University application</span></li>
+                      <li class="mb-2"><i class="fas fa-calendar text-primary me-2"></i> <span data-en="1 month: Visa processing" data-ja="1ヶ月：ビザ処理">1 month: Visa processing</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <h5 class="card-title mb-3" data-en="Quick Facts" data-ja="基本情報">Quick Facts</h5>
+                  <div class="mb-3">
+                    <div class="small text-muted mb-1" data-en="From" data-ja="出身">From</div>
+                    <div class="fw-bold" data-en="Dhaka, Bangladesh" data-ja="ダッカ、バングラデシュ">Dhaka, Bangladesh</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="small text-muted mb-1" data-en="Study Destination" data-ja="留学先">Study Destination</div>
+                    <div class="fw-bold" data-en="Tokyo University, Japan" data-ja="東京大学、日本">Tokyo University, Japan</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="small text-muted mb-1" data-en="Program" data-ja="プログラム">Program</div>
+                    <div class="fw-bold" data-en="Bachelor of Engineering" data-ja="工学学士">Bachelor of Engineering</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="small text-muted mb-1" data-en="Duration" data-ja="期間">Duration</div>
+                    <div class="fw-bold" data-en="4 years" data-ja="4年">4 years</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="small text-muted mb-1" data-en="Started" data-ja="開始">Started</div>
+                    <div class="fw-bold" data-en="April 2023" data-ja="2023年4月">April 2023</div>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="contact.php" class="btn btn-primary w-100 mb-3">
+                <i class="fas fa-calendar-check me-2"></i> <span data-en="Start Your Journey" data-ja="あなたの旅を始める">Start Your Journey</span>
+              </a>
+              
+              <a href="#stories-grid" class="btn btn-outline-primary w-100">
+                <i class="fas fa-book-open me-2"></i> <span data-en="Read More Stories" data-ja="他の事例を読む">Read More Stories</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Grid -->
+  <section class="stories-section" id="stories-grid">
+    <div class="container">
+      <h2 class="display-3 mb-5 text-center section-title animate-on-scroll" data-en="More Success Stories" data-ja="その他の成功事例">More Success Stories</h2>
+      
+      <div class="stories-grid">
+        <!-- Story 1 - Japan -->
+        <div class="story-card animate-on-scroll" data-category="japan">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-japan-1.jpg" alt="Fatima in Osaka" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag"></i>
+              <span data-en="Japan" data-ja="日本">Japan</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-fatima.jpg" alt="Fatima Jahan" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Fatima Jahan" data-ja="ファティマ・ジャハン">Fatima Jahan</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="Japanese Language School, Osaka" data-ja="大阪日本語学校">Japanese Language School, Osaka</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="Started with zero Japanese, now working part-time while studying. Successfully passed JLPT N3 and planning for technical college admission."
+                   data-ja="日本語ゼロからスタートし、現在は学業しながらアルバイト中。JLPT N3に合格し、専門学校進学を計画中。">
+              Started with zero Japanese, now working part-time while studying. Successfully passed JLPT N3 and planning for technical college admission.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="Language School" data-ja="語学学校">Language School</span>
+              <span class="story-tag" data-en="JLPT N3" data-ja="JLPT N3">JLPT N3</span>
+              <span class="story-tag" data-en="Part-time Work" data-ja="アルバイト">Part-time Work</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+        
+        <!-- Story 2 - UK -->
+        <div class="story-card animate-on-scroll" style="transition-delay: 120ms;" data-category="uk">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-uk-1.jpg" alt="Rahim in London" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag-uk"></i>
+              <span data-en="UK" data-ja="英国">UK</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-rahim.jpg" alt="Rahim Khan" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Rahim Khan" data-ja="ラヒム・カーン">Rahim Khan</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="University of London" data-ja="ロンドン大学">University of London</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="Completed Masters in Computer Science with distinction. Now working with a leading tech company in London through post-study work visa."
+                   data-ja="コンピュータサイエンスの修士号を優等で取得。現在は卒業後就労ビザでロンドンの主要テック企業で勤務中。">
+              Completed Masters in Computer Science with distinction. Now working with a leading tech company in London through post-study work visa.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="Masters" data-ja="修士">Masters</span>
+              <span class="story-tag" data-en="Post-Study Work" data-ja="卒業後就労">Post-Study Work</span>
+              <span class="story-tag" data-en="Technology" data-ja="技術">Technology</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+        
+        <!-- Story 3 - Japan -->
+        <div class="story-card animate-on-scroll" style="transition-delay: 240ms;" data-category="japan">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-japan-2.jpg" alt="Sakib in Kyoto" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag"></i>
+              <span data-en="Japan" data-ja="日本">Japan</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-sakib.jpg" alt="Sakib Ahmed" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Sakib Ahmed" data-ja="サキブ・アーメド">Sakib Ahmed</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="Kyoto Technical College" data-ja="京都専門学校">Kyoto Technical College</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="Studying Automotive Technology with practical training. Received company sponsorship for advanced studies after internship performance."
+                   data-ja="自動車技術を実習付きで学習中。インターンシップの成果で企業奨学金を受け、高度な学習を継続中。">
+              Studying Automotive Technology with practical training. Received company sponsorship for advanced studies after internship performance.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="Technical College" data-ja="専門学校">Technical College</span>
+              <span class="story-tag" data-en="Automotive" data-ja="自動車">Automotive</span>
+              <span class="story-tag" data-en="Sponsorship" data-ja="奨学金">Sponsorship</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+        
+        <!-- Story 4 - UK -->
+        <div class="story-card animate-on-scroll" style="transition-delay: 360ms;" data-category="uk">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-uk-2.jpg" alt="Tasnim in Manchester" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag-uk"></i>
+              <span data-en="UK" data-ja="英国">UK</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-tasnim.jpg" alt="Tasnim Akter" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Tasnim Akter" data-ja="タスニム・アクター">Tasnim Akter</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="University of Manchester" data-ja="マンチェスター大学">University of Manchester</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="Pursuing PhD in Biomedical Sciences with full scholarship. Published research papers and presented at international conferences."
+                   data-ja="全額奨学金で生物医学科学の博士号を取得中。研究論文を発表し、国際会議でプレゼンテーション。">
+              Pursuing PhD in Biomedical Sciences with full scholarship. Published research papers and presented at international conferences.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="PhD" data-ja="博士">PhD</span>
+              <span class="story-tag" data-en="Scholarship" data-ja="奨学金">Scholarship</span>
+              <span class="story-tag" data-en="Research" data-ja="研究">Research</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+        
+        <!-- Story 5 - Japan -->
+        <div class="story-card animate-on-scroll" style="transition-delay: 480ms;" data-category="japan featured">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-japan-3.jpg" alt="Nusrat in Nagoya" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag"></i>
+              <span data-en="Japan" data-ja="日本">Japan</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-nusrat.jpg" alt="Nusrat Jahan" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Nusrat Jahan" data-ja="ヌスラト・ジャハン">Nusrat Jahan</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="Nagoya University" data-ja="名古屋大学">Nagoya University</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="First in family to study abroad. Completed language school, now in university studying Economics. Balancing studies with cultural exchange activities."
+                   data-ja="家族初の留学生。語学学校を修了し、現在は大学で経済学を学習中。学業と文化交流活動のバランスを取っています。">
+              First in family to study abroad. Completed language school, now in university studying Economics. Balancing studies with cultural exchange activities.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="Economics" data-ja="経済学">Economics</span>
+              <span class="story-tag" data-en="First Generation" data-ja="第一世代">First Generation</span>
+              <span class="story-tag" data-en="Cultural Exchange" data-ja="文化交流">Cultural Exchange</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+        
+        <!-- Story 6 - UK -->
+        <div class="story-card animate-on-scroll" style="transition-delay: 600ms;" data-category="uk">
+          <div class="story-image-container">
+            <!-- UPDATED PATH -->
+            <img src="images/story/story-uk-3.jpg" alt="Imran in Edinburgh" class="story-image" loading="lazy">
+            <div class="country-badge">
+              <i class="fas fa-flag-uk"></i>
+              <span data-en="UK" data-ja="英国">UK</span>
+            </div>
+          </div>
+          <div class="story-content">
+            <div class="student-meta">
+              <!-- UPDATED PATH -->
+              <img src="images/story/student-imran.jpg" alt="Imran Hossain" class="student-meta-avatar" loading="lazy">
+              <div class="student-meta-details">
+                <h4 data-en="Imran Hossain" data-ja="イムラン・ホサイン">Imran Hossain</h4>
+                <div class="student-program">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span data-en="University of Edinburgh" data-ja="エディンバラ大学">University of Edinburgh</span>
+                </div>
+              </div>
+            </div>
+            <p class="story-excerpt" data-en="Completed MBA with leadership focus. Secured management position in multinational company before graduation through campus recruitment."
+                   data-ja="リーダーシップに焦点を当てたMBAを修了。キャンパス採用を通じて卒業前に多国籍企業の管理職を獲得。">
+              Completed MBA with leadership focus. Secured management position in multinational company before graduation through campus recruitment.
+            </p>
+            <div class="story-tags">
+              <span class="story-tag" data-en="MBA" data-ja="MBA">MBA</span>
+              <span class="story-tag" data-en="Leadership" data-ja="リーダーシップ">Leadership</span>
+              <span class="story-tag" data-en="Campus Recruitment" data-ja="キャンパス採用">Campus Recruitment</span>
+            </div>
+            <a href="#featured-story" class="btn btn-link p-0 mt-3" data-en="Read Full Story →" data-ja="全文を読む →">Read Full Story →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5 animate-on-scroll" style="transition-delay: 720ms;">
+        <a href="contact.php" class="btn btn-primary px-5 py-3">
+          <i class="fas fa-rocket me-2"></i> <span data-en="Start Your Success Story" data-ja="あなたの成功事例を始める">Start Your Success Story</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials-section">
+    <div class="container">
+      <h2 class="display-3 mb-5 text-center section-title animate-on-scroll" data-en="What Our Students Say" data-ja="学生の声">What Our Students Say</h2>
+      
+      <div class="testimonial-slider animate-on-scroll">
+        <div class="testimonial-card">
+          <div class="testimonial-quote" data-en="'The ethical approach of Eminent Overseas made all the difference. No false promises, just proper guidance. Their Japanese language training prepared me well for life in Japan.'"
+                     data-ja="「エミネント海外留学の倫理的アプローチが全てを変えました。偽りの約ストはなく、適切なガイダンスだけ。日本語研修は日本の生活にしっかりと準備させてくれました。」">
+            "The ethical approach of Eminent Overseas made all the difference. No false promises, just proper guidance. Their Japanese language training prepared me well for life in Japan."
+          </div>
+          <div class="testimonial-author">
+            <!-- UPDATED PATH -->
+            <img src="images/story/testimonial-1.jpg" alt="Karim Abdullah" class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-author-info">
+              <h4 data-en="Karim Abdullah" data-ja="カリム・アブドゥラ">Karim Abdullah</h4>
+              <div class="testimonial-author-location" data-en="Tokyo Institute of Technology" data-ja="東京工業大学">Tokyo Institute of Technology</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card" style="display: none;">
+          <div class="testimonial-quote" data-en="'As a parent, I appreciated the transparency and guardian-friendly approach. They involved us in every step and explained everything clearly. My son is now thriving in the UK.'"
+                     data-ja="「保護者として、透明性と保護者向けアプローチに感謝しています。すべてのステップに関与させ、明確に説明してくれました。息子は今、英国で順調にやっています。」">
+            "As a parent, I appreciated the transparency and guardian-friendly approach. They involved us in every step and explained everything clearly. My son is now thriving in the UK."
+          </div>
+          <div class="testimonial-author">
+            <!-- UPDATED PATH -->
+            <img src="images/story/testimonial-2.jpg" alt="Mrs. Rahman" class="testimonial-avatar" loading="lazy">
+            <div class="testimonial-author-info">
+              <h4 data-en="Mrs. Rahman" data-ja="ラーマン夫人">Mrs. Rahman</h4>
+              <div class="testimonial-author-location" data-en="Parent of UK Student" data-ja="英国留学生の保護者">Parent of UK Student</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="slider-btn prev-slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next-slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Stories -->
+  <section class="video-stories" id="video-stories">
+    <div class="container">
+      <h2 class="display-3 mb-5 text-center section-title animate-on-scroll" data-en="Student Stories in Video" data-ja="動画での学生事例">Student Stories in Video</h2>
+      <p class="section-subtitle text-center mb-5 animate-on-scroll" style="transition-delay: 120ms;"
+         data-en="Watch our students share their study abroad experiences, challenges, and achievements firsthand."
+         data-ja="学生たちが留学経験、挑戦、成果を直接共有する動画をご覧ください。">
+        Watch our students share their study abroad experiences, challenges, and achievements firsthand.
+      </p>
+      
+      <div class="video-grid">
+        <div class="video-card animate-on-scroll" data-category="video">
+          <div class="video-thumbnail">
+            <!-- Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&showinfo=0" 
+                    title="A Day in Life - Tokyo Student" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-content">
+            <h4 data-en="A Day in Life - Tokyo Student" data-ja="一日の生活 - 東京の学生">A Day in Life - Tokyo Student</h4>
+            <p class="video-description" data-en="Follow Ahmed through his daily routine as an international student in Tokyo."
+                   data-ja="東京の留学生としてのアーメドの日常を追いかけます。">
+              Follow Ahmed through his daily routine as an international student in Tokyo.
+            </p>
+            <div class="video-meta">
+              <span class="badge bg-primary" data-en="Japan" data-ja="日本">Japan</span>
+              <span class="text-muted ms-2">5:42</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="video-card animate-on-scroll" style="transition-delay: 120ms;" data-category="video">
+          <div class="video-thumbnail">
+            <!-- Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&showinfo=0" 
+                    title="UK University Experience" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-content">
+            <h4 data-en="UK University Experience" data-ja="英国大学の経験">UK University Experience</h4>
+            <p class="video-description" data-en="Tasnim shares her journey from Bangladesh to Manchester University."
+                   data-ja="タスニムがバングラデシュからマンチェスター大学への旅を共有します。">
+              Tasnim shares her journey from Bangladesh to Manchester University.
+            </p>
+            <div class="video-meta">
+              <span class="badge bg-primary" data-en="UK" data-ja="英国">UK</span>
+              <span class="text-muted ms-2">7:15</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="video-card animate-on-scroll" style="transition-delay: 240ms;" data-category="video">
+          <div class="video-thumbnail">
+            <!-- Replace with your YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&showinfo=0" 
+                    title="From Zero to JLPT N2" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-content">
+            <h4 data-en="From Zero to JLPT N2" data-ja="ゼロからJLPT N2へ">From Zero to JLPT N2</h4>
+            <p class="video-description" data-en="Fatima's language learning journey and tips for mastering Japanese."
+                   data-ja="ファティマの言語学習の旅と日本語習得のコツ。">
+              Fatima's language learning journey and tips for mastering Japanese.
+            </p>
+            <div class="video-meta">
+              <span class="badge bg-primary" data-en="Japan" data-ja="日本">Japan</span>
+              <span class="text-muted ms-2">6:28</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <div class="video-modal-header">
+        <h5 class="mb-0" id="videoModalTitle">Video Title</h5>
+        <button class="video-modal-close" id="videoModalClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="video-modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe id="videoModalFrame" src="" title="YouTube video player" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-content animate-on-scroll" style="transition-delay: 720ms;">
+        <h2 class="cta-title" data-en="Ready to Write Your Success Story?" data-ja="あなたの成功事例を書く準備はできていますか？">Ready to Write Your Success Story?</h2>
+        <p class="cta-subtitle" 
+           data-en="Join hundreds of successful students who achieved their study abroad dreams through proper guidance and preparation. Start your journey with Eminent Overseas & Consultants today."
+           data-ja="適切なガイダンスと準備を通じて留学の夢を実現した何百人もの成功した学生に加わりましょう。エミネント海外留学コンサルタントで今日から旅を始めましょう。">
+          Join hundreds of successful students who achieved their study abroad dreams through proper guidance and preparation. Start your journey with Eminent Overseas & Consultants today.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="contact.php" class="btn btn-light px-5 py-3">
+            <i class="fas fa-calendar-check me-2"></i> <span data-en="Book Consultation" data-ja="相談を予約">Book Consultation</span>
+          </a>
+          <a href="tel:+880XXXXXXXXXX" class="btn btn-outline-light px-5 py-3">
+            <i class="fas fa-phone me-2"></i> <span data-en="Call for Success Stories" data-ja="成功事例についてお電話">Call for Success Stories</span>
+          </a>
+        </div>
+
+        <p class="mt-4 opacity-75">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          <span data-en="Location: Dhaka, Bangladesh | Office Time: Sat-Thu, 10:00 AM – 6:00 PM"
+                data-ja="所在地: ダッカ、バングラデシュ | 営業時間: 土〜木、午前10時 – 午後6時">
+            Location: Dhaka, Bangladesh | Office Time: Sat-Thu, 10:00 AM – 6:00 PM
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0 animate-on-scroll">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Eminent Overseas & Consultants Logo" class="brand-logo-img" loading="lazy" />
+          </div>
+          <p class="footer-description" 
+             data-en="Eminent Overseas & Consultants has helped thousands of Bangladeshi students achieve their study abroad dreams in Japan and UK. Our success stories speak to our commitment to proper preparation and ethical guidance."
+             data-ja="エミネント海外留学コンサルタントは、何千人ものバングラデシュ人学生が日本と英国で留学の夢を実現するのを支援してきました。成功事例は適切な準備と倫理的ガイダンスへの取り組みを物語っています。">
+            Eminent Overseas & Consultants has helped thousands of Bangladeshi students achieve their study abroad dreams in Japan and UK. Our success stories speak to our commitment to proper preparation and ethical guidance.
+          </p>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 120ms;">
+          <h5 class="footer-heading" data-en="Quick Links" data-ja="クイックリンク">Quick Links</h5>
+          <a href="index.html" class="footer-link" data-en="Home" data-ja="ホーム">Home</a>
+          <a href="about.html" class="footer-link" data-en="About Us" data-ja="会社概要">About Us</a>
+          <a href="study-japan.html" class="footer-link" data-en="Study in Japan" data-ja="日本留学">Study in Japan</a>
+          <a href="study-uk.html" class="footer-link" data-en="Study in UK" data-ja="英国留学">Study in UK</a>
+          <a href="japanese-course.html" class="footer-link" data-en="Japanese Course" data-ja="日本語コース">Japanese Course</a>
+          <a href="visa-guidance.html" class="footer-link" data-en="Visa Guidance" data-ja="ビザサポート">Visa Guidance</a>
+          <a href="process.html" class="footer-link" data-en="Process" data-ja="プロセス">Process</a>
+          <a href="success-stories.html" class="footer-link" data-en="Success Stories" data-ja="成功事例">Success Stories</a>
+          <a href="#stories-grid" class="footer-link" data-en="More Stories" data-ja="その他の事例">More Stories</a>
+          <a href="contact.php" class="footer-link" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5 mb-md-0 animate-on-scroll" style="transition-delay: 240ms;">
+          <h5 class="footer-heading" data-en="Success Story Categories" data-ja="成功事例カテゴリ">Success Story Categories</h5>
+          <a href="#featured-story" class="footer-link" data-en="Featured Stories" data-ja="注目事例">Featured Stories</a>
+          <a href="#stories-grid" class="footer-link" data-en="Japan Success Stories" data-ja="日本成功事例">Japan Success Stories</a>
+          <a href="#stories-grid" class="footer-link" data-en="UK Success Stories" data-ja="英国成功事例">UK Success Stories</a>
+          <a href="#video-stories" class="footer-link" data-en="Video Testimonials" data-ja="動画推薦文">Video Testimonials</a>
+          <a href="#testimonials-section" class="footer-link" data-en="Student Testimonials" data-ja="学生推薦文">Student Testimonials</a>
+          <a href="contact.php" class="footer-link" data-en="Share Your Story" data-ja="あなたの事例を共有">Share Your Story</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 animate-on-scroll" style="transition-delay: 360ms;">
+          <h5 class="footer-heading" data-en="Contact Information" data-ja="連絡先情報">Contact Information</h5>
+          <div class="mb-4">
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-map-marker-alt mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Address" data-ja="事務所住所">Office Address</div>
+                <div class="text-tertiary">Dhaka, Bangladesh</div>
+                <div class="text-tertiary small" data-en="(Exact address provided upon appointment)" data-ja="（正確な住所は予約時に提供します）">(Exact address provided upon appointment)</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-3">
+              <i class="fas fa-clock mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Office Hours" data-ja="営業時間">Office Hours</div>
+                <div class="text-tertiary" data-en="Saturday – Thursday" data-ja="土曜日 – 木曜日">Saturday – Thursday</div>
+                <div class="text-tertiary" data-en="10:00 AM – 6:00 PM" data-ja="午前10時 – 午後6時">10:00 AM – 6:00 PM</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start">
+              <i class="fas fa-phone mt-1 me-3" style="color: var(--primary-600);"></i>
+              <div>
+                <div class="fw-bold small" data-en="Phone/WhatsApp" data-ja="電話/WhatsApp">Phone/WhatsApp</div>
+                <a href="tel:+880XXXXXXXXXX" class="footer-link">+880 XXXX-XXXXXX</a>
+                <div class="text-tertiary small mt-1" data-en="Call for success story inquiries" data-ja="成功事例についてのお問い合わせはお電話">Call for success story inquiries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom animate-on-scroll" style="transition-delay: 480ms;">
+        <p data-en="© <span id='currentYear'></span> Eminent Overseas & Consultants. All rights reserved."
+           data-ja="© <span id='currentYear'></span> エミネント海外留学コンサルタント。無断複写・転載を禁じます。">
+          © <span id="currentYear"></span> Eminent Overseas & Consultants. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="terms.html" data-en="Terms & Conditions" data-ja="利用規約">Terms & Conditions</a>
+          <a href="privacy.html" data-en="Privacy Policy" data-ja="プライバシーポリシー">Privacy Policy</a>
+          <a href="disclaimer.html" data-en="Disclaimer" data-ja="免責事項">Disclaimer</a>
+          <a href="sitemap.html" data-en="Sitemap" data-ja="サイトマップ">Sitemap</a>
+        </div>
+        <div class="crafted-by">
+          <a href="https://prodo.top" target="_blank" rel="noopener" class="footer-link" 
+             data-en="Crafted by ProDo" data-ja="ProDoによって作成">
+            Crafted by ProDo
+          </a>
+        </div>
+        <p class="small text-tertiary mt-2" data-en="Success stories are based on real student experiences. Individual results may vary based on preparation and circumstances."
+           data-ja="成功事例は実際の学生経験に基づいています。個人の結果は準備と状況によって異なる場合があります。">
+          Success stories are based on real student experiences. Individual results may vary based on preparation and circumstances.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  
+  <!-- Page Specific JavaScript -->
+  <script>
+    // Success Stories Page Specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Filter stories by category
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const storyCards = document.querySelectorAll('.story-card, .video-card');
+      
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active button
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          // Filter stories
+          storyCards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.style.display = 'block';
+              // Add animation class
+              card.classList.add('animate-on-scroll');
+              card.classList.add('visible');
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Testimonial slider
+      const testimonials = document.querySelectorAll('.testimonial-card');
+      const prevBtn = document.querySelector('.prev-slide');
+      const nextBtn = document.querySelector('.next-slide');
+      let currentTestimonial = 0;
+      
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+          testimonial.style.display = i === index ? 'block' : 'none';
+        });
+      }
+      
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+          showTestimonial(currentTestimonial);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+          currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+          showTestimonial(currentTestimonial);
+        });
+      }
+      
+      // Initialize testimonial slider
+      if (testimonials.length > 0) {
+        showTestimonial(0);
+      }
+      
+      // Video modal functionality
+      const videoModal = document.getElementById('videoModal');
+      const videoModalClose = document.getElementById('videoModalClose');
+      const videoModalFrame = document.getElementById('videoModalFrame');
+      const videoModalTitle = document.getElementById('videoModalTitle');
+      
+      // YouTube video IDs (Replace with your actual video IDs)
+      const youtubeVideos = [
+        {
+          id: 'dQw4w9WgXcQ', // Replace with actual YouTube ID for "A Day in Life - Tokyo Student"
+          title: 'A Day in Life - Tokyo Student',
+          titleJa: '一日の生活 - 東京の学生',
+          duration: '5:42'
+        },
+        {
+          id: 'dQw4w9WgXcQ', // Replace with actual YouTube ID for "UK University Experience"
+          title: 'UK University Experience',
+          titleJa: '英国大学の経験',
+          duration: '7:15'
+        },
+        {
+          id: 'dQw4w9WgXcQ', // Replace with actual YouTube ID for "From Zero to JLPT N2"
+          title: 'From Zero to JLPT N2',
+          titleJa: 'ゼロからJLPT N2へ',
+          duration: '6:28'
+        }
+      ];
+      
+      // Function to open video modal
+      function openVideoModal(videoIndex) {
+        const video = youtubeVideos[videoIndex];
+        const currentLang = document.documentElement.lang || 'en';
+        
+        // Set video title
+        if (currentLang === 'ja') {
+          videoModalTitle.textContent = video.titleJa;
+        } else {
+          videoModalTitle.textContent = video.title;
+        }
+        
+        // Set video iframe source
+        const videoUrl = `https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&showinfo=0&autoplay=1`;
+        videoModalFrame.src = videoUrl;
+        
+        // Show modal
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      // Close modal
+      function closeVideoModal() {
+        videoModal.classList.remove('active');
+        videoModalFrame.src = '';
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Event listeners for modal
+      if (videoModalClose) {
+        videoModalClose.addEventListener('click', closeVideoModal);
+      }
+      
+      // Close modal when clicking outside
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+          closeVideoModal();
+        }
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+          closeVideoModal();
+        }
+      });
+      
+      // Video card click handlers
+      const videoCards = document.querySelectorAll('.video-card');
+      videoCards.forEach((card, index) => {
+        const thumbnail = card.querySelector('.video-thumbnail');
+        const titleElement = card.querySelector('h4');
+        
+        thumbnail.addEventListener('click', () => {
+          openVideoModal(index);
+        });
+        
+        // Also allow clicking on the card content to open modal
+        card.addEventListener('click', (e) => {
+          if (!e.target.closest('a') && !e.target.closest('button')) {
+            openVideoModal(index);
+          }
+        });
+      });
+      
+      // Animated counters for stats banner
+      const statNumbers = document.querySelectorAll('.stat-number');
+      let countersStarted = false;
+      
+      const animateCounter = () => {
+        const speed = 200;
+        
+        statNumbers.forEach(counter => {
+          const target = Number(counter.getAttribute('data-count') || 0);
+          const current = Number(counter.textContent.replace(/[^0-9]/g, '') || 0);
+          const increment = target / speed;
+          
+          if (current < target) {
+            const newValue = Math.ceil(current + increment);
+            counter.textContent = newValue;
+          } else {
+            counter.textContent = target;
+          }
+        });
+        
+        const stillCounting = Array.from(statNumbers).some(c => {
+          const target = Number(c.getAttribute('data-count') || 0);
+          const value = Number(c.textContent.replace(/[^0-9]/g, '') || 0);
+          return value < target;
+        });
+        
+        if (stillCounting) {
+          requestAnimationFrame(animateCounter);
+        }
+      };
+      
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            animateCounter();
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      const statsBanner = document.querySelector('.stats-banner');
+      if (statsBanner) statsObserver.observe(statsBanner);
+      
+      // Initialize current year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+      
+      // Smooth scroll for category navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+            const marqueeHeight = document.querySelector('.top-marquee')?.offsetHeight || 0;
+            const offsetTop = targetElement.offsetTop - navbarHeight - marqueeHeight;
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Update marquee content for success stories page
+      if (typeof app !== 'undefined' && app.languageManager) {
+        app.languageManager.marqueeContent = {
+          en: [
+            "Success Stories | Real Student Experiences | Japan & UK Study Abroad",
+            "Featured: From Dhaka to Tokyo University | Read Inspiring Journeys",
+            "2000+ Students Guided | 95% Visa Success Rate | Ethical Guidance",
+            "Watch Video Testimonials | Book Your Consultation Today"
+          ],
+          ja: [
+            "成功事例 | 実際の学生経験 | 日本・英国留学",
+            "注目: ダッカから東京大学へ | 感動的な旅路を読む",
+            "2000人以上ガイダンス | 95%ビザ成功率 | 倫理的ガイダンス",
+            "動画推薦文を見る | 今日相談を予約"
+          ]
+        };
+        app.languageManager.updateMarquee();
+      }
+      
+      // Fix for Japanese text encoding
+      const langToggle = document.getElementById('langToggleDesktop');
+      if (langToggle) {
+        langToggle.addEventListener('click', () => {
+          // Force reflow to fix Japanese text rendering
+          setTimeout(() => {
+            document.querySelectorAll('[data-ja]').forEach(el => {
+              el.style.fontFamily = "'Inter', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif";
+            });
+          }, 100);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
