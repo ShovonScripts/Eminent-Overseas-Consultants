@@ -83,6 +83,19 @@ class LanguageManager {
         titleElement.textContent = enTitle;
       }
     }
+    
+    // Update form placeholders
+    this.updateFormPlaceholders();
+  }
+
+  updateFormPlaceholders() {
+    const messageTextarea = document.getElementById('message');
+    if (messageTextarea) {
+      const placeholder = messageTextarea.getAttribute(`data-${this.currentLang}-placeholder`);
+      if (placeholder) {
+        messageTextarea.placeholder = placeholder;
+      }
+    }
   }
 
   updateMarquee() {
@@ -115,7 +128,6 @@ class LanguageManager {
     });
   }
 
-  // NEW METHOD: Update current year
   updateCurrentYear() {
     const yearElements = document.querySelectorAll('#currentYear');
     if (yearElements.length > 0) {
@@ -199,7 +211,7 @@ class FullscreenHeroSlider {
     this.slides = [];
     this.totalSlides = 0;
     this.autoSlideInterval = null;
-    this.autoSlideDelay = 5000; // 5 seconds
+    this.autoSlideDelay = 5000;
     this.isAutoPlaying = true;
     this.isTransitioning = false;
     this.touchStartX = 0;
@@ -227,7 +239,6 @@ class FullscreenHeroSlider {
     this.isTransitioning = true;
     const prevSlide = this.currentSlide;
     
-    // Calculate new slide index
     if (index >= this.totalSlides) {
       this.currentSlide = 0;
     } else if (index < 0) {
@@ -236,15 +247,12 @@ class FullscreenHeroSlider {
       this.currentSlide = index;
     }
     
-    // Update slides
     this.slides[prevSlide].classList.remove('active');
     this.slides[this.currentSlide].classList.add('active');
     
-    // Update UI
     this.updateIndicators();
     this.updateCounter();
     
-    // Reset transitioning flag after animation
     setTimeout(() => {
       this.isTransitioning = false;
     }, 1200);
@@ -259,7 +267,6 @@ class FullscreenHeroSlider {
   }
 
   updateSlider() {
-    // Ensure only current slide is active
     this.slides.forEach((slide, index) => {
       slide.classList.toggle('active', index === this.currentSlide);
     });
@@ -313,7 +320,6 @@ class FullscreenHeroSlider {
   }
 
   setupEventListeners() {
-    // Previous button
     const prevBtn = document.querySelector('.fullscreen-hero .prev-btn');
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
@@ -323,7 +329,6 @@ class FullscreenHeroSlider {
       });
     }
 
-    // Next button
     const nextBtn = document.querySelector('.fullscreen-hero .next-btn');
     if (nextBtn) {
       nextBtn.addEventListener('click', (e) => {
@@ -333,7 +338,6 @@ class FullscreenHeroSlider {
       });
     }
 
-    // Dot indicators
     const indicators = document.querySelectorAll('.fullscreen-hero .indicator');
     indicators.forEach((indicator, index) => {
       indicator.addEventListener('click', () => {
@@ -342,7 +346,6 @@ class FullscreenHeroSlider {
       });
     });
 
-    // Pause on hover
     const hero = document.querySelector('.fullscreen-hero');
     if (hero) {
       hero.addEventListener('mouseenter', () => {
@@ -355,7 +358,6 @@ class FullscreenHeroSlider {
       });
     }
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (document.querySelector('.fullscreen-hero')) {
         if (e.key === 'ArrowLeft') {
@@ -370,7 +372,6 @@ class FullscreenHeroSlider {
       }
     });
 
-    // Touch/swipe support
     if (hero) {
       hero.addEventListener('touchstart', (e) => {
         this.touchStartX = e.changedTouches[0].screenX;
@@ -389,10 +390,8 @@ class FullscreenHeroSlider {
     
     if (Math.abs(diff) > swipeThreshold) {
       if (diff > 0) {
-        // Swipe left - next slide
         this.nextSlide();
       } else {
-        // Swipe right - previous slide
         this.prevSlide();
       }
       this.restartAutoSlide();
@@ -410,7 +409,7 @@ class CompanyOverviewSlider {
     this.slides = [];
     this.totalSlides = 0;
     this.autoSlideInterval = null;
-    this.autoSlideDelay = 5000; // 5 seconds
+    this.autoSlideDelay = 5000;
     this.isAutoPlaying = true;
   }
 
@@ -456,10 +455,9 @@ class CompanyOverviewSlider {
   updateSliderPosition() {
     const track = document.getElementById('overviewSliderTrack');
     if (track) {
-      const slideWidth = 100; // 100% per slide
+      const slideWidth = 100;
       track.style.transform = `translateX(-${this.currentSlide * slideWidth}%)`;
       
-      // Update slide opacity
       this.slides.forEach((slide, index) => {
         slide.classList.toggle('active', index === this.currentSlide);
       });
@@ -514,7 +512,6 @@ class CompanyOverviewSlider {
   }
 
   setupEventListeners() {
-    // Previous button
     const prevBtn = document.getElementById('overviewSliderPrev');
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
@@ -523,7 +520,6 @@ class CompanyOverviewSlider {
       });
     }
 
-    // Next button
     const nextBtn = document.getElementById('overviewSliderNext');
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
@@ -532,7 +528,6 @@ class CompanyOverviewSlider {
       });
     }
 
-    // Dot navigation
     const dots = document.querySelectorAll('.slider-dot');
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
@@ -541,7 +536,6 @@ class CompanyOverviewSlider {
       });
     });
 
-    // Pause auto-slide on hover
     const sliderWrapper = document.querySelector('.overview-slider-wrapper');
     if (sliderWrapper) {
       sliderWrapper.addEventListener('mouseenter', () => {
@@ -554,7 +548,6 @@ class CompanyOverviewSlider {
       });
     }
 
-    // Touch/swipe support
     let touchStartX = 0;
     let touchEndX = 0;
     
@@ -577,10 +570,8 @@ class CompanyOverviewSlider {
     
     if (Math.abs(diff) > swipeThreshold) {
       if (diff > 0) {
-        // Swipe left - next slide
         this.nextSlide();
       } else {
-        // Swipe right - previous slide
         this.prevSlide();
       }
       this.restartAutoSlide();
@@ -594,6 +585,93 @@ class CompanyOverviewSlider {
 }
 
 // ======================
+// CONTACT FORM HANDLER
+// ======================
+
+class ContactFormHandler {
+  constructor() {
+    this.form = document.getElementById('enquiryForm');
+    this.isSubmitting = false;
+  }
+
+  init() {
+    if (!this.form) return;
+    
+    this.setupFormValidation();
+    this.setupFormSubmission();
+  }
+
+  setupFormValidation() {
+    // HTML5 validation with custom styling
+    this.form.addEventListener('submit', (e) => {
+      if (this.form.checkValidity() === false) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      this.form.classList.add('was-validated');
+    });
+
+    // Real-time validation for better UX
+    const inputs = this.form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.value) {
+          input.classList.add('was-validated');
+        }
+      });
+    });
+  }
+
+  setupFormSubmission() {
+    this.form.addEventListener('submit', (e) => {
+      // Only prevent default if validation fails or already submitting
+      if (!this.form.checkValidity() || this.isSubmitting) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.form.classList.add('was-validated');
+        return;
+      }
+
+      // If validation passes, show loading state but let form submit normally
+      this.isSubmitting = true;
+      this.showLoadingState();
+      
+      // The form will submit normally to send_email.php
+      // PHP will handle the redirect
+    });
+  }
+
+  showLoadingState() {
+    const submitBtn = this.form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+
+    const currentLang = document.documentElement.lang || 'en';
+    const originalContent = submitBtn.innerHTML;
+    
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.cursor = 'not-allowed';
+    
+    if (currentLang === 'ja') {
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>送信中...';
+    } else {
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+    }
+
+    // Reset after 10 seconds (fallback in case something goes wrong)
+    setTimeout(() => {
+      if (this.isSubmitting) {
+        submitBtn.innerHTML = originalContent;
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+        this.isSubmitting = false;
+      }
+    }, 10000);
+  }
+}
+
+// ======================
 // MAIN APPLICATION
 // ======================
 
@@ -603,6 +681,7 @@ class App {
     this.themeManager = new ThemeManager();
     this.heroSlider = new FullscreenHeroSlider();
     this.companyOverviewSlider = new CompanyOverviewSlider();
+    this.contactFormHandler = new ContactFormHandler();
   }
 
   init() {
@@ -619,6 +698,9 @@ class App {
     if (document.querySelector('.overview-slider-track')) {
       this.companyOverviewSlider.init();
     }
+
+    // Initialize contact form handler
+    this.contactFormHandler.init();
 
     // Initialize other components
     this.initScrollAnimations();
@@ -654,7 +736,6 @@ class App {
     const animateEls = document.querySelectorAll('.animate-on-scroll');
     animateEls.forEach(el => observer.observe(el));
 
-    // Make sections visible immediately if already in view
     window.addEventListener('load', () => {
       animateEls.forEach(el => {
         const rect = el.getBoundingClientRect();
@@ -669,12 +750,10 @@ class App {
     const navbar = document.querySelector('.navbar');
     if (!navbar) return;
     
-    // Check initial state
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     }
     
-    // Update on scroll
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -744,10 +823,8 @@ class App {
       }
     };
 
-    // Initial check
     updateBackTopVisibility();
 
-    // Throttled scroll listener
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
@@ -759,7 +836,6 @@ class App {
       }
     });
 
-    // Click handler
     backTopBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({
@@ -770,7 +846,6 @@ class App {
   }
 
   initEventListeners() {
-    // Top marquee pause on hover
     const marquee = document.querySelector('.top-marquee');
     if (marquee) {
       marquee.addEventListener('mouseenter', () => {
@@ -786,28 +861,22 @@ class App {
   }
 
   initCurrentYear() {
-    // Use the LanguageManager's method to update current year
     if (this.languageManager && this.languageManager.updateCurrentYear) {
       this.languageManager.updateCurrentYear();
     } else {
-      // Fallback
       const yearEl = document.getElementById('currentYear');
       if (yearEl) yearEl.textContent = String(new Date().getFullYear());
     }
   }
 
   initMobileMenu() {
-    // FIXED VERSION: Don't interfere with dropdown toggles
-    // Only close navbar when clicking regular nav links (not dropdown toggles)
     const regularNavLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     
     if (regularNavLinks && navbarCollapse) {
       regularNavLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-          // Only on mobile
           if (window.innerWidth < 992) {
-            // Don't close if clicking a link inside a dropdown
             if (e.target.closest('.dropdown-menu')) {
               return;
             }
@@ -821,21 +890,16 @@ class App {
       });
     }
     
-    // Fix for dropdown toggles on mobile
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', function(e) {
-        // On mobile, prevent the navbar from closing when clicking dropdown toggle
         if (window.innerWidth < 992) {
           e.stopPropagation();
           
-          // Get the dropdown menu
           const dropdownMenu = this.nextElementSibling;
           if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-            // Toggle the dropdown
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             
-            // Close all other dropdowns
             document.querySelectorAll('.dropdown-toggle').forEach(otherToggle => {
               if (otherToggle !== this) {
                 otherToggle.setAttribute('aria-expanded', 'false');
@@ -846,7 +910,6 @@ class App {
               }
             });
             
-            // Toggle current dropdown
             if (isExpanded) {
               this.setAttribute('aria-expanded', 'false');
               dropdownMenu.style.display = 'none';
@@ -859,14 +922,12 @@ class App {
       });
     });
     
-    // Close dropdowns when clicking outside on mobile
     document.addEventListener('click', (e) => {
       if (window.innerWidth < 992) {
         const isDropdownToggle = e.target.closest('.dropdown-toggle');
         const isDropdownMenu = e.target.closest('.dropdown-menu');
         
         if (!isDropdownToggle && !isDropdownMenu) {
-          // Close all dropdowns
           document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
             toggle.setAttribute('aria-expanded', 'false');
             const menu = toggle.nextElementSibling;
@@ -880,12 +941,10 @@ class App {
   }
 
   initFAQAccordion() {
-    // Initialize Bootstrap accordion behavior
     const accordionButtons = document.querySelectorAll('.accordion-button');
     
     accordionButtons.forEach(button => {
       button.addEventListener('click', () => {
-        // Add smooth transition for the accordion body
         const collapseElement = button.nextElementSibling;
         if (collapseElement.classList.contains('show')) {
           collapseElement.style.maxHeight = collapseElement.scrollHeight + 'px';
@@ -903,7 +962,6 @@ class App {
   }
 
   initSmoothScroll() {
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
@@ -917,7 +975,6 @@ class App {
           const heroHeight = document.querySelector('.fullscreen-hero')?.offsetHeight || 0;
           let offsetTop = targetElement.offsetTop;
           
-          // Adjust offset based on whether we have a hero slider
           if (heroHeight > 0 && targetId !== '#home') {
             offsetTop = offsetTop - navbarHeight - marqueeHeight;
           } else {
@@ -938,14 +995,12 @@ class App {
 // INITIALIZE APP
 // ======================
 
-// Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   try {
     const app = new App();
     app.init();
-    window.app = app; // Make app globally accessible
+    window.app = app;
     
-    // Initialize Bootstrap tooltips if any
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     if (tooltipTriggerList.length > 0 && typeof bootstrap !== 'undefined') {
       tooltipTriggerList.forEach(tooltipTriggerEl => {
@@ -953,7 +1008,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
-    // Initialize Bootstrap collapse for mobile menu
     const navbarCollapse = document.querySelector('.navbar-collapse');
     if (navbarCollapse && typeof bootstrap !== 'undefined') {
       new bootstrap.Collapse(navbarCollapse, {
@@ -968,12 +1022,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ======================
-// ADDITIONAL FIX FOR CURRENT YEAR
+// CURRENT YEAR UPDATER
 // ======================
 
-// This ensures the current year is always updated
 (function() {
-  // Function to update current year
   function updateCurrentYear() {
     const yearElements = document.querySelectorAll('#currentYear');
     if (yearElements.length > 0) {
@@ -986,9 +1038,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Update on page load
   document.addEventListener('DOMContentLoaded', updateCurrentYear);
-  
-  // Update every second for safety (in case language manager overwrites it)
   setInterval(updateCurrentYear, 1000);
 })();
