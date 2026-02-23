@@ -15,7 +15,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Contact Us | Eminent Overseas & Consultants">
   <meta property="og:description" content="Get in touch with our expert counselors for personalized guidance on studying in Japan or the UK">
-  <meta property="og:image" content="images/eminent-office.jpg">
+  <meta property="og:image" content="https://eminentoverseas.uk/images/hero-banner-1.jpg">
   <meta property="og:url" content="https://eminentoverseas.uk/contact.php">
   <meta property="og:type" content="website">
   
@@ -23,6 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Eminent Overseas & Consultants">
   <meta name="twitter:description" content="Ethical guidance for studying in Japan & UK">
+  <meta name="twitter:image" content="https://eminentoverseas.uk/images/hero-banner-1.jpg">
   
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
